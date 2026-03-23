@@ -76,6 +76,8 @@ Cross tool standard instructions use `AGENTS.md` at repository root. This works 
 - Format with Prettier (auto on save)
 ```
 
+The example above uses TypeScript strict mode. Strict mode is a compiler setting that enables additional type-checking rules. Enable it by adding `"strict": true` to `compilerOptions` in your `tsconfig.json` file. See the [TypeScript strict mode documentation](https://www.typescriptlang.org/tsconfig#strict) for the full list of checks it enables.
+
 Keep instructions concise because Copilot adds them to every request. Link to detailed documentation rather than duplicating it.
 
 ## Custom agents

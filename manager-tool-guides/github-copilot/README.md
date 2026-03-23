@@ -337,6 +337,8 @@ This briefing should be delivered as a presentation with a question and answer s
 
 Agent mode is one of the most productive features in GitHub Copilot, but it is also the most likely to exhaust an engineer's monthly premium request allowance when used with premium models. This section gives administrators the controls they need to prevent unexpected costs across their teams.
 
+[Agent mode is the default in Copilot Chat since VS Code 1.107](https://code.visualstudio.com/updates/v1_107). Engineers can switch to Ask mode from the mode dropdown in the Chat view. To disable agent mode entirely, set [`chat.agent.enabled`](https://code.visualstudio.com/docs/copilot/reference/copilot-settings) to `false` in your organisation's VS Code configuration. This removes access to agent mode for all engineers.
+
 Before diving into the admin controls, it helps to understand how engineers actually use agent mode day to day and what tasks they are likely to run in it. The [GitHub Copilot advanced use guide](../../user-tool-guides/github-copilot/advanced-use.md) covers refactoring, test generation, and multi-file editing patterns. These are the tasks most likely to drive credit consumption. The [GitHub Copilot customisation guide](../../user-tool-guides/github-copilot/customisation-guide.md) covers custom agents, hooks for security and cost logging, and skills. All of these interact with agent mode and affect how your team uses it at scale.
 
 ### Understanding how agent mode consumes credits
@@ -377,6 +379,7 @@ Engineers may not realise how quickly agent mode sessions with premium models co
 - [Auto model selection stays within 0× to 1× multiplier models](https://docs.github.com/en/copilot/concepts/auto-model-selection) and gives a 10% discount on paid plans, making it a safe default if engineers want automatic model selection
 - premium models such as Claude Sonnet 4.5 and Claude Opus 4.5 should be reserved for tasks that genuinely require advanced reasoning
 - [the Copilot coding agent on GitHub.com uses one premium request per session](https://github.blog/changelog/2025-07-10-github-copilot-coding-agent-now-uses-one-premium-request-per-session/) regardless of task complexity, making it far more cost-effective than agent mode chat for large, multi-file tasks
+- agent mode is the default when opening Copilot Chat in VS Code. Engineers who want a read-only, non-destructive chat experience should switch to Ask mode manually at the start of each session
 
 ## Measuring success
 
