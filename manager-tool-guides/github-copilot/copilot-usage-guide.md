@@ -19,11 +19,21 @@ You cannot use GitHub Copilot Free, GitHub Copilot Individual, GitHub Copilot Pr
 
 Never input OFFICIAL SENSITIVE, SECRET, TOP SECRET, personal data, or special category data into any AI tool.
 
+## Accountability
+
+You remain responsible for all code you produce. Your project's accountable owner is ultimately accountable for any errors.
+
+AI assistance does not reduce the need for testing, documentation, and review.
+
 ## What you must do
+
+The following recommendations help you use AI coding tools safely and effectively while managing intellectual property, security, and quality risks.
 
 ### Enable all filtering features
 
 Turn on all filtering features in GitHub Copilot settings. This includes the duplicate detection filter which prevents suggestions that match public code. See [GitHub Copilot filter settings](https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-settings-on-githubcom).
+
+Enabling filters protects against intellectual property risks by blocking suggestions that match publicly available code. It also reduces the chance of introducing known vulnerable code patterns into your codebase.
 
 ### Review every line of AI generated code
 
@@ -31,7 +41,7 @@ Do not accept AI suggestions without understanding what the code does. Treat AI 
 
 ### Remove sensitive data before submitting prompts
 
-Check and clean code before using it with AI tools. Remove all:
+Check and clean code before using it with AI tools. Remove all or add relevant files to `.copilotignore`:
 
 - secrets and credentials
 - personal data
@@ -46,9 +56,9 @@ AI code needs the same or more thorough testing as human written code. Test for 
 
 Your service owner, delivery lead, or other accountable approver must approve AI tool usage before you use AI tools on your project. Document this approval in your project risk register.
 
-### Run security scanning on all AI generated code
+### Run security scanning on all AI-generated code
 
-Use Static Application Security Testing (SAST) tools to scan for vulnerabilities. This is mandatory for all code, including AI assisted code.
+Use Static Application Security Testing (SAST) tools to scan for vulnerabilities. This is mandatory for all code, including AI-assisted code.
 
 ### Validate all dependencies
 
@@ -63,7 +73,7 @@ AI may suggest packages that do not exist.
 
 ### Document when you use AI assistance
 
-Record AI usage in commit messages. For example: 'Implemented with GitHub Copilot assistance'. This maintains transparency and audit trails.
+Where your organisation requires it, record AI usage in commit messages. For example: 'Implemented with GitHub Copilot assistance'. This maintains transparency and audit trails.
 
 ## Required security configuration
 
@@ -115,7 +125,7 @@ Do not input:
 
 ### Classified information
 
-Do not input OFFICIAL SENSITIVE, SECRET, or TOP SECRET data. Only OFFICIAL classification is permitted.
+Do not input SECRET or TOP SECRET data. In most cases only OFFICIAL and OFFICIAL SENSITIVE classification is permitted, but this may vary between organisations. Check your organisation's policies if unsure.
 
 ### System details
 
@@ -130,7 +140,7 @@ Do not input:
 
 You must:
 
-- complete peer review for all AI generated code through pull or merge requests
+- complete peer review for all AI-generated code through pull or merge requests
 - get expert review before using AI for security critical code like authentication or encryption
 - disable Terminal auto approve in agent mode to prevent accidental file deletion (see [GitHub Copilot agent mode settings](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent))
 
@@ -138,12 +148,18 @@ Use Copilot in your IDE rather than on GitHub.com. The IDE does not retain your 
 
 ## Checklists
 
+### Before using AI tools on a project
+
+- [ ] Approval from the accountable owner obtained
+- [ ] Data Protection Impact Assessment completed if required
+- [ ] Project risk register updated
+
 ### Before submitting code to AI
 
 - [ ] All secrets and credentials removed
 - [ ] Personal and sensitive data anonymised or removed
 - [ ] Unique identifiers and case references redacted
-- [ ] Data classification verified (OFFICIAL or lower)
+- [ ] Data classification verified (OFFICIAL or OFFICIAL SENSITIVE, per your organisation's policy)
 - [ ] Internal URLs and system names redacted
 - [ ] Database connection strings removed
 
@@ -167,8 +183,6 @@ Use Copilot in your IDE rather than on GitHub.com. The IDE does not retain your 
 - [ ] Security vulnerabilities addressed
 - [ ] Documentation updated
 - [ ] AI usage documented in commits or pull requests
-- [ ] Approval from the accountable owner obtained
-- [ ] Data Protection Impact Assessment completed if required
 - [ ] Dependency audit completed
 
 ### Every 2 weeks
@@ -178,12 +192,6 @@ Use your organisation's standard review cycle.
 - [ ] DevOps Research and Assessment (DORA) metrics reviewed
 - [ ] AI impact on delivery performance assessed
 - [ ] Any negative trends identified and addressed
-
-## Accountability
-
-You remain responsible for all code you produce. Your project's accountable owner is ultimately accountable for any errors.
-
-AI assistance does not reduce the need for testing, documentation, and review.
 
 ## Related guidance
 
