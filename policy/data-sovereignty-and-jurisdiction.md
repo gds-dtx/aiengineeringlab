@@ -5,6 +5,28 @@
 
 > UK government position on data sovereignty, CLOUD Act exposure, data residency, retention, and secondary use for AI coding assistant inference services.
 
+## Contents
+
+[Purpose](#purpose)
+
+[Who this is for](#who-this-is-for)
+
+[UK data sovereignty position](#uk-data-sovereignty-position)
+
+[US jurisdiction and CLOUD Act exposure](#us-jurisdiction-and-cloud-act-exposure)
+
+[UK sovereign processing](#uk-sovereign-processing)
+
+[Data residency requirements](#data-residency-requirements)
+
+[Data retention requirements](#data-retention-requirements)
+
+[Secondary use prohibitions](#secondary-use-prohibitions)
+
+[Vendor compliance assessment](#vendor-compliance-assessment)
+
+[Further reading](#further-reading)
+
 ## Purpose
 
 AI coding assistants transmit prompt data to cloud-based inference services. US-headquartered providers predominantly operate these services. This creates jurisdiction, sovereignty, and data handling questions that government departments must address before adoption.
@@ -158,25 +180,21 @@ Contracts must include explicit prohibitions and audit rights.
 
 Non-compliance may result in corrective action, suspension of use, or contract termination depending on severity.
 
-## Related documents
+## Further reading
 
-[Security policies](../policy), PS-02 (data classification), PS-09 (third-party and supply chain), PS-11 (tool-type-specific requirements).
+[Security policies](../policy) covers PS-02 (data classification), PS-09 (third-party and supply chain), and PS-11 (tool-type-specific requirements).
 
-[Data Protection Impact Assessment (DPIA)](dpia-ai-coding-assistants.md), international transfer assessment.
+[Data Protection Impact Assessment (DPIA)](dpia-ai-coding-assistants.md) covers international transfer assessment.
 
-[Guardrails base](../governance/guardrails-base.md), G-DH-01 to G-DH-05 (data handling controls).
+[Guardrails base](../governance/guardrails-base.md) covers G-DH-01 to G-DH-05 (data handling controls).
 
-[Threat model](../policy), T-CH-02 (data residency violation).
+[Threat model](../policy) covers T-CH-02 (data residency violation).
 
-[Risk register template](../governance/risk-register-template.md), RISK-SEC-03 (data residency and sovereignty).
+[Risk register template](../governance/risk-register-template.md) covers RISK-SEC-03 (data residency and sovereignty).
 
-[Vendor contract security requirements](../governance/vendor-contract-security-requirements.md), contractual clauses.
+[Vendor contract security requirements](../governance/vendor-contract-security-requirements.md) covers contractual clauses.
 
-[Comparative guidance](../manager-tool-guides/comparative-guidance.md), vendor evaluation Category 1.
-
-## References
-
-### UK government
+[Comparative guidance](../manager-tool-guides/comparative-guidance.md) covers vendor evaluation Category 1.
 
 [UK GDPR Chapter V](https://www.legislation.gov.uk/eur/2016/679/chapter/V)
 
@@ -185,8 +203,6 @@ Non-compliance may result in corrective action, suspension of use, or contract t
 [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud-security)
 
 [UK-US Data Access Agreement](https://www.gov.uk/government/publications/uk-us-data-access-agreement-factsheet)
-
-### Legislation
 
 [US CLOUD Act](https://www.congress.gov/bill/115th-congress/senate-bill/2383)
 

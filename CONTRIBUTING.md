@@ -6,6 +6,24 @@ How to propose, submit, and review contributions to the AI Engineering Lab repos
 
 Thank you for your interest in improving this repository. Contributions from across government help keep these materials current, comprehensive, and practically useful.
 
+## Contents
+
+[Before you contribute](#before-you-contribute)
+
+[Accessibility requirements](#accessibility-requirements)
+
+[Contribution process](#contribution-process)
+
+[Quality checklist](#quality-checklist)
+
+[Recognition](#recognition)
+
+[Getting help](#getting-help)
+
+[Intellectual property](#intellectual-property)
+
+[Further reading](#further-reading)
+
 ## Before you contribute
 
 ### Who can contribute
@@ -252,14 +270,16 @@ Contributions must follow standards on intellectual property, making sure that:
 
 Contributions are published under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
 
-## Related documents
+## Further reading
 
-- [README.md](README.md) - repository overview
-- [Repository structure](REPOSITORY-STRUCTURE.md) - repository structure outline
+[README](README.md) provides a repository overview.
 
-## References
+[Repository structure](REPOSITORY-STRUCTURE.md) outlines the repository structure.
 
-- [GOV.UK Content Design Guide](https://www.gov.uk/guidance/content-design)
-- [GOV.UK Writing for GOV.UK](https://www.gov.uk/guidance/content-design/writing-for-gov-uk)
-- [Civil Service Code](https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code)
-- [Open Government Licence](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
+[GOV.UK Content Design Guide](https://www.gov.uk/guidance/content-design)
+
+[GOV.UK Writing for GOV.UK](https://www.gov.uk/guidance/content-design/writing-for-gov-uk)
+
+[Civil Service Code](https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code)
+
+[Open Government Licence](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)

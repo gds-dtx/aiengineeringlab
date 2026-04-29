@@ -120,20 +120,20 @@ If results are not what you expected:
 
 ---
 
-## Tool specific notes
+## Tool-specific notes
 
 ### GitHub Copilot
 You should use:
 - inline suggestions work best with clear code context
 - comments to guide suggestions
 - chat mode for longer explanations and generation
-- Copilot Edits for multi file changes
+- Copilot Edits for multi-file changes
 
 ### Claude Code
 Claude Code:
 - excels at longer, more complex prompts
 - is strong at explaining and documenting
-- has good multi file context awareness
+- has good multi-file context awareness
 - can use CLAUDE.md for project context
 
 ### Amazon Q Engineer:
@@ -154,9 +154,14 @@ Gemini Code Assist:
 
 ## Further reading
 
-- [Prompt template](prompt-template.md)
-- [Context engineering playbook](../playbooks/context-engineering.md)
-- [AI-SDLC playbook](../playbooks/ai-sdlc-playbook.md)
-- [Guardrails base](../governance/guardrails-base.md)
-- [GitHub Copilot documentation](https://docs.github.com/en/copilot)
-- [Prompt engineering guide](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview)
+[Prompt template](prompt-template.md)
+
+[Context engineering playbook](../playbooks/context-engineering.md)
+
+[AI-SDLC playbook](../playbooks/ai-sdlc-playbook.md)
+
+[Guardrails base](../governance/guardrails-base.md)
+
+[GitHub Copilot documentation](https://docs.github.com/en/copilot)
+
+[Prompt engineering guide](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview)

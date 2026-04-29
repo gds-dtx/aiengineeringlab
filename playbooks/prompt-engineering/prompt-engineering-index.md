@@ -3,7 +3,7 @@
 
 # Prompt engineering for AI code assistants: a complete playbook
 
-Practical techniques for prompting AI code assistants to get consistent, high quality results that match your team's standards.
+Practical techniques for prompting AI code assistants to get consistent, high-quality results that match your team's standards.
 
 ## Purpose
 
@@ -11,11 +11,11 @@ AI code assistants are powerful tools, but they require structured approaches to
 
 Use this playbook to:
 
-- write prompts that produce production ready code
-- apply proven techniques (chain of thought, few shot, reverse prompting) to your daily work
+- write prompts that produce production-ready code
+- apply proven techniques (chain of thought, few-shot, reverse prompting) to your daily work
 - maintain code quality and consistency when using AI
 - understand when and how to use AI effectively across the development lifecycle
-- establish team standards for AI assisted development
+- establish team standards for AI-assisted development
 
 ## Who this applies to
 
@@ -28,11 +28,11 @@ This playbook applies to all technical personnel using AI code assistants on gov
 
 ## Introduction
 
-Your colleague asks an AI assistant to build an authentication system and gets production ready code in minutes. You ask the same assistant for the same thing and get something that barely compiles.
+Your colleague asks an AI assistant to build an authentication system and gets production-ready code in minutes. You ask the same assistant for the same thing and get something that barely compiles.
 
 The difference is simpler than you might think: effective prompting relies on how you communicate your requirements to the AI.
 
-Whether you are generating code, learning new concepts, exploring design options or debugging issues, the quality of AI assistance depends on how you ask for it. This playbook teaches you prompt engineering and the structured techniques for getting consistent, high quality results from AI assistants across all these tasks.
+Whether you are generating code, learning new concepts, exploring design options or debugging issues, the quality of AI assistance depends on how you ask for it. This playbook teaches you prompt engineering and the structured techniques for getting consistent, high-quality results from AI assistants across all these tasks.
 
 ### The AI adoption challenge
 
@@ -45,7 +45,7 @@ Engineers get vastly different quality outputs depending on their prompts and un
 Each team develops their own approach, with some embracing AI assistants, others avoiding them entirely, with wildly varying code quality as a result.
 
 #### 3. Architecture drift
-AI generated code does not follow company standards, leading to inconsistent patterns across the codebase.
+AI-generated code does not follow company standards, leading to inconsistent patterns across the codebase.
 
 #### 4. Knowledge silos
 When someone figures out how to get great results, that knowledge stays trapped in their head instead of spreading across teams.
@@ -57,7 +57,7 @@ These organisational challenges start with individual engineers not knowing how 
 This playbook teaches you the foundational prompt engineering techniques. You will learn how to:
 
 - write prompts that give AI the context it needs
-- use proven patterns like chain of thought and few shot prompting
+- use proven patterns like chain of thought and few-shot prompting
 - adapt your prompting approach to different tasks
 - recognise when AI is helping and when it is not
 
@@ -67,7 +67,7 @@ For individual engineers: follow the techniques through your development workflo
 
 For team leads: use this as a training resource. Share relevant sections with your team, establish standards based on these patterns and create your own examples that match your tech stack.
 
-For organisations: adapt these techniques to your context. Create internal guidelines, build example libraries and establish review processes that ensure AI generated code meets your standards.
+For organisations: adapt these techniques to your context. Create internal guidelines, build example libraries and establish review processes that ensure AI-generated code meets your standards.
 
 Throughout this guide, you will see examples that demonstrate core principles. While the specific technologies may differ from yours, the prompting patterns and techniques apply universally.
 
@@ -90,7 +90,7 @@ Part 3: Prompt engineering for common development tasks
 - [Use case 2: 'This code is a mess - help me refactor'](./prompt-engineering-use-cases.md#use-case-2-this-code-is-a-mess-help-me-refactor)
 - [Use case 3: 'Something's broken - help me debug'](./prompt-engineering-use-cases.md#use-case-3-somethings-broken-help-me-debug)
 - [When AI gets it wrong (and what to do about it)](./prompt-engineering-use-cases.md#when-ai-gets-it-wrong-and-what-to-do-about-it)
-- [AI generated code checklist](./prompt-engineering-use-cases.md#ai-generated-code-checklist)
+- [AI-generated code checklist](./prompt-engineering-use-cases.md#ai-generated-code-checklist)
 
 Part 4: Prompt engineering for testing: getting comprehensive coverage
 - [Types of tests to generate](./prompt-engineering-testing.md#types-of-tests-to-generate)
@@ -112,7 +112,7 @@ Part 5: Prompt engineering for code documentation
 
 Part 6: Prompt engineering for AI coding agents
 - [Chat vs agentic systems: how to prompt each](./prompt-engineering-agents.md#chat-vs-agentic-systems-how-to-prompt-each)
-- [The human in the loop principle](./prompt-engineering-agents.md#the-human-in-the-loop-principle)
+- [The human-in-the-loop principle](./prompt-engineering-agents.md#the-human-in-the-loop-principle)
 - [How to prompt agents safely](./prompt-engineering-agents.md#how-to-prompt-agents-safely)
 - [Tech debt from AI](./prompt-engineering-agents.md#tech-debt-from-ai)
 
@@ -123,8 +123,8 @@ Part 6: Prompt engineering for AI coding agents
 1. Provide comprehensive context including tech stack, constraints and patterns to help AI understand your requirements.
 2. Build functionality iteratively in layers rather than expecting perfect code immediately.
 3. Match your prompting technique to task complexity and specific requirements.
-4. Use chat based AI for learning and critical code, and agents for repetitive mechanical tasks.
-5. Always understand, test and review all AI generated code before accepting it.
+4. Use chat-based AI for learning and critical code, and agents for repetitive mechanical tasks.
+5. Always understand, test and review all AI-generated code before accepting it.
 6. Step away when AI stops helping after several iterations or when tasks are faster without AI.
 
 ## Solving the adoption challenges
@@ -135,10 +135,10 @@ Remember the problems we started with? Here is how these techniques solve them.
 Fixed by establishing standard prompting patterns. When everyone uses the human test and provides rich context, output quality becomes consistent.
 
 #### 2. No shared standards
-Create a team prompting guide based on these techniques. Share example prompts that work well. Review AI generated code in pull requests just like human code.
+Create a team prompting guide based on these techniques. Share example prompts that work well. Review AI-generated code in pull requests just like human code.
 
 #### 3. Architecture drift
- Use few shot prompting with your existing patterns. AI matches your team's style when you show it examples.
+ Use few-shot prompting with your existing patterns. AI matches your team's style when you show it examples.
 
 #### 4. Knowledge silos
 Document your effective prompts. When someone discovers a great technique, add it to your team's playbook.
@@ -167,25 +167,33 @@ AI coding assistants do not replace the need for skill, they amplify it. The bet
 
 The future belongs to engineers who can think clearly, communicate precisely and use AI effectively.
 
-## Useful resources
+## Further reading
 
 This playbook works best when combined with the wider resources in this repository.
 
 ### Start here
-- [Maturity assessment framework](../../assessment/maturity-assessment-framework.md) - understand your starting point
-- [AI tool comparative guidance](../../manager-tool-guides/comparative-guidance.md) - choose an assistant and rollout approach
+
+[Maturity assessment framework](../../assessment/maturity-assessment-framework.md) helps you understand your starting point.
+
+[AI tool comparative guidance](../../manager-tool-guides/comparative-guidance.md) helps you choose an assistant and rollout approach.
 
 ### Prompts and reuse
-- [Prompt library](../../prompt-library/) - reusable prompts by task and language
-- [Prompt template](../../prompt-library/prompt-template.md) - standard structure for new prompts
+
+[Prompt library](../../prompt-library/) provides reusable prompts by task and language.
+
+[Prompt template](../../prompt-library/prompt-template.md) provides the standard structure for new prompts.
 
 ### Quality and governance
-- [Measurement playbook](../../quality-metrics/measurement-playbook.md) - track progress and demonstrate value
+
+[Measurement playbook](../../quality-metrics/measurement-playbook.md) helps you track progress and demonstrate value.
 
 ### Next playbooks
-- [AI SDLC playbook](../ai-sdlc-playbook.md) - embed AI into delivery practices
-- [Context engineering](../context-engineering.md) - advanced context techniques
+
+[AI SDLC playbook](../ai-sdlc-playbook.md) covers embedding AI into delivery practices.
+
+[Context engineering](../context-engineering.md) covers advanced context techniques.
 
 ### Tool guides (pick the one you use)
-- [GitHub Copilot guide](../../manager-tool-guides/github-copilot/)
+
+[GitHub Copilot guide](../../manager-tool-guides/github-copilot/)
 

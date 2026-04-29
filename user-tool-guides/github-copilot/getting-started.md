@@ -3,6 +3,18 @@
 
 # Getting started with GitHub Copilot
 
+## Contents
+
+[Access, licensing and public sector considerations](#1-access-licensing-and-public-sector-considerations)
+
+[Set up GitHub Copilot in your IDE](#2-set-up-github-copilot-in-your-ide)
+
+[Generate code in your IDE](#3-generate-code-in-your-ide)
+
+[Use Copilot safely and responsibly](#4-use-copilot-safely-and-responsibly)
+
+[Next steps](#5-next-steps)
+
 This guide helps you start using GitHub Copilot in a development environment. It is written for developers with a range of experience.
 
 The guide is split into clear steps. Follow them in order.

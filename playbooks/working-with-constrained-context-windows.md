@@ -471,17 +471,18 @@ There is no universal answer. The best approach is to match the model to the tas
 
 ### Internal resources
 
-Use the:
+[Context engineering playbook](context-engineering.md) covers broader context management strategies including prompt techniques and repository setup.
 
-- [Context engineering playbook](context-engineering.md) or broader context management strategies including prompt techniques and repository setup
-- [Model selection guide](model-selection.md) for choosing models based on task type, cost and capability
-- [AI-SDLC playbook](ai-sdlc-playbook.md) for integrating AI into the development lifecycle
-- [Prompt library](../prompt-library/) for ready-to-use prompt patterns
+[Model selection guide](model-selection.md) covers choosing models based on task type, cost and capability.
+
+[AI-SDLC playbook](ai-sdlc-playbook.md) covers integrating AI into the development lifecycle.
+
+[Prompt library](../prompt-library/) provides ready-to-use prompt patterns.
 
 ### External resources
 
-Use the:
+[OpenAI tokeniser tool](https://platform.openai.com/tokenizer) helps estimate token counts for your prompts.
 
-- [OpenAI tokeniser tool](https://platform.openai.com/tokenizer) to estimate token counts for your prompts
-- [Anthropic token counting documentation](https://docs.anthropic.com/en/docs/build-with-claude/token-counting) for how to count tokens with Claude models
-- [Hugging Face tokenisers](https://huggingface.co/docs/tokenizers) to understand tokenisation for open-source models
+[Anthropic token counting documentation](https://docs.anthropic.com/en/docs/build-with-claude/token-counting) covers how to count tokens with Claude models.
+
+[Hugging Face tokenisers](https://huggingface.co/docs/tokenizers) helps you understand tokenisation for open-source models.

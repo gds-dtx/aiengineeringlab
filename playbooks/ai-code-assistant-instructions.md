@@ -3,6 +3,32 @@
 
 # Using instruction files for AI code assistants
 
+## Contents
+
+[Executive summary](#executive-summary)
+
+[Scope and audience](#scope-and-audience)
+
+[Safety and handling](#safety-and-handling)
+
+[Introduction](#introduction)
+
+[Government standards integration](#government-standards-integration)
+
+[Levels of custom instructions](#levels-of-custom-instructions)
+
+[Tool support and file locations](#tool-support-and-file-locations)
+
+[What to include in instruction files](#what-to-include-in-instruction-files)
+
+[Template structures](#template-structures)
+
+[Maintaining instruction files](#maintaining-instruction-files)
+
+[Getting started](#getting-started)
+
+[Further reading](#further-reading)
+
 ## Executive summary
 
 This playbook provides practical guidance on creating and managing instruction files for AI code assistants across government projects. Instruction files ensure AI tools understand your project's standards, compliance requirements and coding patterns, reducing the need to repeat context in every interaction.
@@ -535,19 +561,26 @@ For government standards, refer to the [GDS Service Manual](https://www.gov.uk/s
 
 ### Official documentation
 
-- [Configure Custom Instructions for GitHub Copilot](https://docs.github.com/en/copilot/customizing-copilot/configure-custom-instructions-for-github-copilot) gives an overview of custom instructions at all levels
-- [Adding Personal Custom Instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-personal-custom-instructions-for-github-copilot) covers how to set up your personal preferences
-- [Adding Repository Custom Instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot) gives a detailed guide to repository level instructions
-- [Adding Organisation Custom Instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-organization-custom-instructions-for-github-copilot) covers organisation wide standards
+[Configure Custom Instructions for GitHub Copilot](https://docs.github.com/en/copilot/customizing-copilot/configure-custom-instructions-for-github-copilot) gives an overview of custom instructions at all levels.
+
+[Adding Personal Custom Instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-personal-custom-instructions-for-github-copilot) covers how to set up your personal preferences.
+
+[Adding Repository Custom Instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot) gives a detailed guide to repository level instructions.
+
+[Adding Organisation Custom Instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-organization-custom-instructions-for-github-copilot) covers organisation wide standards.
 
 ### Government standards
 
-- [GDS Service Manual](https://www.gov.uk/service-manual) gives guidance for building government services
-- [Government Digital Service Standard](https://www.gov.uk/service-manual/service-standard) describes the 14-point standard
-- [GOV.UK Design System](https://design-system.service.gov.uk/) covers design patterns and components
-- [WCAG 2.1 Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/) provides accessibility guidelines
-- [NCSC Cloud Security Guidance](https://www.ncsc.gov.uk/collection/cloud-security) describes security principles for cloud
+[GDS Service Manual](https://www.gov.uk/service-manual) gives guidance for building government services.
+
+[Government Digital Service Standard](https://www.gov.uk/service-manual/service-standard) describes the 14-point standard.
+
+[GOV.UK Design System](https://design-system.service.gov.uk/) covers design patterns and components.
+
+[WCAG 2.1 Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/) provides accessibility guidelines.
+
+[NCSC Cloud Security Guidance](https://www.ncsc.gov.uk/collection/cloud-security) describes security principles for cloud.
 
 ### Example instruction files
 
-- [GitHub Awesome Copilot - Instructions Examples](https://github.com/github/awesome-copilot/tree/main/instructions) provides a collection of real-world copilot-instructions.md examples from various projects
+[GitHub Awesome Copilot - Instructions Examples](https://github.com/github/awesome-copilot/tree/main/instructions) provides a collection of real-world copilot-instructions.md examples from various projects.

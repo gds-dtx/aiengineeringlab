@@ -244,12 +244,20 @@ You can attach this schedule to framework call off contracts. If there is a conf
 
 ## Further reading
 
-- the Crown Commercial Service's (CCS) [G-Cloud 14](https://www.crowncommercial.gov.uk/agreements/RM1557.14)  of the G-Cloud framework - provides the procurement framework within which these contract requirements sit
-- UK government's [PPN 011: The Commercial Playbooks](https://www.gov.uk/government/publications/ppn-011-the-commercial-playbooks) - provides the procurement framework within which these contract requirements sit
-- NCSC's [Supply chain security guidance](https://www.ncsc.gov.uk/collection/supply-chain-security) - covers the broader risk management approach for third-party dependencies
-- [Security policies](../security/security-policies.md) - covering PS-09 and PS-11
-- [Data sovereignty and jurisdiction](../policy/data-sovereignty-and-jurisdiction.md) - guidance for data residency and retention requirements
-- [Model assurance and transparency](model-assurance-and-transparency.md) - vendor transparency requirements
-- [Comparative guidance](../manager-tool-guides/comparative-guidance.md) - for vendor evaluation
-- [Risk register template](risk-register-template.md) - for vendor risk documentation
-- [DPIA guidance](../policy/dpia-ai-coding-assistants.md) - for data protection requirements
+The Crown Commercial Service's (CCS) [G-Cloud 14](https://www.crowncommercial.gov.uk/agreements/RM1557.14) of the G-Cloud framework provides the procurement framework within which these contract requirements sit.
+
+The UK government's [PPN 011: The Commercial Playbooks](https://www.gov.uk/government/publications/ppn-011-the-commercial-playbooks) provides the procurement framework within which these contract requirements sit.
+
+The NCSC's [Supply chain security guidance](https://www.ncsc.gov.uk/collection/supply-chain-security) covers the broader risk management approach for third-party dependencies.
+
+[Security policies](../security/security-policies.md) covers PS-09 and PS-11.
+
+[Data sovereignty and jurisdiction](../policy/data-sovereignty-and-jurisdiction.md) provides guidance for data residency and retention requirements.
+
+[Model assurance and transparency](model-assurance-and-transparency.md) covers vendor transparency requirements.
+
+[Comparative guidance](../manager-tool-guides/comparative-guidance.md) supports vendor evaluation.
+
+[Risk register template](risk-register-template.md) supports vendor risk documentation.
+
+[DPIA guidance](../policy/dpia-ai-coding-assistants.md) covers data protection requirements.

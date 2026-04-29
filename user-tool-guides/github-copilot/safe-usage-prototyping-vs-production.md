@@ -748,7 +748,9 @@ For UK government departments, configure GitHub Copilot enterprise policies as f
 
 ### Content exclusion patterns for production
 
-Configure GitHub Copilot to exclude these repository patterns from providing suggestions in production environments.
+Enterprise or organisation administrators can configure GitHub Copilot content exclusions to prevent sensitive repository patterns from being used in suggestions. See [configuring content exclusions for GitHub Copilot](https://docs.github.com/en/copilot/how-tos/configure-content-exclusion/exclude-content-from-copilot). This requires a Copilot Business or Copilot Enterprise plan.
+
+Recommended patterns to exclude in production environments:
 
 ```
 **/secrets/**
@@ -803,27 +805,38 @@ Escalate immediately if you identify:
 
 ### Internal documentation
 
-- [Base guardrails](../../governance/guardrails-base.md) defines foundational security controls for AI tools
-- [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md) covers integrating AI across development lifecycle
-- [Incident response playbook](../../governance/incident-response-playbook.md) covers responding to AI tool incidents
-- [GitHub Copilot manager guide](../../manager-tool-guides/github-copilot/README.md) defines implementation guidance for managers
+[Base guardrails](../../governance/guardrails-base.md) defines foundational security controls for AI tools.
+
+[AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md) covers integrating AI across development lifecycle.
+
+[Incident response playbook](../../governance/incident-response-playbook.md) covers responding to AI tool incidents.
+
+[GitHub Copilot manager guide](../../manager-tool-guides/github-copilot/README.md) defines implementation guidance for managers.
 
 ### Government guidance
 
-- [Government Service Manual](https://www.gov.uk/service-manual) sets principles for digital services
-- [Government Service Standard](https://www.gov.uk/service-manual/service-standard) sets a point checklist for services
-- [Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice) provides technology decisions guidance
-- [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications) advises on data classification levels
-- [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles) describes cloud security standards
+[Government Service Manual](https://www.gov.uk/service-manual) sets principles for digital services.
+
+[Government Service Standard](https://www.gov.uk/service-manual/service-standard) sets a point checklist for services.
+
+[Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice) provides technology decisions guidance.
+
+[Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications) advises on data classification levels.
+
+[NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles) describes cloud security standards.
 
 ### GitHub resources
 
-- [GitHub Copilot Trust Center](https://resources.github.com/copilot-trust-center/) describes data security and privacy
-- [GitHub Copilot Business Data Security](https://docs.github.com/en/copilot/overview-of-github-copilot/about-github-copilot-business#data-security) explains enterprise security features
-- [Managing GitHub Copilot Policies](https://docs.github.com/en/copilot/managing-copilot/managing-policies-for-copilot-in-your-organization) advises on policy configuration
+[GitHub Copilot Trust Center](https://resources.github.com/copilot-trust-center/) describes data security and privacy.
+
+[GitHub Copilot Business Data Security](https://docs.github.com/en/copilot/overview-of-github-copilot/about-github-copilot-business#data-security) explains enterprise security features.
+
+[Managing GitHub Copilot Policies](https://docs.github.com/en/copilot/managing-copilot/managing-policies-for-copilot-in-your-organization) advises on policy configuration.
 
 ### AI security resources
 
-- [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) describes top security risks for language models
-- [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) describes autonomous AI system security
-- [NCSC AI and Machine Learning Security](https://www.ncsc.gov.uk/collection/machine-learning) provides UK AI security guidance
+[OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) describes top security risks for language models.
+
+[OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) describes autonomous AI system security.
+
+[NCSC AI and Machine Learning Security](https://www.ncsc.gov.uk/collection/machine-learning) provides UK AI security guidance.

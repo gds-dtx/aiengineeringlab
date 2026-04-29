@@ -5,6 +5,26 @@
 
 A kgCO2e analysis of different AI coding assistants.
 
+## Contents
+
+[Introduction](#introduction)
+
+[Understanding kgCO2e](#understanding-kgco2e)
+
+[Carbon emissions from inference and training](#carbon-emissions-from-inference-and-training)
+
+[Estimated carbon footprint by tool](#estimated-carbon-footprint-by-tool)
+
+[Comparative analysis](#comparative-analysis)
+
+[Factors affecting actual emissions](#factors-affecting-actual-emissions)
+
+[Sustainability recommendations](#sustainability-recommendations)
+
+[Limitations and caveats](#limitations-and-caveats)
+
+[Conclusion](#conclusion)
+
 ## Introduction
 
 You need to understand the carbon footprint of AI coding assistants to support sustainable technology decisions. This document sets out carbon emission estimates in kilograms of CO2 equivalent for four AI tools used in the DSIT AI Engineering Lab programme. These tools are GitHub Copilot, Amazon Q, Claude Code and Gemini Code Assist.
@@ -59,14 +79,16 @@ Deployment features include:
 - smaller models that support inline suggestions
 - chat mode that uses larger models and increases emissions
 
-#### References
+### References
+[GitHub Changelog 2025](https://github.blog/changelog/) documents GPT-4o, GPT-4.1 and GPT-4.5 model deployments.
+[Sam Altman on ChatGPT energy](https://www.devsustainability.com/p/chatgpt-energy-usage-is-034-wh-per) reports 0.34 Wh per query.
 
-- [GitHub Changelog 2025](https://github.blog/changelog/) documents GPT-4o, GPT-4.1 and GPT-4.5 model deployments
-- [Sam Altman on ChatGPT energy](https://www.devsustainability.com/p/chatgpt-energy-usage-is-034-wh-per) reports 0.34 Wh per query
-- [Dev Sustainability analysis](https://www.devsustainability.com/p/chatgpt-energy-usage-is-034-wh-per)
-- [Data Center Dynamics coverage](https://www.datacenterdynamics.com/en/news/sam-altman-chatgpt-queries-consume-034-watt-hours-of-electricity-and-0000085-gallons-of-water/)
-- [Towards Data Science commentary](https://towardsdatascience.com/lets-analyze-openais-claims-about-chatgpt-energy-use/)
-- [Green My LLM](https://arxiv.org/abs/2411.11892) analyzes energy consumption in code assistants
+[Dev Sustainability analysis](https://www.devsustainability.com/p/chatgpt-energy-usage-is-034-wh-per)
+
+[Data Center Dynamics coverage](https://www.datacenterdynamics.com/en/news/sam-altman-chatgpt-queries-consume-034-watt-hours-of-electricity-and-0000085-gallons-of-water/)
+[Towards Data Science commentary](https://towardsdatascience.com/lets-analyze-openais-claims-about-chatgpt-energy-use/)
+
+[Green My LLM](https://arxiv.org/abs/2411.11892) which analyses energy consumption in code assistants.
 
 ### Amazon Q
 
@@ -90,14 +112,15 @@ Deployment features include:
 - regional variation in carbon intensity
 - optimisation for inference efficiency
 
-#### References
-
+### References
 Amazon's sustainability reports provide general commitments and AWS renewable energy targets but no per-query emissions data for Amazon Q. 
+[Amazon sustainability](https://sustainability.aboutamazon.com/)
 
-- [Amazon sustainability](https://sustainability.aboutamazon.com/)
-- [2024 Amazon Sustainability Report](https://sustainability.aboutamazon.com/2024-amazon-sustainability-report.pdf)
-- [Sustainability in the Cloud](https://sustainability.aboutamazon.com/environment/the-cloud)
-- [Amazon sustainability progress](https://sustainability.aboutamazon.com/progress).
+[2024 Amazon Sustainability Report](https://sustainability.aboutamazon.com/2024-amazon-sustainability-report.pdf)
+
+[Sustainability in the Cloud](https://sustainability.aboutamazon.com/environment/the-cloud)
+
+[Amazon sustainability progress](https://sustainability.aboutamazon.com/progress)
 
 ### Claude Code
 
@@ -124,8 +147,7 @@ Deployment features include:
 - renewable energy commitments
 - limited emissions reporting
 
-#### Reference
-
+### References
 [How Hungry is AI: Benchmarking Energy, Water, and Carbon Footprint of LLM Inference](https://www.researchgate.net/publication/391741710_How_Hungry_is_AI_Benchmarking_Energy_Water_and_Carbon_Footprint_of_LLM_Inference) benchmarks Claude models across energy, water and carbon metrics.
 
 ### Gemini Code Assist
@@ -154,11 +176,14 @@ Deployment features include:
 - renewable energy matched to 100% in 2023
 - detailed carbon accounting including PUE and WUE
 
-#### References
+### References
 
-- [Measuring the environmental impact of AI inference](https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference) reports median Gemini Apps prompt of 0.24 Wh energy and 0.03 gCO2e emissions
-- [Measuring the environmental impact of delivering AI at Google Scale](https://arxiv.org/pdf/2508.15734) covers PUE, WUE and full infrastructure overhead methodology
-- [In a first, Google has released data on how much energy an AI prompt uses](https://www.technologyreview.com/2025/08/21/1122288/google-gemini-ai-energy/) analyzes Google's disclosure approach
+[Measuring the environmental impact of AI inference](https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference) which reports median Gemini Apps prompt of 0.24 Wh energy and 0.03 gCO2e emissions. 
+
+[Measuring the environmental impact of delivering AI at Google Scale](https://arxiv.org/pdf/2508.15734) covering PUE, WUE and full infrastructure overhead methodology.
+
+[Google has released data on how much energy an AI prompt uses](https://www.technologyreview.com/2025/08/21/1122288/google-gemini-ai-energy/) which analyses Google's disclosure approach.
+
 ## Comparative analysis
 
 ### Emissions ranking from lowest to highest for 10,000 interactions

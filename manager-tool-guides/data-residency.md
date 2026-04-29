@@ -36,8 +36,7 @@ Code context and prompts may be processed in EU or US regions. This meets many E
 GitHub Copilot is EU resident, not UK resident.
 
 ### References
-
-- [GitHub announcement on EU data residency](https://github.com/newsroom/press-releases/data-residency-in-the-eu)
+For the official announcement, read the [GitHub announcement on EU data residency](https://github.com/newsroom/press-releases/data-residency-in-the-eu).
 
 ## Amazon Kiro
 
@@ -58,9 +57,8 @@ Residency is implicit rather than contractually guaranteed. This creates a weak 
 Amazon Kiro is UK capable in practice, but without any explicit UK residency guarantee.
 
 ### References
-
-- [Transform DevOps practice with Kiro](https://aws.amazon.com/blogs/publicsector/transform-devops-practice-with-kiro-ai-powered-agents/)
-- [Kiro launch and positioning](https://www.geekwire.com/2025/amazons-surprise-indie-hit-kiro-launches-broadly-in-bid-to-reshape-ai-powered-software-development/)
+[Transform DevOps practice with Kiro](https://aws.amazon.com/blogs/publicsector/transform-devops-practice-with-kiro-ai-powered-agents/)
+[Kiro launch and positioning](https://www.geekwire.com/2025/amazons-surprise-indie-hit-kiro-launches-broadly-in-bid-to-reshape-ai-powered-software-development/)
 
 ## Amazon Q developer and business
 
@@ -84,10 +82,10 @@ With strong AWS governance controls, Amazon Q can meet UK residency requirements
 Amazon Q UK residency is achievable, but configuration and governance are required.
 
 ### References
+[EU region launch announcement](https://aws-news.com/article/01963573-891b-093c-5176-af1477748270)
 
-- [EU region launch](https://aws-news.com/article/01963573-891b-093c-5176-af1477748270)
-- [Amazon Q Business Europe and data sovereignty](https://www.itpro.com/technology/artificial-intelligence/amazon-q-business-europe-data-sovereignty)
-- [Amazon Q in QuickSight](https://community.amazonquicksight.com/t/amazon-q-in-quicksight-is-now-available-in-5-additional-regions/34268)
+[Amazon Q Business Europe and data sovereignty](https://www.itpro.com/technology/artificial-intelligence/amazon-q-business-europe-data-sovereignty)
+ [Amazon Q in QuickSight regional availability](https://community.amazonquicksight.com/t/amazon-q-in-quicksight-is-now-available-in-5-additional-regions/34268)
 
 ## Gemini Code Assist enterprise on Google Cloud
 
@@ -108,9 +106,9 @@ Controls are explicit, documented, and enforceable through Google Cloud configur
 Gemini Code is UK resident for storage and processing. High confidence option for regulated environments.
 
 ### References
+[Google Cloud blog: UK ML processing for Gemini](https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/data-residency-machine-learning-processing-uk/)
 
-- [Google Cloud blog: UK ML processing for Gemini](https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/data-residency-machine-learning-processing-uk/)
-- [IT Pro: Google Cloud announces UK Gemini residency](https://www.itpro.com/cloud/cloud-computing/google-cloud-announces-new-data-residency-flexibility-for-uk-firms-accelerator-for-regional-startups)
+[IT Pro: Google Cloud announces UK Gemini residency](https://www.itpro.com/cloud/cloud-computing/google-cloud-announces-new-data-residency-flexibility-for-uk-firms-accelerator-for-regional-startups)
 
 ## Claude Code
 
@@ -129,6 +127,5 @@ By default, when Claude Code is hosted and managed by Anthropic, customer data m
 Not UK-resident today. [EU regional support](https://claude.com/regional-compliance) is planned but not yet in GA.
 
 ### References
-
-- [Anthropic as subprocessor](https://learn.microsoft.com/en-us/copilot/microsoft-365/connect-to-ai-subprocessor)
+[Anthropic as subprocessor](https://learn.microsoft.com/en-us/copilot/microsoft-365/connect-to-ai-subprocessor)
 

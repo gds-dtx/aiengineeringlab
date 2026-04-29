@@ -103,26 +103,7 @@ Claude Code is not designed for:
 
 ## How it compares with other AI code assistants
 
-For a detailed comparison of Claude Code with other AI code assistants, see the [comparative guidance](../comparative-guidance.md).
-
-### Quick comparison
-
-| AI tool | What it is | Strengths |
-|---------|------------|-----------|
-| Claude Code | CLI and IDE assistant with deep codebase understanding | Terminal-first workflow, strong reasoning, agentic tasks, MCP integration |
-| GitHub Copilot | IDE extension with inline suggestions and agent mode | Broad IDE support, native GitHub integration, multiple model choice |
-| Amazon Kiro | Agentic IDE with specification driven workflows | Specs to design to tasks, steering files, agent hooks |
-| Amazon Q Developer | AWS coding assistant in IDE, CLI, and console | AWS native software development lifecycle support, transformation capabilities |
-| Gemini Code Assist | Google IDE extension with code suggestions | Google Cloud integration, long context window, multimodal support |
-
-### When to combine with other tools
-
-Consider combining Claude Code with other tools when:
-
-- you need GitHub Copilot for inline autocomplete during routine typing
-- you need Amazon Q for AWS specific deployment and infrastructure tasks
-- you need government MCP servers for standards compliance checking
-- you need Gemini Code Assist for Google Cloud projects
+For a detailed comparison of Claude Code with other AI coding assistants, see the [comparative guidance](../comparative-guidance.md).
 
 ## Claude Code models and task suitability
 

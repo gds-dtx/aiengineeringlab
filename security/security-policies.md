@@ -5,6 +5,28 @@
 
 > Organisational security policy for the adoption and use of AI coding assistants in UK government contexts.
 
+## Contents
+
+[Purpose](#purpose)
+
+[Document hierarchy](#document-hierarchy)
+
+[Scope and applicability](#scope-and-applicability)
+
+[Alignment with UK government frameworks](#alignment-with-uk-government-frameworks)
+
+[Roles and responsibilities](#roles-and-responsibilities)
+
+[Policy statements](#policy-statements)
+
+[Compliance and assurance](#compliance-and-assurance)
+
+[Exceptions process](#exceptions-process)
+
+[Policy review and maintenance](#policy-review-and-maintenance)
+
+[Further reading](#further-reading)
+
 ## Purpose
 
 This document establishes the security policy framework for AI coding assistant adoption across government. It defines:
@@ -761,47 +783,55 @@ Exceptions must be recorded in the risk register.
 
 ---
 
-## Related documents
+## Further reading
 
-### Governance
+[Threat model](threat-modelling.md) covers risk assessment and threat catalogue.
 
-- [threat model](threat-modelling.md) - risk assessment and threat catalogue
-- [guardrails base](../governance/guardrails-base.md) - technical control implementation
+[Guardrails base](../governance/guardrails-base.md) covers technical control implementation.
 
-### Operational
-
-- [incident response playbook](../governance/incident-response-playbook.md) - incident handling
-
----
-
-## Further information and research
+[Incident response playbook](../governance/incident-response-playbook.md) covers incident handling.
 
 ### UK Government frameworks
 
-- [UK AI Playbook for government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html)
-- [NCSC Guidelines for Secure AI System Development](https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development)
-- [NCSC Machine Learning Security Principles](https://www.ncsc.gov.uk/files/Principles-for-the-security-of-machine-learning.pdf)
-- [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications)
-- [Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice)
-- [Cyber Essentials Scheme](https://www.ncsc.gov.uk/cyberessentials/overview)
-- [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud-security)
-- [NCSC Secure Development and Deployment](https://www.ncsc.gov.uk/collection/developers-collection)
-- [NCSC Incident Management](https://www.ncsc.gov.uk/collection/incident-management)
-- [NCSC Supply Chain Security](https://www.ncsc.gov.uk/collection/supply-chain-security)
+[UK AI Playbook for government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html)
+
+[NCSC Guidelines for Secure AI System Development](https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development)
+
+[NCSC Machine Learning Security Principles](https://www.ncsc.gov.uk/files/Principles-for-the-security-of-machine-learning.pdf)
+
+[Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications)
+
+[Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice)
+
+[Cyber Essentials Scheme](https://www.ncsc.gov.uk/cyberessentials/overview)
+
+[NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud-security)
+
+[NCSC Secure Development and Deployment](https://www.ncsc.gov.uk/collection/developers-collection)
+
+[NCSC Incident Management](https://www.ncsc.gov.uk/collection/incident-management)
+
+[NCSC Supply Chain Security](https://www.ncsc.gov.uk/collection/supply-chain-security)
 
 ### Industry standards and frameworks
 
-- [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
-- [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/)
-- [OWASP LLM Top 10 (2025)](https://genai.owasp.org/llm-top-10/)
-- [Anthropic Responsible Scaling Policy](https://www.anthropic.com/news/anthropics-responsible-scaling-policy)
-- [Nist AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
-- [MITRE ATLAS](https://atlas.mitre.org/)
-- [ISO/IEC 42001:2023 AI Management System](https://www.iso.org/standard/81230.html)
+[OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
+
+[OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/)
+
+[OWASP LLM Top 10 (2025)](https://genai.owasp.org/llm-top-10/)
+
+[Anthropic Responsible Scaling Policy](https://www.anthropic.com/news/anthropics-responsible-scaling-policy)
+
+[Nist AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+
+[MITRE ATLAS](https://atlas.mitre.org/)
+
+[ISO/IEC 42001:2023 AI Management System](https://www.iso.org/standard/81230.html)
 
 ### Security resources
 
-- [GitHub Copilot Trust Center](https://resources.github.com/copilot-trust-center/)
+[GitHub Copilot Trust Center](https://resources.github.com/copilot-trust-center/)
 
 ### Version history
 

@@ -5,6 +5,32 @@
 
 Techniques for providing effective context to AI code assistants to maximise output quality and relevance.
 
+## Contents
+
+[Purpose](#purpose)
+
+[Who this applies to](#who-this-applies-to)
+
+[What is context engineering](#what-is-context-engineering)
+
+[Context hierarchy](#context-hierarchy)
+
+[Repository setup for AI assistance](#repository-setup-for-ai-assistance)
+
+[Prompt engineering techniques](#prompt-engineering-techniques)
+
+[Context window management](#context-window-management)
+
+[Team context standards](#team-context-standards)
+
+[MCP servers for government standards](#mcp-servers-for-government-standards)
+
+[Common context patterns](#common-context-patterns)
+
+[Troubleshooting poor AI output](#troubleshooting-poor-ai-output)
+
+[Further reading](#further-reading)
+
 ## Purpose
 
 AI code assistants are only as good as the context they receive. This playbook provides practical techniques for structuring your codebase, creating prompts and managing context to get the best results from AI tools.
@@ -718,17 +744,22 @@ For detailed guidance on working with models that have limited context windows, 
 
 ### Internal resources
 
-Use the: 
+[AI-SDLC playbook](ai-sdlc-playbook.md) covers integrating AI into development lifecycles.
 
-- [AI-SDLC playbook](ai-sdlc-playbook.md) for integrating AI into development lifecycles
-- [Model selection playbook](model-selection.md) for choosing the right model for tasks
-- [Working with constrained context windows](working-with-constrained-context-windows.md) to adapt workflows for models with smaller context windows
-- [Prompt library](../prompt-library/) for reusable prompt patterns
-- [Guardrails base](../governance/guardrails-base.md) for security boundaries
+[Model selection playbook](model-selection.md) covers choosing the right model for tasks.
+
+[Working with constrained context windows](working-with-constrained-context-windows.md) covers adapting workflows for models with smaller context windows.
+
+[Prompt library](../prompt-library/) provides reusable prompt patterns.
+
+[Guardrails base](../governance/guardrails-base.md) covers security boundaries.
 
 ### External resources
 
-- [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/claude/docs/prompt-engineering)
-- [GitHub Copilot documentation](https://docs.github.com/en/copilot)
-- [GOV.UK Design System](https://design-system.service.gov.uk/)
-- [GDS way coding standards](https://gds-way.cloudapps.digital/)
+[Anthropic Prompt Engineering Guide](https://docs.anthropic.com/claude/docs/prompt-engineering)
+
+[GitHub Copilot documentation](https://docs.github.com/en/copilot)
+
+[GOV.UK Design System](https://design-system.service.gov.uk/)
+
+[GDS way coding standards](https://gds-way.cloudapps.digital/)

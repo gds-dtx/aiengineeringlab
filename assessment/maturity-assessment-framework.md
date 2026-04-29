@@ -5,6 +5,30 @@
 
 > A structured approach to assessing team readiness and determining appropriate support levels for AI code assistant adoption.
 
+## Contents
+
+[Purpose](#purpose)
+
+[Assessment overview](#assessment-overview)
+
+[Maturity levels](#maturity-levels)
+
+[Assessment dimensions](#assessment-dimensions)
+
+[Scoring methodology](#scoring-methodology)
+
+[Assessment process](#assessment-process)
+
+[Support allocation guidelines](#support-allocation-guidelines)
+
+[Progression between levels](#progression-between-levels)
+
+[Special circumstances](#special-circumstances)
+
+[Reporting and governance](#reporting-and-governance)
+
+[Further reading](#further-reading)
+
 ## Purpose
 
 This framework provides a consistent method for evaluating teams before AI Engineering Lab deployment. The assessment determines:
@@ -523,13 +547,14 @@ Assessment process improvements are based on:
 
 ---
 
-## Related documents
+## Further reading
 
-- [Team Classification Guide](team-classification-guide.md) - detailed classification criteria
-- [Delivery Manager Assessment](assessment-questionnaires/delivery-manager-assessment.md) - delivery manager questionnaire
-- [Technical Lead Assessment](assessment-questionnaires/technical-lead-assessment.md) - tech lead questionnaire
-- [Individual Engineer Assessment](assessment-questionnaires/individual-engineer-assessment.md) - engineer questionnaire
+[Team Classification Guide](team-classification-guide.md) provides detailed classification criteria.
 
-## References
+[Delivery Manager Assessment](assessment-questionnaires/delivery-manager-assessment.md) is the delivery manager questionnaire.
 
-- [Government Digital Service Capability Framework](https://www.gov.uk/government/collections/digital-data-and-technology-profession-capability-framework)
+[Technical Lead Assessment](assessment-questionnaires/technical-lead-assessment.md) is the tech lead questionnaire.
+
+[Individual Engineer Assessment](assessment-questionnaires/individual-engineer-assessment.md) is the engineer questionnaire.
+
+[Government Digital Service Capability Framework](https://www.gov.uk/government/collections/digital-data-and-technology-profession-capability-framework)

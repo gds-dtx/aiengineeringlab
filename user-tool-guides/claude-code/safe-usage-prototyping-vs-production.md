@@ -1053,30 +1053,44 @@ AI tools evolve rapidly. This guidance should be reviewed:
 
 ### Internal documentation
 
-- [Base guardrails](../../governance/guardrails-base.md) covers foundational security controls
-- [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md) describes integrating AI tools across development lifecycle
-- [incident response playbook](../../governance/incident-response-playbook.md) describes responding to AI tool incidents
-- [model selection guide](../../playbooks/model-selection.md) covers choosing appropriate AI models
-- [context engineering](../../playbooks/context-engineering.md) describes managing CLAUDE.md and project context
+[Base guardrails](../../governance/guardrails-base.md) covers foundational security controls.
+
+[AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md) describes integrating AI tools across development lifecycle.
+
+[Incident response playbook](../../governance/incident-response-playbook.md) describes responding to AI tool incidents.
+
+[Model selection guide](../../playbooks/model-selection.md) covers choosing appropriate AI models.
+
+[Context engineering](../../playbooks/context-engineering.md) describes managing CLAUDE.md and project context.
 
 ### Government guidance
 
-- [Government Service Manual](https://www.gov.uk/service-manual)
-- [Government Service Standard](https://www.gov.uk/service-manual/service-standard)
-- [Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice)
-- [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications)
-- [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles)
+[Government Service Manual](https://www.gov.uk/service-manual)
+
+[Government Service Standard](https://www.gov.uk/service-manual/service-standard)
+
+[Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice)
+
+[Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications)
+
+[NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles)
 
 ### Claude Code resources
 
-- [Anthropic documentation](https://docs.anthropic.com/)
-- [Claude Code best practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
-- [Anthropic security and privacy](https://www.anthropic.com/security)
-- [Claude regional compliance](https://claude.com/regional-compliance)
-- [CLAUDE.md guidance](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-case-guides/code-assistant)
+[Anthropic documentation](https://docs.anthropic.com/)
+
+[Claude Code best practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
+
+[Anthropic security and privacy](https://www.anthropic.com/security)
+
+[Claude regional compliance](https://claude.com/regional-compliance)
+
+[CLAUDE.md guidance](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-case-guides/code-assistant)
 
 ### AI security resources
 
-- [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) describes top security risks for large language model applications
-- [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) covers security considerations for autonomous AI systems
-- [NCSC AI and Machine Learning Security](https://www.ncsc.gov.uk/collection/machine-learning) provides UK guidance on securing AI systems
+[OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) describes top security risks for large language model applications.
+
+[OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) covers security considerations for autonomous AI systems.
+
+[NCSC AI and Machine Learning Security](https://www.ncsc.gov.uk/collection/machine-learning) provides UK guidance on securing AI systems.

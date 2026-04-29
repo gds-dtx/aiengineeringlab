@@ -5,6 +5,34 @@
 
 > Threat model for AI coding assistants in UK government contexts, covering adversarial ML, data security, supply chain and agentic AI risks.
 
+## Contents
+
+[Purpose](#purpose)
+
+[Threat model scope](#threat-model-scope)
+
+[Deployment architectures and data flows by tool type](#deployment-architectures-and-data-flows-by-tool-type)
+
+[Assets to protect](#assets-to-protect)
+
+[Threat actors](#threat-actors)
+
+[Threat catalogue](#threat-catalogue)
+
+[Risk Register summary](#risk-register-summary)
+
+[Control coverage matrix](#control-coverage-matrix)
+
+[Tool-type risk profiles](#tool-type-risk-profiles)
+
+[Emerging threats](#emerging-threats)
+
+[Threat model maintenance](#threat-model-maintenance)
+
+[Further reading](#further-reading)
+
+[Document control](#document-control)
+
 ## Purpose
 
 This document provides a structured threat model for AI coding assistant deployments in government. It identifies:
@@ -1817,48 +1845,57 @@ Threat model version control:
 
 ---
 
-## Related documents
+## Further reading
 
-### Governance
+[Security Policies](security-policies.md) covers governance mandate and policy framework.
 
-- [Security Policies](security-policies.md) - governance mandate and policy framework
-- [Guardrails Base](../governance/guardrails-base.md) - technical control implementation
-
-
----
-
-## Further information and research
+[Guardrails Base](../governance/guardrails-base.md) covers technical control implementation.
 
 ### UK Government
 
-- [NCSC Guidelines for Secure AI System Development](https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development)
-- [NCSC Supply Chain Security](https://www.ncsc.gov.uk/collection/supply-chain-security)
-- [UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government)
+[NCSC Guidelines for Secure AI System Development](https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development)
+
+[NCSC Supply Chain Security](https://www.ncsc.gov.uk/collection/supply-chain-security)
+
+[UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government)
 
 ### International standards and frameworks
 
-- [NCSC Machine Learning Security Principles](https://www.ncsc.gov.uk/files/Principles-for-the-security-of-machine-learning.pdf)
-- [MITRE ATLAS: Adversarial Tactics, Techniques and Common Knowledge for Machine Learning Systems](https://atlas.mitre.org/)
-- [MITER Adversarial ML Taxonomy (AI 100-2)](https://csrc.nist.gov/pubs/ai/100/2/e2023/final)
-- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
-- [OWASP Top 10 for Large Language Model Applications (2025)](https://genai.owasp.org/llm-top-10/)
-- [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/)
-- [OWASP Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)
-- [EU AI Act](https://ec.europa.eu/info/law/artificial-intelligence-act_en)
+[NCSC Machine Learning Security Principles](https://www.ncsc.gov.uk/files/Principles-for-the-security-of-machine-learning.pdf)
+
+[MITRE ATLAS: Adversarial Tactics, Techniques and Common Knowledge for Machine Learning Systems](https://atlas.mitre.org/)
+
+[MITER Adversarial ML Taxonomy (AI 100-2)](https://csrc.nist.gov/pubs/ai/100/2/e2023/final)
+
+[NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+
+[OWASP Top 10 for Large Language Model Applications (2025)](https://genai.owasp.org/llm-top-10/)
+
+[OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/)
+
+[OWASP Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)
+
+[EU AI Act](https://ec.europa.eu/info/law/artificial-intelligence-act_en)
 
 ### Industry research
 
-- Simon Willison – Prompt Injection Research Collection (https://simonwillison.net/tags/promptinjection/)
-- [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/)
-- [OWASP Prompt Injection Prevention Cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)
-- [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework)
-- [NIST Adversarial ML Taxonomy (AI 100-2)](https://csrc.nist.gov/pubs/ai/100/2/e2023/final)
+[Simon Willison – Prompt Injection Research Collection](https://simonwillison.net/tags/promptinjection/)
+
+[OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/)
+
+[OWASP Prompt Injection Prevention Cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)
+
+[NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework)
+
+[NIST Adversarial ML Taxonomy (AI 100-2)](https://csrc.nist.gov/pubs/ai/100/2/e2023/final)
 
 ### Research (Tier 5)
 
-- Greshake et al. (2023) - 'Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection'
-- Zou et al. (2023) - 'Universal and Transferable Adversarial Attacks on Aligned Language Models'
-- Simon Willison - Prompt Injection Research Collection (https://simonwillison.net/tags/promptinjection/)
+Greshake et al. (2023) - 'Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection'
+
+Zou et al. (2023) - 'Universal and Transferable Adversarial Attacks on Aligned Language Models'
+
+[Simon Willison - Prompt Injection Research Collection](https://simonwillison.net/tags/promptinjection/)
 
 ---
 

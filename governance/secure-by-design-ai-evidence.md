@@ -196,14 +196,24 @@ Use this checklist to prepare for assurance reviews.
 
 ## Further reading
 
-- [NCSC Secure Development and Deployment](https://www.ncsc.gov.uk/collection/developers-collection) - covers version control, peer review and security testing as core controls for development teams
-- [NCSC Cyber Security Design Principles](https://www.ncsc.gov.uk/collection/cyber-security-design-principles) - underpins the SbD approach applied throughout this document
-- [UK Government Secure by Design policy](https://www.security.gov.uk/policy-and-guidance/secure-by-design/) - sets out the cross-government requirement to embed security from the outset of service delivery
-- [Government Functional Standard GovS 007: Security](https://www.gov.uk/government/publications/government-functional-standard-govs-007-security) - provides the broader security governance framework within which this guidance sits
-- [UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government) - sets out Principle 4 on meaningful human control, which this guidance operationalises for AI-assisted development
-- [Security policies](../security/security-policies.md) - covering PS-03, PS-04 and PS-08
-- [Guardrails base](guardrails-base.md) - for code security and usage logging controls
-- [Incident response playbook](incident-response-playbook.md) - for incident classification and response procedures
-- [Non-deterministic code assurance](non-deterministic-code-assurance.md) - guidance for evidence on non-deterministic output
-- [Threat model](../security/threat-modelling.md) - for the T-CS series of code security threats
-- [AI-assisted SDLC playbook](../playbooks/ai-sdlc-playbook.md) - for SDLC integration
+[NCSC Secure Development and Deployment](https://www.ncsc.gov.uk/collection/developers-collection) covers version control, peer review and security testing as core controls for development teams.
+
+[NCSC Cyber Security Design Principles](https://www.ncsc.gov.uk/collection/cyber-security-design-principles) underpins the SbD approach applied throughout this document.
+
+[UK Government Secure by Design policy](https://www.security.gov.uk/policy-and-guidance/secure-by-design/) sets out the cross-government requirement to embed security from the outset of service delivery.
+
+[Government Functional Standard GovS 007: Security](https://www.gov.uk/government/publications/government-functional-standard-govs-007-security) provides the broader security governance framework within which this guidance sits.
+
+[UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government) sets out Principle 4 on meaningful human control, which this guidance operationalises for AI-assisted development.
+
+[Security policies](../security/security-policies.md) covers PS-03, PS-04 and PS-08.
+
+[Guardrails base](guardrails-base.md) covers code security and usage logging controls.
+
+[Incident response playbook](incident-response-playbook.md) covers incident classification and response procedures.
+
+[Non-deterministic code assurance](non-deterministic-code-assurance.md) provides guidance for evidence on non-deterministic output.
+
+[Threat model](../security/threat-modelling.md) covers the T-CS series of code security threats.
+
+[AI-assisted SDLC playbook](../playbooks/ai-sdlc-playbook.md) covers SDLC integration.

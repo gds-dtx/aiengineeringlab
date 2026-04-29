@@ -5,6 +5,34 @@
 
 > Baseline security and usage boundaries for AI Engineering Lab deployments across government.
 
+## Contents
+
+[Purpose](#purpose)
+
+[Who this applies to](#who-this-applies-to)
+
+[In this document](#in-this-document)
+
+[Data handling guardrails](#data-handling-guardrails)
+
+[Code security guardrails](#code-security-guardrails)
+
+[Usage boundary guardrails](#usage-boundary-guardrails)
+
+[Output validation guardrails](#output-validation-guardrails)
+
+[Ethical use guardrails](#ethical-use-guardrails)
+
+[Monitoring and audit guardrails](#monitoring-and-audit-guardrails)
+
+[Creating department-specific guardrails](#creating-department-specific-guardrails)
+
+[Checks before using AI coding assistants](#checks-before-using-ai-coding-assistants)
+
+[Agentic AI guardrails](#agentic-ai-guardrails)
+
+[Further reading](#further-reading)
+
 ## Purpose
 
 This document defines the foundational guardrails that apply to all AI Engineering Lab deployments. These guardrails protect government systems, data and intellectual property while enabling productive use of AI tools.
@@ -614,22 +642,32 @@ For L4 and L5 sessions, you must document the:
 - session end time
 - review attestation
 
-## References
+## Further reading
 
 ### UK government (tier 1)
 
-- [UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html) - replaces the CDDO GenAI Framework
-- [NCSC AI Security Guidance](https://www.ncsc.gov.uk/collection/ai)
-- [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud-security)
-- [NCSC Zero Trust Architecture](https://www.ncsc.gov.uk/collection/zero-trust-architecture)
-- [NCSC Secure Development Guidance](https://www.ncsc.gov.uk/collection/developers-collection)
-- [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications)
-- [Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice)
-- [Cyber Essentials Scheme](https://www.ncsc.gov.uk/cyberessentials/overview)
+[UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html) replaces the CDDO GenAI Framework.
+
+[NCSC AI Security Guidance](https://www.ncsc.gov.uk/collection/ai)
+
+[NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud-security)
+
+[NCSC Zero Trust Architecture](https://www.ncsc.gov.uk/collection/zero-trust-architecture)
+
+[NCSC Secure Development Guidance](https://www.ncsc.gov.uk/collection/developers-collection)
+
+[Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications)
+
+[Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice)
+
+[Cyber Essentials Scheme](https://www.ncsc.gov.uk/cyberessentials/overview)
 
 ### Standards (tier 3)
 
-- [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
-- [OWASP LLM Top 10 (2025)](https://genai.owasp.org/llm-top-10/)
-- [OWASP Agentic AI Threats](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/)
-- [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework)
+[OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
+
+[OWASP LLM Top 10 (2025)](https://genai.owasp.org/llm-top-10/)
+
+[OWASP Agentic AI Threats](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/)
+
+[NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework)

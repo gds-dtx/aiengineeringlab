@@ -5,6 +5,28 @@
 
 This document outlines DSIT's approach to sustainable AI. It addresses environmental impacts across the [three industry-standard greenhouse gas (GHG) protocol scopes](https://www.nationalgrid.com/stories/energy-explained/what-are-scope-1-2-3-carbon-emissions).
 
+## Contents
+
+[Environmental context](#environmental-context)
+
+[Scope 1: direct emissions](#scope-1-direct-emissions)
+
+[Scope 2: energy indirect emissions](#scope-2-energy-indirect-emissions)
+
+[Scope 3: other indirect emissions](#scope-3-other-indirect-emissions)
+
+[Programme-specific measures](#programme-specific-measures)
+
+[Government policy alignment](#government-policy-alignment)
+
+[Transparency and reporting](#transparency-and-reporting)
+
+[Continuous improvement](#continuous-improvement)
+
+[Conclusion](#conclusion)
+
+[Futher reading](#futher-reading)
+
 | Scope | Summary | Description |
 |-------|---------|-------------|
 | Scope 1 | Direct emissions | Emissions from sources owned or controlled by the organisation |

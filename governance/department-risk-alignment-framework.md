@@ -5,6 +5,28 @@
 
 > Reconciling central programme risk tolerance with departmental governance requirements for AI coding assistant adoption.
 
+## Contents
+
+[Purpose and scope](#purpose-and-scope)
+
+[Who this is for](#who-this-is-for)
+
+[The alignment challenge](#the-alignment-challenge)
+
+[Tiered adoption model](#tiered-adoption-model)
+
+[Department risk profile assessment](#department-risk-profile-assessment)
+
+[Controls escalation matrix](#controls-escalation-matrix)
+
+[Governance escalation pathway](#governance-escalation-pathway)
+
+[Consistency across government](#consistency-across-government)
+
+[Worked example](#worked-example)
+
+[Further reading](#further-reading)
+
 ## Purpose and scope
 
 The AI Engineering Lab programme operates across multiple government departments. Each department has its own governance structure and risk appetite and security posture. The Department for Science, Innovation and Technology (DSIT) leads the central programme. The central programme adopts an approach appropriate for innovation programmes that supports experimentation. Individual departments may have a lower risk appetite. Operational context or regulatory environment or governance committee requirements create this lower risk appetite.
@@ -266,26 +288,22 @@ Actions taken include:
 
 ---
 
-## Related documents
+## Further reading
 
-[Guardrails base](guardrails-base.md) for programme baseline controls and department extension mechanism.
+[Guardrails base](guardrails-base.md) covers programme baseline controls and department extension mechanism.
 
-[Security policies](../security/security-policies.md) for policy framework and governance structure.
+[Security policies](../security/security-policies.md) covers policy framework and governance structure.
 
-[Risk register template](risk-register-template.md) for risk documentation.
+[Risk register template](risk-register-template.md) covers risk documentation.
 
-[Maturity assessment framework](../assessment/maturity-assessment-framework.md) for team readiness assessment.
+[Maturity assessment framework](../assessment/maturity-assessment-framework.md) covers team readiness assessment.
 
-[Comparative guidance](../manager-tool-guides/comparative-guidance.md) for tool evaluation framework.
+[Comparative guidance](../manager-tool-guides/comparative-guidance.md) covers tool evaluation framework.
 
-## References
+[UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government)
 
-### UK government
+[Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications)
 
-[UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government).
+[Government Functional Standard GovS 007: Security](https://www.gov.uk/government/publications/government-functional-standard-govs-007-security)
 
-[Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications).
-
-[Government Functional Standard GovS 007: Security](https://www.gov.uk/government/publications/government-functional-standard-govs-007-security).
-
-[HM Treasury Orange Book for risk management](https://www.gov.uk/government/publications/orange-book).
+[HM Treasury Orange Book for risk management](https://www.gov.uk/government/publications/orange-book)
