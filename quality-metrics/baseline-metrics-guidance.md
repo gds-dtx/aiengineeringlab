@@ -257,7 +257,7 @@ If SonarQube or an equivalent is already integrated into your pipeline, export a
 Where automated collection is not possible, use structured manual methods.
 
 #### Time-on-task sampling
-Ask engineers to estimate time spent on specific task types during the baseline period. Use the task time log template below. This does not need to be exhaustive, a sample of ten comparable tasks per task type is enough.
+Ask engineers to estimate time spent on specific task types during the baseline period. Use the task time log template below. This does not need to be exhaustive, so a sample of ten comparable tasks per task type is enough.
 
 #### Sprint metrics summary
 If your issue tracker does not produce clean reports, record the main numbers at each sprint review using the sprint summary template below.

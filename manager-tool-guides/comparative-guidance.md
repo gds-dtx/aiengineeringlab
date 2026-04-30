@@ -295,7 +295,7 @@ Note: DSIT is procuring licences centrally for Phase 1. Pricing details are for 
 
 ## Category 7: models and task suitability
 
-Each tool uses different underlying models. Understanding model capabilities helps set appropriate expectations and choose the right approach. The [model selection playbook](../playbooks/model-selection.md) provides broader guidance on choosing the right AI model for different tasks.
+Each tool uses different underlying models. Understanding model capabilities helps to set appropriate expectations so that you can choose the right approach. The [model selection playbook](../playbooks/model-selection.md) provides broader guidance on choosing the right AI model for different tasks.
 
 ### Underlying models by tool
 
