@@ -41,7 +41,7 @@ Do not accept AI suggestions without understanding what the code does. Treat AI 
 
 ### Remove sensitive data before submitting prompts
 
-Check and clean code before using it with AI tools. Remove all or add relevant files to `.copilotignore`:
+Check and clean code before using it with AI tools. Remove all files that contain or reference:
 
 - secrets and credentials
 - personal data
