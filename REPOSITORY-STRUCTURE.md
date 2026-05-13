@@ -5,6 +5,12 @@
 
 This repository is the central home for all AI Engineering Lab content across government departments.
 
+## Contents
+
+[Overview](#overview)
+
+[Repository structure](#repository-structure)
+
 ## Overview
 
 This repository follows a structured approach designed to maintain clarity and scalability as the project grows.

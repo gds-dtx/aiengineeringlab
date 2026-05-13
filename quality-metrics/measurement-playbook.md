@@ -4,6 +4,30 @@
 
 > Practical guidance for implementing measurement and demonstrating the value of AI Engineering Lab adoption.
 
+## Contents
+
+[Purpose](#purpose)
+
+[Measurement principles](#measurement-principles)
+
+[Leading versus lagging indicators](#leading-versus-lagging-indicators)
+
+[Metric tiers](#metric-tiers)
+
+[Implementation steps](#implementation-steps)
+
+[Measuring specific scenarios](#measuring-specific-scenarios)
+
+[Tool-specific measurement](#tool-specific-measurement)
+
+[When metrics are not available](#when-metrics-are-not-available)
+
+[Common measurement pitfalls](#common-measurement-pitfalls)
+
+[Privacy and ethics](#privacy-and-ethics)
+
+[Further reading](#further-reading)
+
 ## Purpose
 
 This playbook provides step-by-step guidance for collecting, analysing, and reporting metrics related to AI Engineering Lab adoption. It helps teams and programmes demonstrate value, identify issues early, and make data-driven decisions.
@@ -866,7 +890,10 @@ Do not say:
 
 ## Further reading
 
-- [Maturity assessment framework](../assessment/maturity-assessment-framework.md)
-- [DORA four keys](https://dora.dev/guides/dora-metrics-four-keys/)
-- [Accelerate](https://itrevolution.com/product/accelerate/) by Forsgren, Humble and Kim
-- [GDS service manual: measuring success](https://www.gov.uk/service-manual/measuring-success)
+[Maturity assessment framework](../assessment/maturity-assessment-framework.md)
+
+[DORA four keys](https://dora.dev/guides/dora-metrics-four-keys/)
+
+[Accelerate](https://itrevolution.com/product/accelerate/) by Forsgren, Humble and Kim
+
+[GDS service manual: measuring success](https://www.gov.uk/service-manual/measuring-success)

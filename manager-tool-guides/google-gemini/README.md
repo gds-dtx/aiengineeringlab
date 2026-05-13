@@ -78,28 +78,7 @@ Gemini Code Assist tools were deprecated on 14 October 2025. External service in
 
 ## How it compares with other AI Engineering Lab tools
 
-| Capability | Gemini Code Assist | GitHub Copilot | Amazon Q Developer | Claude Code |
-|---|---|---|---|---|
-| Inline completion | Excellent | Excellent | Good | Not available |
-| Chat assistance | Excellent | Good | Good | Excellent |
-| Agent mode | Yes | Yes (preview) | Limited | Yes |
-| Codebase understanding | Up to 2 million tokens | Current file focus | Repository-wide | Multi-file context |
-| GCP integration | Native | Limited | Limited | Via MCP |
-| AWS integration | Limited | Limited | Native | Via MCP |
-| Primary use case | GCP workflows | Fast completion | AWS workflows | Reasoning tasks |
-
-Choose Gemini Code Assist when:
-
-- your team primarily works with Google Cloud Platform
-- you need agent mode for complex, multi-step coding tasks
-- you need large-scale code transformation for migrations
-- your infrastructure is GCP-based
-
-Consider combining with other tools to:
-
-- use [GitHub Copilot](../github-copilot/) for faster inline completions in non-GCP contexts
-- use Claude Code for complex architectural reasoning
-- use [Amazon Q Developer](../amazon-q/) for teams primarily working with AWS services
+For a detailed comparison of Gemini Code Assist with other AI coding assistants, see the [comparative guidance](../comparative-guidance.md).
 
 ## Government-specific considerations
 

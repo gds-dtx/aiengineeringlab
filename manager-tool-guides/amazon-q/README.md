@@ -24,7 +24,7 @@ This guide is organised into the following sections.
 1. Overview
 - [summary](#summary) - key considerations and capabilities at a glance
 - [what Amazon Q does](#what-amazon-q-does) - core capabilities and interaction modes
-- [how it compares with other AI Engineering Lab tools](#how-it-compares-with-other-ai-engineering-lab-tools) - feature comparison and when to use different tools
+- [how it compares with other AI Engineering Lab tools](#how-it-compares-with-other-ai-engineering-lab-tools) - see the consolidated comparative guidance
 - [Q models and task suitability](#q-models-and-task-suitability) - choosing the right model for different tasks
 
 2. Implementation planning
@@ -142,32 +142,7 @@ Amazon Q is not designed for:
 
 ## How it compares with other AI Engineering Lab tools
 
-| Capability | Amazon Q Engineer | GitHub Copilot | Claude Code |
-|---|---|---|---|
-| Inline completion | Good | Excellent | Not available |
-| Chat assistance | Good | Good | Excellent |
-| Codebase understanding | Repository-wide | Current file only | Multi-file context |
-| Execution capability | Limited | No | No |
-| AWS integration | Native | Limited | Via API |
-| Security scanning | Built-in | Separate tool | Not available |
-| Code transformation | Java upgrades | Not available | Manual |
-| Primary use case | AWS workflows | Fast completion | Reasoning tasks |
-
-Choose Amazon Q when:
-
-- your team primarily works with AWS services
-- you need integrated security scanning in your workflow
-- Java modernisation is a priority
-- you want built-in code review capabilities
-- your infrastructure is primarily AWS-based
-- you need assistance with AWS CLI and CloudFormation
-
-Consider combining with other tools to:
-
-- use [GitHub Copilot](../github-copilot/) for faster inline completions in non-AWS contexts
-- use Claude Code for complex architectural reasoning
-- use Claude with AWS MCP server for enhanced AWS resource management
-- combine Q's security scanning with manual security reviews
+For a detailed comparison of Amazon Q Developer with other AI coding assistants, see the [comparative guidance](../comparative-guidance.md).
 
 ### AWS MCP server for enhanced workflows
 

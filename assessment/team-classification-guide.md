@@ -5,6 +5,30 @@
 
 > Detailed criteria and guidance for classifying teams as starting, developing, or established.
 
+## Contents
+
+[Purpose](#purpose)
+
+[Classification overview](#classification-overview)
+
+[Starting classification](#starting-classification)
+
+[Developing classification](#developing-classification)
+
+[Established classification](#established-classification)
+
+[Classification decision guide](#classification-decision-guide)
+
+[Dimension-specific guidance](#dimension-specific-guidance)
+
+[Common classification scenarios](#common-classification-scenarios)
+
+[Classification communication](#classification-communication)
+
+[Reassessment and progression](#reassessment-and-progression)
+
+[Further reading](#further-reading)
+
 ## Purpose
 
 This guide provides detailed criteria for classifying teams following the [maturity assessment](maturity-assessment-framework.md). It helps assessors make consistent classification decisions and helps teams understand what their classification means.

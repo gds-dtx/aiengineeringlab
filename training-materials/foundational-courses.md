@@ -3,6 +3,20 @@
 
 # Foundational courses for AI engineering tools
 
+## Contents
+
+[GitHub Copilot](#github-copilot)
+
+[Gemini Code Assist](#gemini-code-assist)
+
+[Amazon Q Developer](#amazon-q-developer)
+
+[Kiro](#kiro)
+
+[Choosing a starting point](#choosing-a-starting-point)
+
+[What to do after the foundational course](#what-to-do-after-the-foundational-course)
+
 This page helps you find the right training for the AI engineering tools used across the programme. Each tool has a recommended foundational course and a certification path where available.
 
 Complete the foundational course for any tool you have been given a licence for. Your forward deployed engineer (FDE) or change lead can help you choose where to start.
@@ -80,7 +94,7 @@ When completing this course, pay attention to:
 - how to guide suggestions using comments and context
 - the differences between editions, especially around data privacy
 
-### Additional resources
+### Further reading
 
 For more information, see the [Gemini Code Assist documentation](https://developers.google.com/gemini-code-assist/docs/overview).
 
@@ -106,9 +120,9 @@ When completing this course, pay attention to:
 - chat commands such as /transform, /review, /doc and /test
 - the differences between free and Pro tiers around data handling
 
-### Additional resources
+### Further reading
 
-For more information, see the [Amazon Q Developer documentation](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/).
+[Amazon Q Developer documentation](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/)
 
 ## Kiro
 
@@ -128,7 +142,7 @@ When completing this course, pay attention to:
 - steering files for giving Kiro persistent knowledge about your project
 - agent hooks for automating repetitive tasks
 
-### Additional resources
+### Further reading
 
 For more information, see the [Kiro documentation](https://kiro.dev/docs/) and the MCP introduction (internal) in the mcp-servers folder in the repository.
 

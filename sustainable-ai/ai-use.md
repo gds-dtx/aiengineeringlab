@@ -7,6 +7,26 @@ Sustainable AI use is not about using AI less, it's about using it better. Clear
 
 Every AI interaction consumes compute resources. Better practices mean fewer wasted tokens, less energy consumed, and reduced environmental impact, whilst also saving time and money.
 
+## Contents
+
+[Purpose](#purpose)
+
+[Who this applies to](#who-this-applies-to)
+
+[The environmental cost of AI](#the-environmental-cost-of-ai)
+
+[Principle 1: good prompting equals fewer wasted tokens](#principle-1-good-prompting-equals-fewer-wasted-tokens)
+
+[Principle 2: right model for the right task](#principle-2-right-model-for-the-right-task)
+
+[Principle 3: build sustainable habits](#principle-3-build-sustainable-habits)
+
+[Measuring impact](#measuring-impact)
+
+[Quick reference card](#quick-reference-card)
+
+[Further reading](#further-reading)
+
 ## Purpose
 
 This guide helps developers use AI code assistants more sustainably by reducing unnecessary compute through better prompting and smarter model selection.

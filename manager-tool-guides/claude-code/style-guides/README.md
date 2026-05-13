@@ -38,6 +38,9 @@ These style guides reflect the GDS Way principle that teams should:
 
 ## Further reading
 
-- [GDS Way programming languages](https://gds-way.digital.cabinet-office.gov.uk/standards/programming-languages.html)
-- [Claude Code customisation guide](../../../user-tool-guides/claude-code/customisation-guide.md)
-- [Claude Code manager guide](../README.md)
+[GDS Way programming languages](https://gds-way.digital.cabinet-office.gov.uk/standards/programming-languages.html)
+
+[Claude Code customisation guide](../../../user-tool-guides/claude-code/customisation-guide.md)
+
+[Claude Code manager guide](../README.md)
+

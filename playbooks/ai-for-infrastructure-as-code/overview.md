@@ -61,8 +61,12 @@ Keep the following in mind when using AI to write IaC.
 
 ## Further reading
 
-- [NCSC Cloud Security Guidance](https://www.ncsc.gov.uk/collection/cloud-security)
-- [GOV.UK Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice)
-- [HashiCorp Infrastructure-as-Code](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code)
-- [GitHub Copilot for Infrastructure](https://github.com/features/copilot)
-- [CDDO Cloud First Policy](https://www.gov.uk/guidance/government-cloud-first-policy)
+[NCSC Cloud Security Guidance](https://www.ncsc.gov.uk/collection/cloud-security)
+
+[GOV.UK Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice)
+
+[HashiCorp Infrastructure-as-Code](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code)
+
+[GitHub Copilot for Infrastructure](https://github.com/features/copilot)
+
+[CDDO Cloud First Policy](https://www.gov.uk/guidance/government-cloud-first-policy)

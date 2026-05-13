@@ -6,21 +6,35 @@
 
 ## Contents
 
-- [purpose](#purpose)
-- [strategic objectives](#strategic-objectives)
-- [success criteria](#success-criteria)
-- [tier 1: adoption metrics](#tier-1-adoption-metrics)
-- [tier 2: productivity metrics](#tier-2-productivity-metrics)
-- [tier 3: quality and delivery metrics](#tier-3-quality-and-delivery-metrics)
-- [tier 4: business outcome metrics](#tier-4-business-outcome-metrics)
-- [satisfaction metrics](#satisfaction-metrics)
-- [adaptability metrics](#adaptability-metrics)
-- [comparative analysis](#comparative-analysis)
-- [reporting framework](#reporting-framework)
-- [governance and accountability](#governance-and-accountability)
-- [continuous improvement](#continuous-improvement)
-- [data quality and integrity](#data-quality-and-integrity)
-- [further reading](#further-reading)
+[Purpose](#purpose)
+
+[Strategic objectives](#strategic-objectives)
+
+[Success criteria](#success-criteria)
+
+[Tier 1: adoption metrics](#tier-1-adoption-metrics)
+
+[Tier 2: productivity metrics](#tier-2-productivity-metrics)
+
+[Tier 3: Quality and delivery metrics](#tier-3-quality-and-delivery-metrics)
+
+[Tier 4: Business outcome metrics](#tier-4-business-outcome-metrics)
+
+[Satisfaction metrics](#satisfaction-metrics)
+
+[Adaptability metrics](#adaptability-metrics)
+
+[Comparative analysis](#comparative-analysis)
+
+[Reporting framework](#reporting-framework)
+
+[Governance and accountability](#governance-and-accountability)
+
+[Continuous improvement](#continuous-improvement)
+
+[Data quality and integrity](#data-quality-and-integrity)
+
+[Further reading](#further-reading)
 
 ## Purpose
 

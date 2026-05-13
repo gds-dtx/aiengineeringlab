@@ -12,17 +12,16 @@ Engineering managers, technical leads, and delivery managers responsible for AI 
 
 This guide provides engineering managers with practical guidance for implementing Amazon Q within UK government departments. It covers security considerations, troubleshooting issues and incident reporting.
 
-## What's in this guide
+## Contents
 
-This guide is organised into the following sections.
+[Security best practices](#security-best-practices) 
 
-1. Operational guidance
-- [security best practices](#security-best-practices) - policy configuration and daily security practices
-- [support and escalation](#support-and-escalation) - troubleshooting and support pathways
+[Support and escalation](#support-and-escalation) 
 
-2. Additional resources
-- [related resources](#related-resources) - links to official documentation, government guidance, and repository materials
-- [contributing](#contributing) - how to improve this guide
+
+[Further reading](#further-reading) 
+
+[Contributing guidance](#contributing-guidance) 
 
 ## Prerequisites
 
@@ -325,42 +324,50 @@ Follow-up activities include:
 - sharing learning without blame
 - reporting issue to AWS if appropriate
 
-## Related resources
+## Further reading
 
 ### Official AWS resources
-Official AWS resources include: 
-- Amazon Q Engineer documentation - complete official documentation
-- Amazon Q Engineer features - feature overview and capabilities
-- getting started with Amazon Q - initial setup guides
-- Amazon Q Engineer pricing - licensing and cost information
-- AWS re:Post for Amazon Q - community questions and answers
+Amazon Q Engineer documentation - complete official documentation
+
+Amazon Q Engineer features - feature overview and capabilities
+
+Getting started with Amazon Q - initial setup guides
+
+Amazon Q Engineer pricing - licensing and cost information
+
+AWS re:Post for Amazon Q - community questions and answers
 
 ### Enterprise and security
-Enterprise and security resources include: 
-- managing Amazon Q in your organisation - IAM and access control
-- Amazon Q security - security features and best practices
-- content exclusions - configuring what Amazon Q can access
-- AWS Artifact - compliance reports and certifications
+Managing Amazon Q in your organisation - IAM and access control
+
+Amazon Q security - security features and best practices
+
+Content exclusions - configuring what Amazon Q can access
+
+AWS Artifact - compliance reports and certifications
 
 ### Government procurement
-Government procurement resources include:
-- Crown Commercial Service G-Cloud 14 - UK government cloud services framework
-- AWS on G-Cloud - search for AWS services including Amazon Q
-- TechUK framework - alternative procurement route
+Crown Commercial Service G-Cloud 14 - UK government cloud services framework
+
+AWS on G-Cloud - search for AWS services including Amazon Q
+
+TechUK framework - alternative procurement route
 
 ### NCSC guidance
-NCSC guidance includes:
-- cloud security principles - assessing cloud services
-- secure development and deployment guidance - security best practices
-- vulnerability disclosure - handling security issues
+Cloud security principles - assessing cloud services
+
+Secure development and deployment guidance - security best practices
+
+Vulnerability disclosure - handling security issues
 
 ### Repository resources
-Repository resources include:
-- AI SDLC playbook - integrating AI Engineering Lab tools across development lifecycle
-- model selection playbook - choosing appropriate tools for tasks
-- GitHub Copilot manager guide - complementary tool for inline completions
+AI SDLC playbook - integrating AI Engineering Lab tools across development lifecycle
 
-## Contributing
+Model selection playbook - choosing appropriate tools for tasks
+
+GitHub Copilot manager guide - complementary tool for inline completions
+
+## Contributing guidance
 
 We encourage contributions from across government to keep this repository current and comprehensive. Share your team's experience, lessons learned, and effective practices to help other government departments.
 

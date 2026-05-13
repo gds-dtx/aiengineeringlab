@@ -5,6 +5,26 @@
 
 > Procedures for identifying, responding to and learning from incidents related to AI code assistant usage.
 
+## Contents
+
+[Purpose](#purpose)
+
+[Key terms and acronyms](#key-terms-and-acronyms)
+
+[Incident classification](#incident-classification)
+
+[Incident response process](#incident-response-process)
+
+[Example incident playbooks](#example-incident-playbooks)
+
+[Roles and responsibilities](#roles-and-responsibilities)
+
+[Communication templates](#communication-templates)
+
+[Metrics and reporting](#metrics-and-reporting)
+
+[Further reading](#further-reading)
+
 ## Purpose
 
 This playbook provides standardised procedures for handling security incidents, data exposures and other adverse events involving AI Engineering Lab. It ensures consistent, timely responses that minimise harm and support organisational learning.

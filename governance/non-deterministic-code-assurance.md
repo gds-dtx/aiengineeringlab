@@ -210,19 +210,15 @@ This position is consistent with the existing requirement in G-CS-01 that a huma
 
 [AI-assisted software development lifecycle](../playbooks/ai-sdlc-playbook.md) for SDLC integration guidance.
 
-## References
+## Further reading
 
-### UK government
+[NCSC Secure Development and Deployment](https://www.ncsc.gov.uk/collection/developers-collection)
 
-[NCSC Secure Development and Deployment](https://www.ncsc.gov.uk/collection/developers-collection).
+[NCSC Principles for the Security of Machine Learning](https://www.ncsc.gov.uk/files/Principles-for-the-security-of-machine-learning.pdf)
 
-[NCSC Principles for the Security of Machine Learning](https://www.ncsc.gov.uk/files/Principles-for-the-security-of-machine-learning.pdf).
+[UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government)
 
-[UK AI Playbook for Government (2025)](https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government).
+[OWASP LLM Top 10 (2025) - LLM09 Misinformation](https://genai.owasp.org/llm-top-10/)
 
-### Standards
-
-[Open Web Application Security Project (OWASP) Large Language Model (LLM) Top 10 (2025) - LLM09 Misinformation](https://genai.owasp.org/llm-top-10/).
-
-[National Institute of Standards and Technology (NIST) AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework).
+[NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
 

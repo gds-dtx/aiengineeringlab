@@ -426,18 +426,16 @@ Use this template for risks unique to your deployment.
 | Previous | | | | | |
 | Change | | | | | ↑↓→ |
 
-## Related documents
+## Further reading
 
-The following documents provide additional context:
+[Guardrails Base](guardrails-base.md) covers security controls.
 
-- [Guardrails Base](guardrails-base.md) - security controls
-- [Incident Response Playbook](incident-response-playbook.md) - when risks materialise
-- [Quality Strategy](../quality-metrics/quality-strategy.md) - metrics for monitoring
+[Incident Response Playbook](incident-response-playbook.md) covers when risks materialise.
 
-## References
+[Quality Strategy](../quality-metrics/quality-strategy.md) covers metrics for monitoring.
 
-The following external resources provide further guidance:
+[GOV.UK Orange Book](https://www.gov.uk/government/publications/orange-book) provides risk management guidance.
 
-- [GOV.UK Orange Book](https://www.gov.uk/government/publications/orange-book) - risk management guidance
-- [Government Functional Standard GovS 002](https://www.gov.uk/government/publications/project-delivery-functional-standard) - project delivery
-- [NCSC Risk Management Guidance](https://www.ncsc.gov.uk/collection/risk-management-collection)
+[Government Functional Standard GovS 002](https://www.gov.uk/government/publications/project-delivery-functional-standard) covers project delivery.
+
+[NCSC Risk Management Guidance](https://www.ncsc.gov.uk/collection/risk-management-collection)

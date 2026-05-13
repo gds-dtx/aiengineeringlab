@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.0] - 2026-04-29
+
+### Added
+- consolidated and updated comparative guidance documentation
+- guidance on baselining for departments
+- Amazon Kiro setup guide
+
 ## [0.0.9] - 2026-04-13
 
 ### Added

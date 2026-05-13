@@ -107,9 +107,14 @@ Google provides AI-assisted development tooling with native GCP integration.
 
 ## Further reading
 
-- [Google Cloud Terraform on Google Cloud documentation](https://cloud.google.com/docs/terraform)
-- [Google Cloud Deployment Manager documentation](https://cloud.google.com/deployment-manager/docs)
-- [Pulumi Google Cloud provider](https://www.pulumi.com/registry/packages/gcp/)
-- [Google Cloud Config Connector overview](https://cloud.google.com/config-connector/docs/overview)
-- [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview)
-- [NCSC Cloud security principles](https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles)
+[Google Cloud Terraform on Google Cloud documentation](https://cloud.google.com/docs/terraform)
+
+[Google Cloud Deployment Manager documentation](https://cloud.google.com/deployment-manager/docs)
+
+[Pulumi Google Cloud provider](https://www.pulumi.com/registry/packages/gcp/)
+
+[Google Cloud Config Connector overview](https://cloud.google.com/config-connector/docs/overview)
+
+[Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview)
+
+[NCSC Cloud security principles](https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles)

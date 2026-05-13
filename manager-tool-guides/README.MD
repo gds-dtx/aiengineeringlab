@@ -9,7 +9,8 @@ This section provides guidance on tool selection and management.
 
 | Section | Description |
 |---------|-------------|
-| [Comparative guidance](comparative-guidance.md) | A tool-agnostic framework for evaluating, selecting, and managing AI Engineering Labs across government |
+| [Comparative guidance](comparative-guidance.md) | A consolidated framework for evaluating, selecting, and managing AI coding assistants across government |
+| [Data residency](data-residency.md) | UK data residency analysis for each AI coding assistant |
 | [Amazon Kiro](amazon-kiro/) | A manager tool guide for Amazon Kiro |
 | [Amazon Q](amazon-q/) | A manager tool guide for Amazon Q |
 | [GitHub Copilot](github-copilot/) | A manager tool guide for GitHub Copilot |

@@ -97,8 +97,12 @@ Microsoft provides AI assistance integrated directly into Azure development work
 
 ## Further reading
 
-- [Microsoft Bicep documentation](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview)
-- [HashiCorp AzureRM Terraform provider](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
-- [Microsoft ARM template documentation](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview)
-- [Checkov Azure IaC security scanning](https://www.checkov.io/5.Policy%20Index/arm.html)
-- [NCSC Secure cloud deployment guidance](https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles)
+[Microsoft Bicep documentation](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview)
+
+[HashiCorp AzureRM Terraform provider](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+
+[Microsoft ARM template documentation](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview)
+
+[Checkov Azure IaC security scanning](https://www.checkov.io/5.Policy%20Index/arm.html)
+
+[NCSC Secure cloud deployment guidance](https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles)

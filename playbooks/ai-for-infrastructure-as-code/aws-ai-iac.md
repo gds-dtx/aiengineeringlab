@@ -99,8 +99,12 @@ AWS provides native AI tooling that integrates directly with IaC workflows.
 
 ## Further reading
 
-- [AWS CloudFormation documentation](https://docs.aws.amazon.com/cloudformation/index.html)
-- [AWS CDK developer guide](https://docs.aws.amazon.com/cdk/v2/guide/home.html)
-- [HashiCorp AWS Terraform provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
-- [Amazon Q Developer](https://aws.amazon.com/q/developer/)
-- [AWS Security best practices for IaC](https://docs.aws.amazon.com/prescriptive-guidance/latest/terraform-aws-provider-best-practices/security.html)
+[AWS CloudFormation documentation](https://docs.aws.amazon.com/cloudformation/index.html)
+
+[AWS CDK developer guide](https://docs.aws.amazon.com/cdk/v2/guide/home.html)
+
+[HashiCorp AWS Terraform provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
+
+[Amazon Q Developer](https://aws.amazon.com/q/developer/)
+
+[AWS Security best practices for IaC](https://docs.aws.amazon.com/prescriptive-guidance/latest/terraform-aws-provider-best-practices/security.html)

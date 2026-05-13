@@ -4,6 +4,36 @@
 
 > Guidance on selecting the right AI code assistant and model for your task.
 
+## Contents
+
+[Purpose](#purpose)
+
+[Tools in scope](#tools-in-scope)
+
+[Selection by work type](#selection-by-work-type)
+
+[Important considerations when selecting models](#important-considerations-when-selecting-models)
+
+[Model recommendations by use case](#model-recommendations-by-use-case)
+
+[Model personality comparison](#model-personality-comparison)
+
+[Multi-model approach](#multi-model-approach)
+
+[Practical tips for model selection](#practical-tips-for-model-selection)
+
+[Working with constrained model access](#working-with-constrained-model-access)
+
+[Premium credit management](#premium-credit-management)
+
+[Comparative analysis](#comparative-analysis)
+
+[Advanced considerations](#advanced-considerations)
+
+[Getting started](#getting-started)
+
+[Further reading](#further-reading)
+
 ## Purpose
 
 This guide helps engineers and teams choose appropriate AI code assistants and models based on their work type, task requirements and cost considerations. It supports the programme's goal of optimising cost to use trade-offs while maintaining productivity gains.
@@ -355,18 +385,26 @@ Model selection is highly personal and task dependent. What works best for one d
 
 ## Further reading
 
-### Useful resources
+### Internal resources
 
-- [GitHub Copilot guide](../manager-tool-guides/github-copilot/)
-- [Amazon Q Developer guide](../manager-tool-guides/amazon-q/)
-- [tool comparative guidance](../manager-tool-guides/comparative-guidance.md) to select appropriate tools
-- [prompt library](../prompt-library/) for ready to use examples
-- [Working with constrained context windows](working-with-constrained-context-windows.md) for guidance on adapting workflows when access to large-context models is restricted
+[GitHub Copilot guide](../manager-tool-guides/github-copilot/)
+
+[Amazon Q Developer guide](../manager-tool-guides/amazon-q/)
+
+[Tool comparative guidance](../manager-tool-guides/comparative-guidance.md) helps select appropriate tools.
+
+[Prompt library](../prompt-library/) provides ready to use examples.
+
+[Working with constrained context windows](working-with-constrained-context-windows.md) provides guidance on adapting workflows when access to large-context models is restricted.
 
 ### Model documentation
 
-- [Claude API Documentation](https://docs.anthropic.com/claude/docs) for the official Anthropic Claude documentation
-- [OpenAI API Documentation](https://platform.openai.com/docs) covers GPT models and API reference
-- [Google AI Studio Documentation](https://ai.google.dev/gemini-api/docs) for Gemini model documentation
-- [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) for Claude specific prompting techniques
-- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) covers best practice for GPT models
+[Claude API Documentation](https://docs.anthropic.com/claude/docs) is the official Anthropic Claude documentation.
+
+[OpenAI API Documentation](https://platform.openai.com/docs) covers GPT models and API reference.
+
+[Google AI Studio Documentation](https://ai.google.dev/gemini-api/docs) covers Gemini model documentation.
+
+[Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) covers Claude specific prompting techniques.
+
+[OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) covers best practice for GPT models.

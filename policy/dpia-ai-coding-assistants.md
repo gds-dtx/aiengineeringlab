@@ -5,6 +5,26 @@
 
 > Guidance on conducting Data Protection Impact Assessments (DPIAs) for AI coding assistant deployments, including proportionality and necessity analysis under UK GDPR.
 
+## Contents
+
+[Purpose](#purpose)
+
+[Who this is for](#who-this-is-for)
+
+[When a DPIA is required](#when-a-dpia-is-required)
+
+[Proportionality and necessity framework](#proportionality-and-necessity-framework)
+
+[Lawful basis analysis](#lawful-basis-analysis)
+
+[Data protection risks specific to AI coding assistants](#data-protection-risks-specific-to-ai-coding-assistants)
+
+[DPIA template for AI coding assistant deployment](#dpia-template-for-ai-coding-assistant-deployment)
+
+[DPO consultation guidance](#dpo-consultation-guidance)
+
+[Further guidance](#further-guidance)
+
 ## Purpose
 
 AI coding assistants process data that may include personal data. Prompt content, code context, and metadata are transmitted to AI providers for inference. This processing may engage UK GDPR requirements, particularly where prompts contain or reference personal data.

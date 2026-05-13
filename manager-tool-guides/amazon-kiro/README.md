@@ -25,7 +25,7 @@ This guide is organised into the following sections.
 Understanding Amazon Kiro:
 
 - [What Amazon Kiro does](#what-amazon-kiro-does) - core capabilities and interaction modes
-- [How it compares with other AI code assistants](#how-it-compares-with-other-ai-code-assistants) - feature comparison and when to use different tools
+- [How it compares with other AI code assistants](#how-it-compares-with-other-ai-code-assistants) - see the consolidated comparative guidance
 - [Amazon Kiro models and task suitability](#amazon-kiro-models-and-task-suitability) - choosing the right model for different tasks
     
 Implementation planning:
@@ -94,17 +94,7 @@ When to use each mode:
 
 ## How it compares with other AI code assistants
 
-Quick comparison matrix:
-
-| AI Tool | What it is | Strengths |
-|---------|------------|-----------|
-| Amazon Kiro | AI-first IDE and CLI with spec-driven workflow | Specs to design to tasks, agent hooks, Model Context Protocol (MCP), autopilot, VS Code settings and plugins compatibility |
-| Amazon Q Developer | AWS coding assistant in IDE, CLI and AWS console help | AWS native software development lifecycle (SDLC) help, IDE and CLI, transformation capabilities (Java and .NET), governance features |
-| GitHub Copilot | Ubiquitous AI assistant inside many IDEs and GitHub | Broad IDE support, agent and chat, multiple model choices, strong GitHub workflow integration |
-| Cursor | AI first VS Code style editor | AI native editor, agents, Bugbot, usage based model API pricing approach |
-| Windsurf (Codeium) | Agentic IDE and plugins, prompt credit model | Free tier, multiple model providers, team controls and 'Fast Context' options |
-| JetBrains AI (Junie) | Agentic assistant inside JetBrains IDEs | Deep JetBrains IDE integration, credit based plans, Junie agent in AI chat |
-| Anthropic Claude (Claude Code) | Claude with terminal and desktop extensions | Claude Pro includes access to Claude Code 'on the web and in your terminal', strong general reasoning | 
+For a detailed comparison of Amazon Kiro with other AI coding assistants, see the [comparative guidance](../comparative-guidance.md).
 
 ## Amazon Kiro models and task suitability
 Kiro does not use a single model. It is built on Amazon Bedrock, meaning it can use multiple large language models under the hood. The primary models currently powering Kiro are Anthropic Claude Sonnet 4.0 and Sonnet 3.7.
