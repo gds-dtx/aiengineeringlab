@@ -301,7 +301,7 @@ Each tool uses different underlying models. Understanding model capabilities hel
 
 | Tool | Primary models | Model selection |
 |------|---------------|-----------------|
-| GitHub Copilot | GPT-4.1, GPT-5 mini (included). Claude Sonnet 4.5, Claude Opus 4.5, Gemini 2.5 Pro (premium) | user selectable via model picker. Auto mode stays within 0x to 1x cost models |
+| GitHub Copilot | GPT-5 mini (included). Claude Sonnet 4.6, Claude Opus 4.6, Gemini 2.5 Pro (premium) | user selectable via model picker. Auto mode stays within 0x to 1x cost models |
 | Claude Code | Claude Opus 4.5, Claude Sonnet 4.5, Claude Haiku 4.5 | user selectable via /model command |
 | Amazon Kiro | Claude Sonnet 4.0, Claude Sonnet 3.7 (via Bedrock) | auto-routing for efficiency |
 | Amazon Q Developer | AWS proprietary models | automatic selection based on task |
@@ -312,7 +312,7 @@ Each tool uses different underlying models. Understanding model capabilities hel
 | Task | Best suited tools | Why |
 |------|-------------------|-----|
 | Fast inline autocompletion | GitHub Copilot, Gemini Code Assist | optimised for speed and low latency |
-| Complex reasoning and debugging | Claude Code (Opus), GitHub Copilot (Claude Opus or GPT-5.2) | superior reasoning about multi-layer problems |
+| Complex reasoning and debugging | Claude Code (Opus), GitHub Copilot (Claude Opus or Claude Sonnet 4.6) | superior reasoning about multi-layer problems |
 | Large-scale refactoring | Claude Code, Amazon Kiro | agentic multi-step execution with deep context |
 | Specification-driven development | Amazon Kiro | native spec-to-task workflow |
 | AWS infrastructure tasks | Amazon Q Developer | native AWS service integration and CloudFormation |
@@ -321,7 +321,7 @@ Each tool uses different underlying models. Understanding model capabilities hel
 | Security code scanning | Amazon Q Developer | built-in security scanning |
 | PR review automation | GitHub Copilot | native GitHub PR integration |
 | Legacy COBOL maintenance | Amazon Q Developer | mainframe focus and COBOL features |
-| Quick boilerplate generation | GitHub Copilot (GPT-4.1), Claude Code (Haiku) | fast and cost-effective |
+| Quick boilerplate generation | GitHub Copilot (GPT-5 mini), Claude Code (Haiku) | fast and cost-effective |
 | Multi-file feature implementation | Claude Code, Amazon Kiro, GitHub Copilot (agent mode) | strong agentic capabilities |
 | Documentation generation | all tools | comparable across tools |
 | Test generation | Claude Code, GitHub Copilot, Amazon Q Developer | strong test scaffolding |

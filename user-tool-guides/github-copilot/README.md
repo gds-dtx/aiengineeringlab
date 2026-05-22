@@ -16,3 +16,4 @@ Developer user guides for GitHub Copilot.
 | [Agent mode billing](agent-mode-billing.md) | How agent mode consumes premium requests, Auto model selection, and admin controls |
 | [Copilot CLI billing](copilot-cli-billing.md) | How Copilot CLI charges credits, autopilot mode billing, and plan requirements |
 | [Safe usage guidance: prototyping vs production](safe-usage-prototyping-vs-production.md) | Differentiated controls for prototyping and production environments |
+| [Content exclusions](content-exclusions.md) | How file exclusion works, what guarantees exist, and recommended patterns for government teams |

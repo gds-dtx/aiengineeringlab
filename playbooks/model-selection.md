@@ -42,7 +42,7 @@ The AI landscape changes rapidly. Always verify pricing and capabilities against
 
 ## Tools in scope
 
-The AI Engineering Lab programme includes 4 core AI code assistants: GitHub Copilot Enterprise by Microsoft and GitHub, Claude Code by Anthropic, Amazon Q Developer by AWS, and Gemini Code Assist by Google.
+The AI Engineering Lab programme includes 4 core AI code assistants. These are GitHub Copilot Enterprise by Microsoft and GitHub, Claude Code by Anthropic, Amazon Q Developer by AWS, and Gemini Code Assist by Google.
 
 Each tool has different strengths, pricing models and model options. This guide will be updated as comparative evidence emerges from programme deployments.
 
