@@ -140,7 +140,7 @@ This builds the reasoning behind patterns, not just familiarity with their synta
 
 ##### Why this matters for junior engineers specifically
 
-The risk of skills degradation (see [RISK-ADO-03](../../governance/risk-register-template.md) in the risk register) is highest for engineers who are still building fundamentals. AI can produce correct-looking code that masks misunderstandings about data structures, error handling, security, or performance. Juniors who bypass the 'why' may ship code that works today but cannot be maintained, debugged, or extended by themselves or others tomorrow.
+The risk of skills degradation is highest for engineers who are still building fundamentals. AI can produce correct-looking code that masks misunderstandings about data structures, error handling, security, or performance. Juniors who bypass the 'why' may ship code that works today but cannot be maintained, debugged, or extended by themselves or others tomorrow.
 
 Your adaptability is also an advantage. Junior engineers often find it easier to adopt new workflows than those with deeply embedded habits. Use that adaptability to build good AI-assisted habits from the start, not just fast ones.
 

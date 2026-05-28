@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.1] - 2026-05-22
+
+### Added
+- updated model selection guide with guidance on Claude Opus 4.7 and Sonnet 4.6
+- Information to reflect billing changes introduced by Microsoft for Copilot effective 1 June 2026
+- Guidance for token cost management
+- Guidance for file exclusions in Copilot
+- Improved documentation for junior developers
+- Signposting to guidance on using evals in Claude Code
+
 ## [0.1.0] - 2026-04-29
 
 ### Added

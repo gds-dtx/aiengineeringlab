@@ -27,7 +27,7 @@ Agents in GitHub allow AI to autonomously take actions within repositories and w
 
 ### Guidance for tech leads
 
-The following agent features are active
+The following agent features are active.
 
 - Copilot Code Review is enabled, allowing you to request AI code reviews on pull requests directly within GitHub
 - Agent Mode in IDE chat (VS Code, JetBrains, and others) is configured under Copilot clients
@@ -121,6 +121,10 @@ Copilot code review also consumes GitHub Actions minutes in addition to AI Credi
 
 For model multipliers and per-token pricing, see [Copilot billing models and pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing).
 
+For techniques to reduce token consumption and manage spend, see the [token cost management playbook](../playbooks/token-cost-management.md).
+
+If your team requires additional or custom models, raise a request with AI Engineering Lab. All changes are assessed against DSIT data governance requirements.
+
 ### Metrics and usage
 
 | Setting | Value | Description |
@@ -147,7 +151,7 @@ Two mechanisms exist for keeping sensitive data out of Copilot. Both are necessa
 
 Organisation and enterprise admins can exclude file paths and patterns from Copilot indexing via repository or organisation settings. This is the only native mechanism for preventing Copilot from indexing specific files. The patterns configured for this enterprise are listed below.
 
-> **Note:** Content exclusions are not a security control. Do not rely on them to protect secrets or sensitive files.
+Content exclusions are not a security control. Do not rely on them to protect secrets or sensitive files.
 
 Read more about [content exclusions](../user-tool-guides/github-copilot/content-exclusions.md).
 

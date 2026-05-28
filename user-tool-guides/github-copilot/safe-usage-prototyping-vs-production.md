@@ -5,7 +5,7 @@
 
 ## Purpose
 
-This guidance defines safe usage boundaries for GitHub Copilot across prototyping and production environments within UK government departments. It establishes differentiated controls that enable rapid experimentation during prototyping whilst ensuring appropriate security rigour for production systems.
+This guidance defines safe usage boundaries for GitHub Copilot across prototyping and production environments within UK government departments. It establishes differentiated controls that enable rapid experimentation during prototyping while ensuring appropriate security rigour for production systems.
 
 ## Who this is for
 

@@ -53,7 +53,7 @@ Cross tool standard instructions use `AGENTS.md` at repository root. This works 
 
 ### Example
 
-`.github/copilot-instructions.md`:
+`.github/copilot-instructions.md`
 
 ```markdown
 # Project instructions
@@ -89,7 +89,7 @@ Custom agents are specialised personas you select for specific workflows. Use th
 - consistent expertise such as testing, security or documentation
 - restricted available tools
 
-The model a custom agent uses determines the premium request cost of every session. An agent running on an included model (GPT-4.1, GPT-4o, GPT-5 mini) costs nothing. An agent running on Claude Opus 4.5 costs three premium requests per message. Before deploying custom agents for team-wide use, check which model they will run on and what your monthly allowance supports. Read [agent mode and credit consumption](premium-credit-management.md#agent-mode-and-credit-consumption) for worked examples showing how agent sessions translate into credit costs.
+The model a custom agent uses determines the credit cost of every session. An agent running on an included model (GPT-5 mini) costs nothing. An agent running on Claude Opus 4.6 costs 3 credits per message. Before deploying custom agents for team-wide use, check which model they will run on and what your credit budget supports. Read [agent mode and credit consumption](premium-credit-management.md#agent-mode-and-credit-consumption) for worked examples showing how agent sessions translate into credit costs.
 
 ### File format
 
@@ -190,19 +190,19 @@ Use subagents to:
 
 You can invoke subagents using three methods.
 
-Method 1 uses an explicit request:
+Method 1 uses an explicit request.
 
 ```
 'Use #runSubagent to research React 18 best practices and return a summary'
 ```
 
-Method 2 invokes a custom agent as a subagent:
+Method 2 invokes a custom agent as a subagent.
 
 ```
 'Use @documentation-reader as a subagent to fetch and summarise the migration guide'
 ```
 
-Method 3 configures agents to use subagents through agent instructions:
+Method 3 configures agents to use subagents through agent instructions.
 
 ```markdown
 Before implementing features use the following steps.
@@ -249,7 +249,7 @@ Minimal relevant examples in appropriate language.
 Focus on summarisation and not on implementation.
 ```
 
-Usage:
+Usage
 
 ```
 User: 'Implement pagination in our React app'
@@ -292,7 +292,7 @@ The preToolUse hook is the most powerful because it can block agent actions.
 
 ### File location
 
-Create `*.json` files in `.github/hooks/`:
+Create `*.json` files in `.github/hooks/`.
 
 ```json
 {
@@ -370,7 +370,7 @@ echo "$(date -d @$((TIMESTAMP/1000))): Tool=$TOOL_NAME Result=$RESULT" >> audit.
 
 Hooks receive input as JSON via stdin containing context about the action.
 
-For preToolUse hooks only, output a JSON object with your permission decision:
+For preToolUse hooks only, output a JSON object with your permission decision.
 
 ```json
 {
@@ -387,7 +387,9 @@ Hooks support common use cases to:
 - log all actions for audit trails for compliance
 - run linters before code edits and validate test coverage for quality
 - alert teams on production changes for notifications
-- track tool usage across teams for cost management. For broader guidance on controlling credit spend and setting organisation-wide spending limits, see the [premium credit management guide](premium-credit-management.md#managing-agent-mode-and-premium-credit-spend)
+- track tool usage across teams for cost management
+
+For broader guidance on controlling credit spend and setting spending limits, see the [premium credit management guide](premium-credit-management.md#managing-agent-mode-and-premium-credit-spend).
 
 ## Skills
 
@@ -411,7 +413,7 @@ Skills are folders with instructions, scripts and resources. Copilot automatical
         └── baseline.png
 ```
 
-Each folder serves a specific role with:
+Each folder type has a specific role:
 
 - templates containing code that Copilot modifies
 - references containing documentation that Copilot reads for guidance
@@ -435,7 +437,7 @@ Content sections should include:
 - available tools for scripts and their usage
 - best practices for key guidelines
 
-Script usage example where `--param` is the parameter description:
+Script usage example where `--param` is the parameter description.
 
 ```bash
 python scripts/tool.py --param value
@@ -511,11 +513,11 @@ Result
 
 ### Complete example workflow
 
-In this example task, comprehensive tests are added for an authentication module.
+This example task adds comprehensive tests to an authentication module.
 
 1. Custom agent where user selects `@test-specialist` with restricted tools that cannot modify production code and testing expertise.
 
-2. Instructions that Copilot applies automatically where project uses Jest, requiring 80% coverage and follows the AAA pattern.
+2. Instructions that Copilot applies automatically where project uses Jest, requiring 80% coverage and follows the Arrange, Act, Assert (AAA) pattern.
 
 3. Hooks where `sessionStart` logs task initiation, `preToolUse` validates file edits, `postToolUse` logs test creation and `sessionEnd` generates coverage reports.
 
@@ -523,7 +525,7 @@ In this example task, comprehensive tests are added for an authentication module
 
 5. Subagent where test specialist needs research, invokes `@documentation-reader`, gets Jest best practices summary and returns to main agent.
 
-6. Result is a complete test suite that follows project conventions (instructions), created by the specialist (custom agent), validated by security policies (hooks), uses templates (skill) and is informed by research (subagent).
+6. Result is a complete test suite following project conventions (instructions), created by the specialist (custom agent), validated by security policies (hooks), using templates (skill) and informed by research (subagent).
 
 ### Comparison
 

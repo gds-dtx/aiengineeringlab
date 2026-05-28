@@ -15,9 +15,9 @@
 
 [Next steps](#5-next-steps)
 
-This guide helps you start using GitHub Copilot in a development environment. It is written for developers with a range of experience.
+This guide helps you start using GitHub Copilot in a development environment. Developers of all experience levels can use this guide.
 
-The guide is split into clear steps. Follow them in order.
+This guide has clear steps. Follow them in order.
 
 ## Who this guide is for
 
@@ -27,7 +27,7 @@ This guide is for:
 - DevOps and platform engineers
 - technical staff working in UK public sector organisations
 
-You may be new to GitHub Copilot or already experienced with modern IDEs.
+You may be new to GitHub Copilot or already experienced with modern integrated development environments (IDEs).
 
 ## What GitHub Copilot is
 
@@ -40,19 +40,7 @@ It can help you to:
 - create tests and documentation
 - reduce time spent on repetitive tasks
 
-Essential reading: [GitHub Copilot documentation](https://docs.github.com/en/copilot)
-
-## Contents
-
-[Access, licensing and public sector considerations](#1-access-licensing-and-public-sector-considerations)
-
-[Set up GitHub Copilot in your IDE](#2-set-up-github-copilot-in-your-ide)
-
-[Generate code in your IDE](#3-generate-code-in-your-ide)
-
-[Use Copilot safely and responsibly](#4-use-copilot-safely-and-responsibly)
-
-[Next steps](#5-next-steps)
+Read the [GitHub Copilot documentation](https://docs.github.com/en/copilot).
 
 ## 1. Access, licensing and public sector considerations
 
@@ -63,7 +51,7 @@ Many public sector organisations use GitHub Copilot Business or Enterprise.
 You should know:
 
 - your organisation controls licensing and policies
-- Copilot Business and Enterprise data is not used to train models
+- GitHub does not use Copilot Business or Enterprise data to train models
 - privacy and security settings can be centrally managed
 
 Read the [GitHub Copilot Trust Center](https://copilot.github.trust.page/faq) and this guide on [responsibly adopting GitHub Copilot](https://github.blog/news-insights/policy-news-and-insights/how-to-responsibly-adopt-github-copilot-with-the-github-copilot-trust-center/).
@@ -121,7 +109,7 @@ See [Get started with GitHub Copilot in VS Code](https://code.visualstudio.com/d
 
 ### Generate code in JetBrains IDEs
 
-JetBrains IDEs support inline suggestions and chat based prompts.
+JetBrains IDEs support inline suggestions and chat-based prompts.
 
 You can generate code by:
 
@@ -132,7 +120,7 @@ You can generate code by:
 You can improve how you work in JetBrains IDEs by:
 
 - using Copilot for small focused tasks rather than large rewrites
-- combining Copilot suggestions with built in refactoring tools
+- combining Copilot suggestions with built-in refactoring tools
 - reviewing generated code against your project standards
 
 ## 4. Use Copilot safely and responsibly
@@ -157,5 +145,4 @@ After you are comfortable with the basics, you can:
 - use Copilot to generate tests and documentation
 - explore advanced features such as refactoring and code review
 
-Once you are confident using GitHub Copilot, consider reading the [advanced guide on 
-using GitHub Copilot](advanced-use.md).
+When you are confident using GitHub Copilot, read the [advanced guide on using GitHub Copilot](advanced-use.md).
