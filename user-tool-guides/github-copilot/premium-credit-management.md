@@ -92,6 +92,7 @@ The table below shows current models and their multipliers. For the latest model
 
 | Model | Type | Multiplier | Premium requests per chat |
 |-------|------|------------|---------------------------|
+| Claude Opus 4.8 | Premium (not enterprise-enabled) | 15x | 15 |
 | Claude Opus 4.7 | Premium (not enterprise-enabled) | 15x | 15 |
 | Claude Opus 4.6 | Premium | 3x | 3 |
 | Claude Opus 4.5 | Premium | 3x | 3 |
@@ -107,7 +108,7 @@ The table below shows current models and their multipliers. For the latest model
 | GPT-5.3-Codex | Premium | 1x | 1 |
 | GPT-5 mini | Included | 0x | Unlimited on paid plans |
 
-Claude Opus 4.6 fast mode (preview) is not currently enabled in the enterprise. See the [enterprise AI controls](../../governance/github-enterprise-ai-controls.md) for the full enabled model list.
+Claude Opus 4.8 and Claude Opus 4.6 fast mode (preview) are not currently enabled in the enterprise. See the [enterprise AI controls](../../governance/github-enterprise-ai-controls.md) for the full enabled model list.
 
 The included model (0x multiplier) is suitable for most everyday development tasks. For tasks that need advanced reasoning, see the [model selection guide](../../playbooks/model-selection.md).
 
@@ -301,7 +302,7 @@ When premium requests are exhausted, you retain access to:
 
 You cannot use:
 
-- premium AI models (Claude Opus 4.7, Claude Opus 4.6, Claude Opus 4.5, Claude Sonnet 4.6, Claude Sonnet 4.5, Gemini 2.5 Pro, GPT-5.4)
+- premium AI models (Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, Claude Opus 4.5, Claude Sonnet 4.6, Claude Sonnet 4.5, Gemini 2.5 Pro, GPT-5.4)
 - Copilot Code Review on pull requests
 - features requiring premium model access
 

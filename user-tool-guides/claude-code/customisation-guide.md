@@ -319,6 +319,14 @@ Agent orchestration lets you decompose complex work into incremental steps with 
 
 Read more about [sub-agents and orchestration](https://code.claude.com/docs/en/sub-agents).
 
+### Dynamic workflows (research preview)
+
+Dynamic workflows, available in research preview, allow Claude to take on significantly larger tasks in Claude Code. Claude can plan the work and then run hundreds of parallel subagents in a single session (with Opus 4.8, the agents can run for even longer). Claude verifies its outputs before reporting back to the user.
+
+For example, Claude Code with Opus 4.8 can now carry out codebase-scale migrations across hundreds of thousands of lines of code from kickoff to merge, with the existing test suite as its bar.
+
+Dynamic workflows are available in Claude Code for Enterprise, Team, and Max plans. Read more about [dynamic workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code).
+
 ### How to use
 
 #### Plan mode for reviewing changes

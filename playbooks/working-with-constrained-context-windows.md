@@ -53,7 +53,7 @@ When the total input exceeds the context window, the tool needs to drop somethin
 |----------|------------------------------------|-------------------------|-----------------------------|
 | Limited | GPT-4                              | 32,768 | ~128,000 characters |
 | Large | Claude Sonnet 4.6, Claude Sonnet 4.5  | 128,000 to 200,000 | ~512,000 to 800,000 characters |
-| Very large | Claude Opus 4.7, Claude Opus 4.6, Gemini 2.5 Pro | 1,000,000 | ~4,000,000 characters |
+| Very large | Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, Gemini 2.5 Pro | 1,000,000 | ~4,000,000 characters |
 
 As a rule of thumb, 1 token is approximately 4 characters, or about three-quarters of a word in English. A typical source code file of 500 lines might use between 3,000 and 8,000 tokens depending on how verbose the language is.
 

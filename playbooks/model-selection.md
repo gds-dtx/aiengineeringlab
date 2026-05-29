@@ -142,7 +142,7 @@ Use these models for:
 
 ### Deep problem analysis and new projects
 
-Best models are Claude Opus 4.7, Claude Opus 4.6, GPT-5.3-Codex, Gemini 3 Pro.
+Best models are Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, GPT-5.3-Codex, Gemini 3 Pro.
 
 These models have very high curiosity, excellent reasoning through complex problems and strong multimodal understanding.
 
@@ -197,7 +197,7 @@ Use these models for:
 
 ### Long-running agentic workflows
 
-Best models are Claude Opus 4.7, Claude Opus 4.6, GPT-5.3-Codex.
+Best models are Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, GPT-5.3-Codex.
 
 These models are exceptional at sustained multi-step tasks and maintain context over extended sessions.
 
@@ -208,20 +208,31 @@ Use these models for:
 - complex feature builds requiring iteration
 - production-ready assistants for operational workflows
 
-### Opus 4.7 — when you need precision execution
+### Opus 4.8 - enhanced collaboration and reliability
 
-Best model is Claude Opus 4.7. The application programming interface (API) ID is `claude-opus-4-7`.
+Best model is Claude Opus 4.8. The application programming interface (API) ID is `claude-opus-4-8`.
 
-This model resolves ambiguity through execution rather than hedging, maintains coherence across very long outputs and sustains performance on complex multi-step tasks. Pricing is $5 and $25 per million tokens, the same token rate as previous Opus. Opus 4.7 consumes more input and output tokens per task than Sonnet 4.6, so total cost per task is higher.
+Released on 28 May 2026, Opus 4.8 builds on its predecessor with tangible improvements in coding, agentic tasks, reasoning and honesty. Early testers report better judgement in agentic tasks, with the model catching its own mistakes, pushing back on unsound plans and building confidence before making large changes. Opus 4.8 is around 4 times less likely than its predecessor to allow flaws in code to pass unremarked.
 
-Use Opus 4.7 only when your use case clearly requires:
+Pricing is $5 and $25 per million tokens (the same token rate as Opus 4.7). Fast mode is now available at $10 and $50 per million tokens, 3 times cheaper than previous fast mode implementations. Opus 4.8 defaults to high effort, which uses similar tokens to Opus 4.7's default setting but delivers better performance. Users can select extra or max effort levels for difficult tasks.
+
+Use Opus 4.8 when your use case clearly requires the following:
 
 - tasks with 150+ sequential steps or high parallel tool call volume
+- agentic workflows where self-correction and judgement are critical
 - high-resolution vision tasks (images up to 3.75MP)
 - long-running autonomous work where sustained coherence across the full task matters
 - high-stakes analysis or edge-case resolution where Sonnet 4.6's output is demonstrably insufficient
 
 If you cannot answer 'what specific capability does Sonnet 4.6 not provide for this task?' then start with Sonnet 4.6.
+
+### Opus 4.7 - precision execution
+
+Best model is Claude Opus 4.7. The application programming interface (API) ID is `claude-opus-4-7`.
+
+This model resolves ambiguity through execution rather than hedging, maintains coherence across very long outputs and sustains performance on complex multi-step tasks. Pricing is $5 and $25 per million tokens. Opus 4.7 consumes more input and output tokens per task than Sonnet 4.6, so total cost per task is higher.
+
+Consider Opus 4.8 for new work. Opus 4.7 remains a strong choice for precision execution tasks.
 
 ## Model personality comparison
 
@@ -234,8 +245,8 @@ If you cannot answer 'what specific capability does Sonnet 4.6 not provide for t
 | Claude Sonnet 4.5 | Medium | Medium | Medium | Stable, predictable coding |
 | Claude Sonnet 4.6 | Medium | High | Medium to high | General development, improved honesty |
 | Claude Opus 4.5   | Medium to slow | High | Very high | Comprehensive solutions, deep reasoning |
-| Claude Opus 4.6   | Medium | Very high | Very high | Enterprise agents, long-running workflows |
-| Claude Opus 4.7   | Medium | Very high | Very high | 150+ step tasks, precision execution, high-res vision |
+| Claude Opus 4.7   | Medium | Very high | Very high | 150+ step tasks, precision execution |
+| Claude Opus 4.8   | Medium | Very high | Very high | Enhanced judgement, agentic reliability, self-correction |
 
 ### Model notes
 
@@ -243,9 +254,15 @@ GPT-5.3-Codex (February 2026) is 25% faster than GPT-5.2-Codex and the first mod
 
 Claude Sonnet 4.6 (February 2026) provides near-Opus reasoning at fast latency, with improved honesty over 4.5.
 
-Claude Opus 4.6 (February 2026) is the latest flagship, best for coding and enterprise agents. It includes agent team capabilities, 1 million token context (beta) and discovered 500+ zero-day vulnerabilities in security testing.
+Claude Opus 4.6 (February 2026) is a flagship model best for coding and enterprise agents. It includes agent team capabilities, 1 million token context (beta) and discovered 500+ zero-day vulnerabilities in security testing.
 
 Claude Opus 4.7 resolves ambiguity through execution rather than hedging. It maintains coherence across very long outputs and sustains performance on complex multi-step tasks. Total cost per task is higher than Sonnet 4.6 due to greater token consumption, even though the per-token rate is the same as previous Opus models.
+
+Claude Opus 4.8 (May 2026) improves on 4.7 with better judgement in agentic tasks, catching its own mistakes and pushing back on unsound plans. It is 4 times less likely to allow flaws in code to pass unremarked compared to 4.7. Fast mode pricing is now 3 times cheaper. Opus 4.8 includes new dynamic workflows in Claude Code, allowing hundreds of parallel subagents in a single session.
+
+Opus 4.8 introduced effort control in claude.ai and Cowork. This allows users to choose how much effort Claude puts into a response. Higher effort settings produce better responses with more frequent and deeper thinking. Lower effort settings respond faster and use rate limits more slowly. This control is available on all plans.
+
+Claude Mythos Preview represents a new class of model with even higher intelligence than Opus. As part of Project Glasswing, a small number of organisations are currently using Mythos Preview for cybersecurity work. Anthropic is developing stronger cyber safeguards and expects to bring Mythos-class models to all customers in the coming weeks.
 
 Gemini 3 Flash (January 2026) is 3 times faster than Gemini 2.5 Pro while outperforming it.
 

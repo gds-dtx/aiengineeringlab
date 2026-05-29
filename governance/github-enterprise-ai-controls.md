@@ -1,9 +1,11 @@
 # AI Engineering Lab — GitHub Enterprise AI controls
 
 ### Purpose
+
 This page describes the AI-related controls configured on the DSIT AI Engineering Lab GitHub Enterprise. It covers agents, GitHub Copilot, and Model Context Protocol (MCP) servers.
 
 ### Who this is for
+
 Tech leads and department owners who need to understand what is enabled, restricted, or pending configuration.
 
 ### Contents
@@ -27,7 +29,7 @@ Agents in GitHub allow AI to autonomously take actions within repositories and w
 
 ### Guidance for tech leads
 
-The following agent features are active.
+The following agent features are active:
 
 - Copilot Code Review is enabled, allowing you to request AI code reviews on pull requests directly within GitHub
 - Agent Mode in IDE chat (VS Code, JetBrains, and others) is configured under Copilot clients
@@ -42,6 +44,7 @@ GitHub Copilot provides AI-assisted code completion, chat, and code review withi
 Licences are allocated at enterprise level and distributed to individual users. To request additional seats or onboard new teams, contact the AI Engineering Lab.
 
 ### Models
+
 The enterprise has the following models enabled. No custom models are configured. Organisations may configure a subset for their teams.
 
 - Anthropic Claude Opus 4.6
@@ -62,7 +65,8 @@ The enterprise has the following models enabled. No custom models are configured
 
 The following models appear in the enterprise model settings but are not currently enabled or accessible. Raise a request with the AI Engineering Lab if your team requires any of these.
 
-- Anthropic Claude Opus 4.7 (policy not set — contact AI Engineering Lab to enable)
+- Anthropic Claude Opus 4.8 (policy not set - contact AI Engineering Lab to enable)
+- Anthropic Claude Opus 4.7 (policy not set - contact AI Engineering Lab to enable)
 - Anthropic Claude Opus 4.6 (fast mode) (Preview) (not accessible on current Copilot plan)
 - Google Gemini 3 Pro
 - OpenAI GPT-5.5 (policy not set — 7.5x credit multiplier, see Model changes)
@@ -115,7 +119,7 @@ If your team requires additional or custom models, raise a request with AI Engin
 
 #### Usage-based billing (from 1 June 2026)
 
-As of 1 June 2026, GitHub moved all Copilot plans from [request-based billing to usage-based billing](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/). Usage is tracked in GitHub AI Credits (1 credit = $0.01 USD) based on token consumption per model, replacing the previous premium request system. Seat pricing remains unchanged at $19 per user per month for Copilot Business and $39 per user per month for Copilot Enterprise. Code completions and next edit suggestions remain unlimited and do not consume AI Credits.
+As of 1 June 2026, GitHub moved all Copilot plans from [request-based billing to usage-based billing](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/). Usage is tracked in GitHub AI Credits. One credit equals $0.01 USD based on token consumption per model. This replaces the previous premium request system. Seat pricing remains unchanged at $19 per user per month for Copilot Business and $39 per user per month for Copilot Enterprise. Code completions and next edit suggestions remain unlimited and do not consume AI Credits.
 
 Copilot code review also consumes GitHub Actions minutes in addition to AI Credits.
 
@@ -157,7 +161,7 @@ Read more about [content exclusions](../user-tool-guides/github-copilot/content-
 
 #### Developer discipline
 
-Developers are responsible for removing sensitive data before submitting prompts to Copilot. No tooling enforces this. Content exclusions are a backstop against accidental indexing — they do not prevent a developer from copying a secret into a chat window. Tech leads should make this expectation explicit in onboarding and code review guidance for their teams.
+Developers are responsible for removing sensitive data before submitting prompts to Copilot. No tooling enforces this. Content exclusions are a backstop against accidental indexing. They do not prevent a developer from copying a secret into a chat window. Tech leads should make this expectation explicit in onboarding and code review guidance for their teams.
 
 For more security information, see the [AI Engineering Lab security policies](https://github.com/govuk-digital-backbone/aiengineeringlab/blob/main/security/security-policies.md).
 

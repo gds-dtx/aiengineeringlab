@@ -2,10 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.1.1] - 2026-05-22
+## [0.1.1] - 2026-05-29
 
 ### Added
-- updated model selection guide with guidance on Claude Opus 4.7 and Sonnet 4.6
+- updated model selection guide with guidance on Claude Opus 4.8, 4.7 and Sonnet 4.6
+- information about Claude Mythos Preview and Project Glasswing
+- dynamic workflows feature documentation in Claude Code customisation guide
+- effort control feature documentation for managing token usage and response quality
+- Messages API system entries feature for mid-task instruction updates
 - Information to reflect billing changes introduced by Microsoft for Copilot effective 1 June 2026
 - Guidance for token cost management
 - Guidance for file exclusions in Copilot
