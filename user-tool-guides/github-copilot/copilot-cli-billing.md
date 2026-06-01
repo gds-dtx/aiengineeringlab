@@ -102,6 +102,8 @@ In autopilot mode, [each continuation step consumes credits](https://docs.github
 | Claude Opus 4.6 | 3x | 3 credits | 30 credits |
 | Claude Opus 4.7 | 15x | 15 credits | 150 credits |
 
+> The above is true as of 1 June 2026
+
 Multipliers are from the [Requests in GitHub Copilot documentation](https://docs.github.com/en/copilot/concepts/billing/copilot-requests). For current rates, see the [individual plan billing page](https://docs.github.com/en/copilot/concepts/billing/billing-for-individuals).
 
 Use GPT-5 mini for routine CLI tasks. Reserve premium models for tasks where you have confirmed an included model produced insufficient output. For multi-file implementation tasks, consider using the [Copilot coding agent](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent) on GitHub.com instead. It charges once per session at the model's multiplier. This is usually more cost-effective than a CLI autopilot session with a premium model.

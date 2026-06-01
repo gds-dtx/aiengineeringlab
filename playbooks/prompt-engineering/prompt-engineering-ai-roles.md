@@ -87,7 +87,7 @@ Why this works: it mirrors how we naturally learn - understand the concept, see 
 
 #### For junior engineers: building foundations through AI
 
-AI tools can accelerate your growth as a junior engineer. They also carry a specific risk. You may accept output you do not fully understand. This creates the appearance of progress while undermining the foundational knowledge you need to make good engineering decisions later.
+ AI tools can accelerate your growth as a junior engineer, but they also carry the specific risk that you may accept output you do not fully understand. This creates the appearance of progress while undermining the foundational knowledge you need to make good engineering decisions later.
 
 The patterns below address that risk directly.
 
@@ -109,6 +109,8 @@ Once you understand the existing code, you are in a much stronger position to as
 ##### Apply the 'teach-back' test
 
 When AI generates code, ask yourself whether you can explain every line to a colleague without referencing the AI output. If not, you do not understand it well enough to commit it.
+
+Please review pricing if significant additions or changes have been made before running the prompt below.
 
 Use this prompt after receiving generated code.
 ```

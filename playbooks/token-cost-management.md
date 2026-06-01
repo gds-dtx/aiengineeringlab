@@ -39,7 +39,9 @@ This guide is for:
 
 ## Why token cost matters
 
-Token costs accumulate in 2 ways. Input tokens are what you send to the model. Output tokens are what the model generates. Output tokens are typically 3 to 5 times more expensive than input tokens. Models like Opus 4.8 and Opus 4.7 consume more tokens per task than Sonnet 4.6 even when the per-token rate is similar. Total cost per task scales with model verbosity and reasoning depth.
+Token costs accumulate in 2 ways, where input tokens are what you send to the model, and output tokens are what the model generates.
+
+Output tokens are typically 3 to 5 times more expensive than input tokens. Models such as Opus 4.8 and Opus 4.7 consume more tokens per task than Sonnet 4.6, even when the per-token rate is similar. The total cost per task scales with model verbosity and reasoning depth.
 
 Reducing unnecessary tokens directly lowers spend without reducing quality. Verbose tool output, filler language, and running an expensive model for simple decisions all waste tokens.
 

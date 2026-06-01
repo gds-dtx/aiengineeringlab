@@ -65,6 +65,8 @@ The table below compares typical agent mode sessions across different task types
 | Feature implementation | 20 to 40 | 0 credits | 20 to 40 credits | 60 to 120 credits | 300 to 600 credits |
 | Test generation for a module | 5 to 10 | 0 credits | 5 to 10 credits | 15 to 30 credits | 75 to 150 credits |
 
+> The above is true as of 1 June 2026
+
 Engineers who regularly use premium models on complex tasks can exhaust their credit allowance within a few focused sessions.
 
 ## What auto model selection does in agent mode
