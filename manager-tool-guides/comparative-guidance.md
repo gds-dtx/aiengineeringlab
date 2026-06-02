@@ -92,7 +92,7 @@ The table below provides a single view of how all five tools compare across the 
 
 ## Category 1: security and compliance
 
-The table below shows criteria you should consider when evaluating security and compliance aspects:
+The table below shows criteria you should consider when evaluating security and compliance aspects.
 
 | Criterion | Questions to consider | Weight |
 |-----------|----------------------|--------|
@@ -122,7 +122,7 @@ Consult your departmental security team before deployment. Reference [NCSC guida
 
 ## Category 2: capabilities and features
 
-The table below shows criteria you should consider when evaluating capabilities and features:
+The table below shows criteria you should consider when evaluating capabilities and features.
 
 | Criterion | Questions to consider | Weight |
 |-----------|----------------------|--------|
@@ -174,7 +174,7 @@ The table below shows criteria you should consider when evaluating capabilities 
 
 ## Category 3: language and framework support
 
-The table below shows criteria you should consider when evaluating language and framework support:
+The table below shows criteria you should consider when evaluating language and framework support.
 
 | Criterion | Questions to consider | Weight |
 |-----------|----------------------|--------|
@@ -209,7 +209,7 @@ Note: quality varies by specific use case. Conduct proof-of-concept testing with
 
 ## Category 4: integration and deployment
 
-The table below shows criteria you should consider when evaluating integration and deployment:
+The table below shows criteria you should consider when evaluating integration and deployment.
 
 | Criterion | Questions to consider | Weight |
 |-----------|----------------------|--------|
@@ -268,7 +268,7 @@ If you must make a defensible claim of UK-only data residency, the strongest opt
 
 ## Category 6: cost and licensing
 
-The table below shows criteria you should consider when evaluating cost and licensing:
+The table below shows criteria you should consider when evaluating cost and licensing.
 
 | Criterion | Questions to consider | Weight |
 |-----------|----------------------|--------|
@@ -289,7 +289,7 @@ The table below shows criteria you should consider when evaluating cost and lice
 | Premium models | included allowance plus overage | additional credits | included | included | included |
 | Government procurement | G-Cloud 14, Digital Marketplace | via AWS Bedrock and LiteLLM | AWS Enterprise Agreement | G-Cloud 14, AWS Marketplace | G-Cloud 14 |
 
-Note: DSIT is procuring licences centrally for Phase 1. Pricing details are for future reference and business case development.
+DSIT is procuring licences centrally for Phase 1. Pricing details are for future reference and business case development.
 
 ---
 
@@ -301,7 +301,7 @@ Each tool uses different underlying models. Understanding model capabilities hel
 
 | Tool | Primary models | Model selection |
 |------|---------------|-----------------|
-| GitHub Copilot | GPT-4.1, GPT-5 mini (included). Claude Sonnet 4.5, Claude Opus 4.5, Gemini 2.5 Pro (premium) | user selectable via model picker. Auto mode stays within 0x to 1x cost models |
+| GitHub Copilot | GPT-5 mini (included). Claude Sonnet 4.6, Claude Opus 4.8, Claude Opus 4.6, Gemini 2.5 Pro (premium) | user selectable via model picker. Auto mode stays within 0x to 1x cost models |
 | Claude Code | Claude Opus 4.5, Claude Sonnet 4.5, Claude Haiku 4.5 | user selectable via /model command |
 | Amazon Kiro | Claude Sonnet 4.0, Claude Sonnet 3.7 (via Bedrock) | auto-routing for efficiency |
 | Amazon Q Developer | AWS proprietary models | automatic selection based on task |
@@ -312,7 +312,7 @@ Each tool uses different underlying models. Understanding model capabilities hel
 | Task | Best suited tools | Why |
 |------|-------------------|-----|
 | Fast inline autocompletion | GitHub Copilot, Gemini Code Assist | optimised for speed and low latency |
-| Complex reasoning and debugging | Claude Code (Opus), GitHub Copilot (Claude Opus or GPT-5.2) | superior reasoning about multi-layer problems |
+| Complex reasoning and debugging | Claude Code (Opus), GitHub Copilot (Claude Opus 4.8, Claude Opus or Claude Sonnet 4.6) | superior reasoning about multi-layer problems |
 | Large-scale refactoring | Claude Code, Amazon Kiro | agentic multi-step execution with deep context |
 | Specification-driven development | Amazon Kiro | native spec-to-task workflow |
 | AWS infrastructure tasks | Amazon Q Developer | native AWS service integration and CloudFormation |
@@ -321,7 +321,7 @@ Each tool uses different underlying models. Understanding model capabilities hel
 | Security code scanning | Amazon Q Developer | built-in security scanning |
 | PR review automation | GitHub Copilot | native GitHub PR integration |
 | Legacy COBOL maintenance | Amazon Q Developer | mainframe focus and COBOL features |
-| Quick boilerplate generation | GitHub Copilot (GPT-4.1), Claude Code (Haiku) | fast and cost-effective |
+| Quick boilerplate generation | GitHub Copilot (GPT-5 mini), Claude Code (Haiku) | fast and cost-effective |
 | Multi-file feature implementation | Claude Code, Amazon Kiro, GitHub Copilot (agent mode) | strong agentic capabilities |
 | Documentation generation | all tools | comparable across tools |
 | Test generation | Claude Code, GitHub Copilot, Amazon Q Developer | strong test scaffolding |
@@ -330,7 +330,7 @@ Each tool uses different underlying models. Understanding model capabilities hel
 
 ## Category 8: support and ecosystem
 
-The table below shows criteria you should consider when evaluating support and ecosystem:
+The table below shows criteria you should consider when evaluating support and ecosystem.
 
 | Criterion | Questions to consider | Weight |
 |-----------|----------------------|--------|
@@ -356,7 +356,7 @@ The table below shows criteria you should consider when evaluating support and e
 
 ### Decision factors
 
-Different tools suit different contexts. The [model selection playbook](../playbooks/model-selection.md) provides complementary guidance on choosing appropriate AI models for specific tasks once you have selected a tool. The table below shows factors to consider:
+Different tools suit different contexts. The [model selection playbook](../playbooks/model-selection.md) provides complementary guidance on choosing appropriate AI models for specific tasks once you have selected a tool. The table below shows factors to consider.
 
 | Factor | Implications |
 |--------|--------------|
@@ -371,6 +371,8 @@ Different tools suit different contexts. The [model selection playbook](../playb
 ### Recommended evaluation approach
 
 #### Step 1: define requirements (week 1)
+
+Complete the following tasks.
 
 1. Document must-have security requirements including data residency.
 2. List primary languages and frameworks.
@@ -412,12 +414,12 @@ Proof-of-concept evaluation template:
 
 You should make a recommendation that documents the following information.
 
-1. Evaluation criteria and weighting.
-2. Proof-of-concept findings and scores.
-3. Engineer feedback summary.
-4. Security assessment outcome.
-5. Recommendation with rationale.
-6. Implementation considerations.
+- evaluation criteria and weighting
+- proof-of-concept findings and scores
+- engineer feedback summary
+- security assessment outcome
+- recommendation with rationale
+- implementation considerations
 
 ---
 
@@ -425,7 +427,7 @@ You should make a recommendation that documents the following information.
 
 ### When to consider multiple tools
 
-The table below shows scenarios where multiple tools may be appropriate:
+The table below shows scenarios where multiple tools may be appropriate.
 
 | Scenario | Rationale |
 |----------|-----------|
@@ -437,7 +439,7 @@ The table below shows scenarios where multiple tools may be appropriate:
 
 ### Multi-tool considerations
 
-The table below shows considerations when using multiple tools:
+The table below shows considerations when using multiple tools.
 
 | Consideration | Guidance |
 |---------------|----------|
@@ -601,7 +603,7 @@ You should consider the following:
 
 ### Usage monitoring
 
-The table below shows metrics to monitor and their purpose:
+The table below shows metrics to monitor and their purpose.
 
 | Metric | Purpose | Frequency |
 |--------|---------|-----------|
@@ -613,7 +615,7 @@ The table below shows metrics to monitor and their purpose:
 
 ### Periodic review
 
-The table below shows reviews to conduct and their frequency:
+The table below shows reviews to conduct and their frequency.
 
 | Review | Frequency | Focus |
 |--------|-----------|-------|

@@ -107,6 +107,7 @@ Starting teams have limited AI assistant experience, face significant constraint
 | Check-ins | Daily during first 2 weeks |
 | Change management | High-touch, address resistance directly |
 | Focus | Build basic confidence, quick wins, address concerns |
+| Junior-heavy teams | Pair juniors with AI tools under structured supervision for the first 2 to 4 weeks. A senior engineer reviews not just the code output but the prompts used and the junior's understanding of the response. This turns the FDE engagement into a teaching opportunity rather than just a tool rollout. See [For junior engineers: building foundations through AI](../playbooks/prompt-engineering/prompt-engineering-ai-roles.md#for-junior-engineers-building-foundations-through-ai). |
 
 ### What starting teams need to progress
 
@@ -174,6 +175,7 @@ Developing teams have foundational capabilities or some AI experience. They need
 | Check-ins | Weekly |
 | Change management | Standard approach, address concerns as they arise |
 | Focus | Build proficiency, advanced techniques, identify champions |
+| Junior-heavy teams | Pair juniors with AI tools under structured supervision for the first 2 to 4 weeks. A senior engineer reviews not just the code output but the prompts used and the junior's understanding of the response. This turns the FDE engagement into a teaching opportunity rather than just a tool rollout. See [For junior engineers: building foundations through AI](../playbooks/prompt-engineering/prompt-engineering-ai-roles.md#for-junior-engineers-building-foundations-through-ai). |
 
 ### What Developing teams need to progress
 

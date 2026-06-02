@@ -70,7 +70,7 @@ Example commit message template:
 
 ```
 feat: add input validation for registration endpoint
-ai assisted: GitHub Copilot, model gpt-4.1
+ai assisted: GitHub Copilot, claude-sonnet-4.6
 human changes: added rate limiting and corrected error handling
 reviewed by: Firstname Lastname
 ```

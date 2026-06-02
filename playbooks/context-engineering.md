@@ -427,7 +427,7 @@ Each AI tool has a context window limit. This is the maximum amount of text it c
 | Tool | Approximate context window | Notes |
 |------|---------------------------|-------|
 | GitHub Copilot | Varies by model | Depends on the underlying model selected |
-| Claude Code | 200,000 tokens (Claude 4.5); 1,000,000 tokens (Claude Opus 4.6) | Older Claude models had smaller windows |
+| Claude Code | 200,000 tokens (Claude 4.5); 1,000,000 tokens (Claude Opus 4.8, 4.7, 4.6) | Older Claude models had smaller windows |
 | Amazon Q Developer | Varies by feature | Inline completion uses a smaller local window |
 | Gemini Code Assist | 1,000,000 tokens (Gemini 1.5 and later) | Gemini 1.0 Pro had a 32,768-token window |
 

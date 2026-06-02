@@ -87,7 +87,9 @@ Your enterprise administrator or repository owner must enable these settings bef
 | Content exclusions | Configured to exclude sensitive files from AI indexing |
 | Firewall rules | Block GitHub Copilot Free endpoints |
 
-You should also create a `.copilotignore` file in VS Code to exclude config files, environment files, and credentials from Copilot context.
+Your enterprise administrator can configure content exclusions to keep sensitive files out of Copilot context. This covers configuration files, environment files, and credential files. See [configuring content exclusions for GitHub Copilot](https://docs.github.com/en/copilot/how-tos/configure-content-exclusion/exclude-content-from-copilot). This feature requires a Copilot Business or Copilot Enterprise plan. Administrators configure exclusions at repository or organisation level.
+
+Content exclusion has significant limitations that affect risk decisions, particularly for agentic features. Exclusions are not enforced in agent mode, edit mode, Copilot CLI, or the Copilot cloud agent. For a full explanation of what exclusion does and does not guarantee, including recommended patterns and guidance for OFFICIAL-SENSITIVE environments, see the [content exclusions guide](../../user-tool-guides/github-copilot/content-exclusions.md).
 
 ## What you must not do
 
@@ -195,6 +197,7 @@ Use your organisation's standard review cycle.
 
 ## Related guidance
 
+- [Content exclusions guide](../../user-tool-guides/github-copilot/content-exclusions.md)
 - [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md)
 - [Security policies](../../security/security-policies.md)
 - [AI Engineering Lab repository](https://github.com/govuk-digital-backbone/aiengineeringlab)

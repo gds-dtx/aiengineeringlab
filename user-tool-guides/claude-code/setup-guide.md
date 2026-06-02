@@ -190,10 +190,12 @@ Do not store keys in source control. Do not share keys in chat, tickets, or pull
 
 Use a two-step pattern to reduce spend and keep quality high.
 
-1. Plan with Opus for complex decomposition, risk spotting, and architecture decisions.
+1. Plan with Opus (4.8, 4.7, or 4.6) for complex decomposition, risk spotting, and architecture decisions.
 2. Execute with Sonnet for implementation, tests, and iterative edits.
 
 Use Haiku for lightweight tasks such as formatting fixes, short explanations, and quick boilerplate.
+
+Opus 4.8 offers improved judgement in agentic tasks and is 4 times less likely to allow code flaws to pass unremarked compared to earlier versions.
 
 ## Troubleshooting
 

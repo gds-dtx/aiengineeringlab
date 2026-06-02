@@ -107,7 +107,7 @@ You can improve the quality of outputs by:
 - ensuring generated tests still fail when code breaks
 - ensuring documentation reflects real behaviour rather than intent
 
-If you use agent mode to generate tests across multiple files, the number of messages you send determines how many premium requests you consume. See [Agent mode billing](agent-mode-billing.md) for worked examples showing credit usage for test generation sessions, including how to keep costs to zero using included models.
+If you use agent mode to generate tests across multiple files, the number of messages you send determines how many credits you consume. See [Agent mode billing](agent-mode-billing.md) for worked examples showing credit usage for test generation sessions, including how to keep costs to zero using included models.
 
 ### References
 [Generate unit tests with GitHub Copilot](https://docs.github.com/en/copilot/tutorials/customization-library/prompt-files/generate-unit-tests)
@@ -133,7 +133,7 @@ You can refactor more safely by:
 - avoiding large multi-file changes generated in one step
 - keeping changes reviewable in pull requests
 
-Multi-file refactoring is one of the most credit-intensive agent mode tasks. A complex refactoring job can involve 15 to 25 messages, which adds up quickly if you use a premium model. See [Agent mode billing](agent-mode-billing.md) for a cost comparison across model choices, including how to use agent mode for refactoring at zero premium cost with included models.
+Multi-file refactoring is one of the most credit-intensive agent mode tasks. A complex refactoring job can involve 15 to 25 messages, which adds up quickly if you use a premium model. See [Agent mode billing](agent-mode-billing.md) for a cost comparison across model choices. It also explains how to use agent mode for refactoring at zero cost with included models.
 
 ### References
 [Refactoring code with GitHub Copilot](https://docs.github.com/en/copilot/tutorials/refactor-code)

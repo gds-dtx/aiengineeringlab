@@ -9,9 +9,9 @@ Practical guidance for engineers working with AI models that have limited contex
 
 Not all teams can access the latest large-context models. Government departments may be constrained by procurement timelines, cost controls, data residency requirements, or the availability of on-premises model deployments. In these situations, engineers may work with models that have smaller context windows under 32,000 tokens. These are significantly smaller than the windows on current flagship models, which range from 200,000 to 1 million tokens.
 
-## Who this applies to
+## Who this is for
 
-This guide applies to engineers, technical leads and delivery teams in UK government organisations who are using AI coding assistants under any of the following conditions:
+This guide is for engineers, technical leads and delivery teams in UK government organisations. It covers using AI coding assistants when you are:
 
 - working with models procured through older or fixed contracts
 - using self-hosted or on-premises model deployments
@@ -52,8 +52,8 @@ When the total input exceeds the context window, the tool needs to drop somethin
 | Category | Model examples                     | Context window (tokens) | Approximate character limit |
 |----------|------------------------------------|-------------------------|-----------------------------|
 | Limited | GPT-4                              | 32,768 | ~128,000 characters |
-| Large | GPT-4o, Claude 4.5  | 128,000 to 200,000 | ~512,000 to 800,000 characters |
-| Very large | GPT-4.1, Claude Opus 4.6, Gemini 2.5 Pro | 1,000,000 | ~4,000,000 characters |
+| Large | Claude Sonnet 4.6, Claude Sonnet 4.5  | 128,000 to 200,000 | ~512,000 to 800,000 characters |
+| Very large | Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, Gemini 2.5 Pro | 1,000,000 | ~4,000,000 characters |
 
 As a rule of thumb, 1 token is approximately 4 characters, or about three-quarters of a word in English. A typical source code file of 500 lines might use between 3,000 and 8,000 tokens depending on how verbose the language is.
 
@@ -93,7 +93,7 @@ Before starting a session, estimate how much context your inputs will consume.
 3. Subtract any persistent conversation history from previous exchanges.
 4. What remains is your working budget for code, files, and questions.
 
-For a model with a 16,384-token window:
+For a model with a 16,384-token window, you would:
 
 - subtract 500 tokens for system prompt
 - subtract 2,000 tokens for conversation history
@@ -179,7 +179,7 @@ When your context budget is limited, every token counts. Apply these techniques 
 
 Replace large blocks of context with concise summaries.
 
-Instead of including a full 500-line service file, provide a structured summary:
+Instead of including a full 500-line service file, provide a structured summary.
 
 ```
 PaymentService summary:
@@ -224,7 +224,7 @@ Structure your prompts in this order.
 3. Provide supporting context such as relevant code, interfaces, and examples.
 4. Specify output requirements such as format, language, and test coverage expectations.
 
-Example of a front-loaded prompt for a constrained context:
+This example shows a front-loaded prompt for a constrained context.
 
 ```
 Constraints:
@@ -478,6 +478,8 @@ There is no universal answer. The best approach is to match the model to the tas
 [AI-SDLC playbook](ai-sdlc-playbook.md) covers integrating AI into the development lifecycle.
 
 [Prompt library](../prompt-library/) provides ready-to-use prompt patterns.
+
+[Token cost management](token-cost-management.md) covers tools and techniques for reducing token consumption and managing costs under usage-based billing.
 
 ### External resources
 

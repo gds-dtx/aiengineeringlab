@@ -5,7 +5,7 @@
 
 ## Purpose
 
-This guidance defines safe usage boundaries for GitHub Copilot across prototyping and production environments within UK government departments. It establishes differentiated controls that enable rapid experimentation during prototyping whilst ensuring appropriate security rigour for production systems.
+This guidance defines safe usage boundaries for GitHub Copilot across prototyping and production environments within UK government departments. It establishes differentiated controls that enable rapid experimentation during prototyping while ensuring appropriate security rigour for production systems.
 
 ## Who this is for
 
@@ -750,6 +750,8 @@ For UK government departments, configure GitHub Copilot enterprise policies as f
 
 Enterprise or organisation administrators can configure GitHub Copilot content exclusions to prevent sensitive repository patterns from being used in suggestions. See [configuring content exclusions for GitHub Copilot](https://docs.github.com/en/copilot/how-tos/configure-content-exclusion/exclude-content-from-copilot). This requires a Copilot Business or Copilot Enterprise plan.
 
+Content exclusions have significant limitations. They are not enforced in agent mode, edit mode, Copilot CLI, or the Copilot cloud agent. For a full explanation of all mechanisms, what they guarantee, and recommended patterns, see the [content exclusions guide](content-exclusions.md).
+
 Recommended patterns to exclude in production environments:
 
 ```
@@ -806,6 +808,8 @@ Escalate immediately if you identify:
 ### Internal documentation
 
 [Base guardrails](../../governance/guardrails-base.md) defines foundational security controls for AI tools.
+
+[Content exclusions guide](content-exclusions.md) explains how file exclusion works, what guarantees exist, and how to configure exclusions for OFFICIAL-SENSITIVE environments.
 
 [AI SDLC playbook](../../playbooks/ai-sdlc-playbook.md) covers integrating AI across development lifecycle.
 

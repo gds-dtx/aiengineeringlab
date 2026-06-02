@@ -48,6 +48,7 @@ You can use Claude Code:
 | [Advanced use of Claude Code](advanced-use.md) | Techniques for individual engineers including better prompting, context management, and comprehensive security practices |
 | [Customisation guide for Claude Code](customisation-guide.md) | Team-level configuration through CLAUDE.md files, custom slash commands, skills, hooks, and Model Context Protocol (MCP) integration |
 | [Safe usage guidance: prototyping vs production](safe-usage-prototyping-vs-production.md) | Differentiated controls for prototyping and production environments |
+| [Evaluating AI agents](evaluating-ai-agents.md) | Signpost to Anthropic's practical guide on designing evals for agentic systems |
 
 ## Getting help
 

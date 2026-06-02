@@ -3,7 +3,7 @@
 
 # Copilot CLI billing and credit consumption
 
-This guide explains how GitHub Copilot CLI (command-line interface) consumes premium requests. It covers how its autopilot mode billing differs from agent mode in the IDE and what administrators need to do before engineers can use it.
+This guide explains how GitHub Copilot CLI (command-line interface) consumes GitHub AI Credits. It covers how its autopilot mode billing differs from agent mode in the IDE and what administrators need to do before engineers can use it.
 
 ## Contents
 
@@ -32,7 +32,9 @@ This guide is for:
 
 ## Before you start
 
-Before reading this guide, you should understand how premium credits work and what your monthly allowance includes. Read the [GitHub Copilot premium credit management guide](premium-credit-management.md) for the foundational concepts, plan allowances, and model multiplier table.
+Before reading this guide, you should understand how credits work and what your plan includes. Read the [GitHub Copilot premium credit management guide](premium-credit-management.md) for the foundational concepts, plan details, and model multiplier table.
+
+GitHub Copilot uses usage-based billing through GitHub AI Credits (1 credit = $0.01 USD). See the [enterprise AI controls](../../governance/github-enterprise-ai-controls.md#usage-based-billing-from-1-june-2026) for details.
 
 ## What Copilot CLI is
 
@@ -40,7 +42,7 @@ GitHub Copilot CLI is a standalone terminal-based agent. It is a distinct produc
 
 ## How Copilot CLI billing works
 
-Each prompt you submit in Copilot CLI consumes one [premium request](https://docs.github.com/en/copilot/concepts/billing/copilot-requests#premium-features), multiplied by the selected model's multiplier.
+Each prompt you submit in Copilot CLI consumes [credits](https://docs.github.com/en/copilot/concepts/billing/copilot-requests#premium-features) based on the selected model's multiplier.
 
 The [default model is Claude Sonnet 4.5](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli#model-usage) (1x multiplier). You can change the model at any time using the `/model` command in interactive mode or the `--model` flag when running non-interactively.
 
@@ -48,21 +50,21 @@ Copilot CLI does not use auto model selection. You must choose your model explic
 
 ## Using included models in Copilot CLI
 
-Copilot CLI supports [included models](https://docs.github.com/en/copilot/concepts/billing/copilot-requests#model-multipliers). On paid plans, GPT-4o, GPT-4.1, and GPT-5 mini consume 0 premium requests per prompt.
+Copilot CLI supports [included models](https://docs.github.com/en/copilot/concepts/billing/copilot-requests#model-multipliers). On paid plans, GPT-5 mini consumes 0 credits per prompt.
 
-To switch to an included model in an interactive session, type `/model` and select GPT-4o, GPT-4.1, or GPT-5 mini from the list. To set a persistent default, update your CLI config file to specify the model.
+To switch to an included model in an interactive session, type `/model` and select GPT-5 mini from the list. To set a persistent default, update your CLI config file to specify the model.
 
-When your premium request allowance is exhausted, Copilot CLI falls back to included models. The CLI displays a message confirming you have been switched to an included model.
+When your credit budget is exhausted, Copilot CLI falls back to included models. The CLI displays a message confirming you have been switched to an included model.
 
 ## Autopilot mode in Copilot CLI
 
 Copilot CLI includes an autopilot mode. It lets the agent work through a task from start to finish without asking you to approve each step.
 
-In [IDE agent mode](https://docs.github.com/en/copilot/concepts/billing/copilot-requests#premium-features), only the prompts you enter are billed. The agent's follow-up tool calls, file reads, and reasoning steps between your messages are free. In [CLI autopilot mode](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/autopilot#things-to-consider), the agent keeps working after your initial prompt. Each continuation step is billed as a separate premium request at the selected model's multiplier.
+In [IDE agent mode](https://docs.github.com/en/copilot/concepts/billing/copilot-requests#premium-features), only the prompts you enter are billed. The agent's follow-up tool calls, file reads, and reasoning steps between your messages are free. In [CLI autopilot mode](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/autopilot#things-to-consider), the agent keeps working after your initial prompt. Each continuation step consumes credits at the selected model's multiplier.
 
-For example, consider a CLI autopilot session that completes a task in 12 autonomous steps using Claude Sonnet 4.5 (1x). That session will consume 12 premium requests, not 1. The same session using Claude Opus 4.5 (3x) would consume 36 premium requests.
+For example, consider a CLI autopilot session that completes a task in 12 autonomous steps using Claude Sonnet 4.5 (1x). That session will consume 12 credits, not 1. The same session using Claude Opus 4.5 (3x) would consume 36 credits.
 
-The [`--max-autopilot-continues` flag](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#command-line-options) limits how many autonomous continuation steps the agent can take after your initial prompt. It does not count the initial prompt itself. Always set this when using autopilot with a premium model to prevent a session from consuming more premium requests than intended.
+The [`--max-autopilot-continues` flag](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference#command-line-options) limits how many autonomous continuation steps the agent can take after your initial prompt. It does not count the initial prompt itself. Always set this when using autopilot with a premium model to prevent a session from consuming more credits than intended.
 
 Follow these steps to activate autopilot mode.
 
@@ -71,9 +73,9 @@ Follow these steps to activate autopilot mode.
 3. Enter your task prompt.
 4. Review the changes the agent made when the session ends.
 
-For scripted or automated use, run: `copilot --autopilot --max-autopilot-continues 10 -p "your task here"`
+For scripted or automated use, run `copilot --autopilot --max-autopilot-continues 10 -p "your task here"`
 
-With `--max-autopilot-continues 10`, the agent can take up to 10 autonomous continuation steps after the initial prompt, giving a maximum of 11 total model interactions and 11 premium requests at a 1x model multiplier.
+With `--max-autopilot-continues 10`, the agent can take up to 10 autonomous continuation steps after the initial prompt. This gives a maximum of 11 total model interactions and 11 credits at a 1x model multiplier.
 
 Autopilot mode is also available as a permission level in VS Code (preview). Administrators can disable it for all engineers using the ChatToolsAutoApprove policy.
 
@@ -89,20 +91,22 @@ Usage reports for Copilot CLI are available in the Copilot usage metrics dashboa
 
 The table below shows how model choice affects cost for a typical CLI autopilot session. It assumes 10 total model interactions to complete a task. Each step represents one call to the AI model. This includes the initial prompt (1 step) and all subsequent autonomous continuation steps.
 
-In autopilot mode, [each continuation step is billed as a separate premium request](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/autopilot) at the selected model's multiplier. To cap a session at 10 total model interactions, set `--max-autopilot-continues 9` (9 continuation steps after the initial prompt).
+In autopilot mode, [each continuation step consumes credits](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/autopilot) at the selected model's multiplier. To cap a session at 10 total model interactions, set `--max-autopilot-continues 9` (9 continuation steps after the initial prompt).
 
-| Model | Multiplier | Cost per step | Total for 10 steps | Total at overage rate |
-|-------|-----------|--------------|--------------------|-----------------------|
-| GPT-4o | 0x | 0 requests | 0 requests | $0.00 USD |
-| GPT-4.1 | 0x | 0 requests | 0 requests | $0.00 USD |
-| GPT-5 mini | 0x | 0 requests | 0 requests | $0.00 USD |
-| Claude Sonnet 4.5 | 1x | 1 request | 10 requests | $0.40 USD |
-| Claude Opus 4.5 | 3x | 3 requests | 30 requests | $1.20 USD |
-| Claude Opus 4.6 fast mode (preview) | 30x | 30 requests | 300 requests | $12.00 USD |
+| Model | Multiplier | Cost per step | Total for 10 steps |
+|-------|-----------|--------------|--------------------|
+| GPT-5 mini | 0x | 0 credits | 0 credits |
+| Claude Sonnet 4.6 | 1x | 1 credit | 10 credits |
+| Claude Sonnet 4.5 | 1x | 1 credit | 10 credits |
+| Claude Opus 4.5 | 3x | 3 credits | 30 credits |
+| Claude Opus 4.6 | 3x | 3 credits | 30 credits |
+| Claude Opus 4.7 | 15x | 15 credits | 150 credits |
 
-Multipliers are from the [Requests in GitHub Copilot documentation](https://docs.github.com/en/copilot/concepts/billing/copilot-requests). Additional premium requests beyond your monthly allowance are charged at $0.04 USD each. For current rates, see the [individual plan billing page](https://docs.github.com/en/copilot/concepts/billing/billing-for-individuals).
+> The above is true as of 1 June 2026
 
-Use GPT-4.1 or GPT-5 mini for routine CLI tasks. Reserve premium models for tasks where you have confirmed an included model produced insufficient output. For multi-file implementation tasks, consider using the [Copilot coding agent](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent) on GitHub.com instead. It charges one premium request multiplied by the model's multiplier per session. This is usually more cost-effective than a CLI autopilot session with a premium model.
+Multipliers are from the [Requests in GitHub Copilot documentation](https://docs.github.com/en/copilot/concepts/billing/copilot-requests). For current rates, see the [individual plan billing page](https://docs.github.com/en/copilot/concepts/billing/billing-for-individuals).
+
+Use GPT-5 mini for routine CLI tasks. Reserve premium models for tasks where you have confirmed an included model produced insufficient output. For multi-file implementation tasks, consider using the [Copilot coding agent](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent) on GitHub.com instead. It charges once per session at the model's multiplier. This is usually more cost-effective than a CLI autopilot session with a premium model.
 
 ## Further reading
 

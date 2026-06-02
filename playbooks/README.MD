@@ -21,4 +21,5 @@ This section provides operational guidance.
 | [Legacy system modernisation](legacy-system-modernisation.md) | Signpost to all guidance and prompts for AI-assisted analysis, planning, and safe modernisation of legacy codebases |
 | [Model selection](model-selection.md) | Guidance on selecting the right AI code assistant and model for your task |
 | [Prompt engineering](prompt-engineering/) | A series of guides on prompt engineering best practice |
+| [Token cost management](token-cost-management.md) | Techniques and tools for reducing LLM token consumption and managing costs in agentic workflows |
 | [Working with constrained context windows](working-with-constrained-context-windows.md) | Practical guidance for engineers working with models that have limited context capacity, including older models and those available under procurement or data residency constraints |

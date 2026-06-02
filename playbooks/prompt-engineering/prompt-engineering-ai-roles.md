@@ -85,6 +85,67 @@ Any potential issues with memory or performance?'
 
 Why this works: it mirrors how we naturally learn - understand the concept, see it in action, try it yourself, then refine through practice. It also naturally combines the prompting techniques in this playbook (for example: reverse prompting when asking for explanations, few-shot prompting when requesting examples and step-by-step reasoning when reviewing your attempt).
 
+#### For junior engineers: building foundations through AI
+
+ AI tools can accelerate your growth as a junior engineer, but they also carry the specific risk that you may accept output you do not fully understand. This creates the appearance of progress while undermining the foundational knowledge you need to make good engineering decisions later.
+
+The patterns below address that risk directly.
+
+##### Use the 'explain before generating' pattern
+
+Before asking AI to write new code, ask it to explain what existing code does. This builds understanding rather than dependency.
+
+Here is an example prompt.
+```
+'Explain what this function does line by line.
+
+[paste the function]
+
+What is its purpose? What would happen if it were removed?'
+```
+
+Once you understand the existing code, you are in a much stronger position to ask the AI to extend or modify it.
+
+##### Apply the 'teach-back' test
+
+When AI generates code, ask yourself whether you can explain every line to a colleague without referencing the AI output. If not, you do not understand it well enough to commit it.
+
+Please review pricing if significant additions or changes have been made before running the prompt below.
+
+Use this prompt after receiving generated code.
+```
+'Now explain back to me what each part of this code does and why it was written that way.
+
+Do not summarise - go line by line.'
+```
+
+If the explanation reveals gaps in your understanding, ask follow-up questions before moving on.
+
+##### Ask 'why', not just 'how'
+
+It is easy to ask AI to generate a solution. It is more valuable to ask why that solution is the right one.
+
+A shallow prompt asks for code directly.
+```
+'Write me a function that paginates a database query.'
+```
+
+A deeper prompt asks for reasoning first.
+```
+'Why is offset-based pagination problematic at scale?
+What alternatives exist, such as cursor-based pagination?
+When would I choose one over the other?
+Now show me an example of cursor-based pagination and explain each part.'
+```
+
+This builds the reasoning behind patterns, not just familiarity with their syntax.
+
+##### Why this matters for junior engineers specifically
+
+The risk of skills degradation is highest for engineers who are still building fundamentals. AI can produce correct-looking code that masks misunderstandings about data structures, error handling, security, or performance. Juniors who bypass the 'why' may ship code that works today but cannot be maintained, debugged, or extended by themselves or others tomorrow.
+
+Your adaptability is also an advantage. Junior engineers often find it easier to adopt new workflows than those with deeply embedded habits. Use that adaptability to build good AI-assisted habits from the start, not just fast ones.
+
 #### Understanding complex code
 
 Example prompt:

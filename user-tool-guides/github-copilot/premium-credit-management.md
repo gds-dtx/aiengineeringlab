@@ -3,7 +3,13 @@
 
 # GitHub Copilot premium credit management
 
-This guidance explains how enterprise premium credits work in GitHub Copilot. It covers how to manage them effectively and what happens when you reach your allowance limits.
+This page describes the premium request billing system that was in place before 1 June 2026. On 1 June 2026, GitHub moved all Copilot plans to usage-based billing tracked in GitHub AI Credits (1 credit = $0.01 USD) based on token consumption per model. For current billing guidance, see the [enterprise AI controls](../../governance/github-enterprise-ai-controls.md#usage-based-billing-from-1-june-2026) and the [agent mode billing guide](agent-mode-billing.md).
+
+The budget management, model multiplier, and cost control sections below remain relevant because the new system uses the same budget infrastructure. Model multipliers and spending caps work the same way under usage-based billing.
+
+---
+
+The guidance below describes how the premium request system worked and how to manage budgets effectively.
 
 ## Who this is for
 
@@ -50,13 +56,13 @@ Each time you use these capabilities, you consume premium requests based on the 
 
 All paid Copilot plans include unlimited:
 
-- code completions using included models (GPT-5 mini, GPT-4.1, GPT-4o)
+- code completions using included models (GPT-5 mini)
 - chat interactions using included models
 - basic code suggestions and explanations
 
 Your monthly premium request allowance includes a set number of premium requests to use advanced models and features. The exact number depends on your plan (see table below). Allowances reset on the first of each month at 00:00:00 Coordinated Universal Time (UTC). Unused requests do not carry over to the next month.
 
-The included models (GPT-5 mini, GPT-4.1, GPT-4o) do not consume premium requests on paid plans. You can use them unlimited times for everyday coding tasks.
+The included model (GPT-5 mini) does not consume premium requests on paid plans. You can use it unlimited times for everyday coding tasks.
 
 For more detail on how requests are counted and billed, see [Requests in GitHub Copilot](https://docs.github.com/en/copilot/concepts/billing/copilot-requests).
 
@@ -86,18 +92,25 @@ The table below shows current models and their multipliers. For the latest model
 
 | Model | Type | Multiplier | Premium requests per chat |
 |-------|------|------------|---------------------------|
+| Claude Opus 4.8 | Premium (not enterprise-enabled) | 15x | 15 |
+| Claude Opus 4.7 | Premium (not enterprise-enabled) | 15x | 15 |
 | Claude Opus 4.6 | Premium | 3x | 3 |
-| Claude Opus 4.6 fast mode (preview) | Premium | 30x | 30 |
 | Claude Opus 4.5 | Premium | 3x | 3 |
-| Claude Sonnet 4.6 | Premium | 1x (subject to change) | 1 |
+| Claude Sonnet 4.6 | Premium | 1x | 1 |
 | Claude Sonnet 4.5 | Premium | 1x | 1 |
 | Claude Haiku 4.5 | Premium | 0.33x | 0.33 |
-| GPT-5.1 | Premium | 1x | 1 |
+| Gemini 2.5 Pro | Premium | Check GitHub docs | Check GitHub docs |
+| Gemini 3 Flash (Preview) | Premium | Check GitHub docs | Check GitHub docs |
+| Gemini 3.1 Pro (Preview) | Premium | Check GitHub docs | Check GitHub docs |
+| GPT-5.4 | Premium | Check GitHub docs | Check GitHub docs |
+| GPT-5.4 mini | Premium | Check GitHub docs | Check GitHub docs |
+| GPT-5.4 nano | Premium | Check GitHub docs | Codex VS Code extension only — not available in Copilot Chat |
+| GPT-5.3-Codex | Premium | 1x | 1 |
 | GPT-5 mini | Included | 0x | Unlimited on paid plans |
-| GPT-4.1 | Included | 0x | Unlimited on paid plans |
-| GPT-4o | Included | 0x | Unlimited on paid plans |
 
-The included models (0x multiplier) are suitable for most everyday development tasks.
+Claude Opus 4.8 and Claude Opus 4.6 fast mode (preview) are not currently enabled in the enterprise. See the [enterprise AI controls](../../governance/github-enterprise-ai-controls.md) for the full enabled model list.
+
+The included model (0x multiplier) is suitable for most everyday development tasks. For tasks that need advanced reasoning, see the [model selection guide](../../playbooks/model-selection.md).
 
 On Copilot Free, all models consume at least one premium request per interaction. This applies even to models that are free for paid subscribers. See [requests in GitHub Copilot](https://docs.github.com/en/copilot/concepts/billing/copilot-requests) for the full breakdown by plan.
 
@@ -148,7 +161,7 @@ Copilot coding agent works on GitHub.com autonomously. You assign it a task and 
 
 Copilot CLI is a terminal-based agent that reached general availability on 25 February 2026. Its autopilot mode bills per autonomous step rather than per user prompt. This means costs can accumulate faster than in IDE agent mode. For full billing detail, plan requirements, and a cost comparison table, see the [Copilot CLI billing guide](copilot-cli-billing.md).
 
-For example, sending 10 messages in agent mode using GPT-4.1 costs 0 premium requests. Triggering one coding agent session on GitHub.com costs 1 premium request, regardless of how many files it changes. Running a 10-step CLI autopilot session with Claude Sonnet 4.5 costs 10 premium requests
+For example, sending 10 messages in agent mode using GPT-5 mini costs 0 premium requests. Triggering one coding agent session on GitHub.com costs 1 premium request, regardless of how many files it changes. Running a 10-step CLI autopilot session with Claude Sonnet 4.5 costs 10 premium requests.s
 
 ### Important notes on specific features
 
@@ -233,7 +246,7 @@ GitHub Copilot's behaviour when you exceed your premium request allowance depend
 Enabling 'Stop usage when budget limit is reached' means:
 
 - premium request usage stops when budget is exhausted
-- users automatically switch to included models (GPT-5 mini, GPT-4.1, GPT-4o)
+- users automatically switch to included models (GPT-5 mini)
 - no charges beyond the budget
 - usage resumes when the budget resets or you increase it
 
@@ -253,7 +266,7 @@ You should be aware that:
 
 Without a budget cap:
 
-- Copilot automatically switches you to included models for the remainder of the billing cycle
+- Copilot automatically switches you to included models (GPT-5 mini) for the remainder of the billing cycle
 - you can still use Copilot with included models, and basic code completions and chat remain available
 - additional premium requests are billed at $0.04 USD per request after model multipliers (for example, Claude Opus 4.6 at 3x means each use costs $0.12 USD)
 - access to premium models and Code Review is restricted until your allowance resets or you increase your budget
@@ -272,15 +285,15 @@ You should be aware that:
 
 You will see this message in your IDE:
 
-> 'You have exceeded your premium request allowance. We have automatically switched you to an included model (GPT-5 mini, GPT-4.1, or GPT-4o). Enable additional paid premium requests to continue using premium models.'
+> 'You have exceeded your premium request allowance. We have automatically switched you to an included model (GPT-5 mini). Enable additional paid premium requests to continue using premium models.'
 
-This is not an error. It is how the system maintains service availability whilst controlling costs.
+This is not an error. It is how the system maintains service availability while controlling costs.
 
 ### What remains available
 
 When premium requests are exhausted, you retain access to:
 
-- unlimited code completions with included models (GPT-5 mini, GPT-4.1, GPT-4o)
+- unlimited code completions with included models (GPT-5 mini)
 - Copilot Chat with included models
 - agent mode with included models
 - Copilot CLI with included models
@@ -289,7 +302,7 @@ When premium requests are exhausted, you retain access to:
 
 You cannot use:
 
-- premium AI models (Claude Opus 4.6, Claude Opus 4.5, Claude Sonnet 4.5, GPT-5)
+- premium AI models (Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, Claude Opus 4.5, Claude Sonnet 4.6, Claude Sonnet 4.5, Gemini 2.5 Pro, GPT-5.4)
 - Copilot Code Review on pull requests
 - features requiring premium model access
 
@@ -328,7 +341,7 @@ With $200 USD budget cap:
 
 ## Monitoring and optimising usage
 
-Control costs whilst maintaining developer productivity through monitoring and smart model selection.
+Control costs while maintaining developer productivity through monitoring and smart model selection.
 
 ### Track your usage
 
@@ -352,12 +365,12 @@ Navigate to Settings, then Copilot to:
 
 #### Choose the right model for each task
 
-Included models (GPT-4.1, GPT-4o, GPT-5 mini) are free on paid plans and capable for the majority of everyday work. Reserve premium models for tasks that genuinely need advanced reasoning. For a full task-to-model mapping table, see [Choosing the right model for your task](agent-mode-billing.md#choosing-the-right-model-for-your-task) in the agent mode billing guide.
+GPT-5 mini is free on paid plans and capable for the majority of everyday work. Reserve premium models for tasks that genuinely need advanced reasoning. For a full task-to-model mapping table, see [Choosing the right model for your task](agent-mode-billing.md#choosing-the-right-model-for-your-task) in the agent mode billing guide and the [model selection guide](../../playbooks/model-selection.md).
 
 #### Costs per interaction at a glance
 
-- $0 USD — GPT-4.1, GPT-4o, GPT-5 mini (included models, paid plans)
-- $0.04 USD — GPT-5.1 and other 1x models (at overage rate)
+- $0 USD — GPT-5 mini (included model, paid plans)
+- $0.04 USD — Claude Sonnet 4.6 and other 1x models (at overage rate)
 - $0.12 USD — Claude Opus 4.6 or 4.5 (3x models, at overage rate)
 
 #### Use coding agent for multi-file tasks
@@ -372,7 +385,7 @@ Download usage reports monthly to identify high consumers. Contact them to under
 - when to use included versus premium models
 - the cost implications of different choices
 
-GitHub Copilot models, pricing, and features are subject to change. This guidance was last updated March 2026. Always verify current information against the [official GitHub Copilot documentation](https://docs.github.com/en/copilot).
+GitHub Copilot models, pricing, and features are subject to change. This guidance was last updated May 2026. Always verify current information against the [official GitHub Copilot documentation](https://docs.github.com/en/copilot) and the [enterprise AI controls](../../governance/github-enterprise-ai-controls.md).
 
 GitHub Copilot is billed in US dollars (USD). UK government departments should apply current exchange rates when converting to pounds (GBP) for budget planning. All pricing in this document is shown in USD as per GitHub's official pricing.
 

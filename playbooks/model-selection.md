@@ -1,5 +1,6 @@
 > ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+
 # Model selection guide
 
 > Guidance on selecting the right AI code assistant and model for your task.
@@ -36,13 +37,13 @@
 
 ## Purpose
 
-This guide helps engineers and teams choose appropriate AI code assistants and models based on their work type, task requirements and cost considerations. It supports the programme's goal of optimising cost to use trade-offs while maintaining productivity gains.
+This guide helps engineers and teams choose appropriate AI code assistants and models based on their work type, task requirements and cost considerations. It supports the programme's goal of optimising cost-to-use trade-offs while maintaining productivity gains.
 
 The AI landscape changes rapidly. Always verify pricing and capabilities against vendor documentation before making decisions. Pricing shown in GBP is converted at approximately £0.74 per $1 USD.
 
 ## Tools in scope
 
-The AI Engineering Lab programme includes 4 core AI code assistants: GitHub Copilot Enterprise by Microsoft and GitHub, Claude Code by Anthropic, Amazon Q Developer by AWS, and Gemini Code Assist by Google.
+The AI Engineering Lab programme includes 4 core AI code assistants. These are GitHub Copilot Enterprise by Microsoft and GitHub, Claude Code by Anthropic, Amazon Q Developer by Amazon Web Services (AWS), and Gemini Code Assist by Google.
 
 Each tool has different strengths, pricing models and model options. This guide will be updated as comparative evidence emerges from programme deployments.
 
@@ -111,23 +112,25 @@ When choosing an AI model for your tool, consider these 2 primary characteristic
 
 Model curiosity levels include:
 
-- high curiosity: models that ask questions, dive deeper and explore problems broadly
-- low curiosity: models that stick closely to instructions without much exploration
+- high curiosity, where models ask questions, dive deeper and explore problems broadly
+- low curiosity, where models stick closely to instructions without much exploration
 
 ### Model agency level
 
 Model agency levels include:
 
-- high agency: models willing to go beyond your prompt and solve problems independently
-- low agency: models that execute exactly what you ask without going further
+- high agency, where models go beyond your prompt and solve problems independently
+- low agency, where models execute exactly what you ask without going further
 
 ## Model recommendations by use case
 
 ### Fast, iterative development
 
-Best models are Claude 4.5 Haiku, Gemini 3 Flash, GPT-5.2 Instant.
+Best models are Claude Haiku 4.5, Gemini 3 Flash.
 
-Characteristics: fast response times, solid code quality, medium agency.
+> GPT-5.2 Instant is retired. Use GPT-5.4 mini or Gemini 3 Flash as alternatives for fast, iterative work. GPT-5.4 nano is available in the Codex VS Code extension only and is not available in Copilot Chat.
+
+These models have fast response times, solid code quality and medium agency.
 
 Use these models for:
 
@@ -139,9 +142,9 @@ Use these models for:
 
 ### Deep problem analysis and new projects
 
-Best models are Claude Opus 4.6, Claude Opus 4.5.
+Best models are Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, GPT-5.3-Codex, Gemini 3 Pro.
 
-Characteristics: very high curiosity, excellent at reasoning through complex problems, strong multimodal understanding.
+These models have very high curiosity, excellent reasoning through complex problems and strong multimodal understanding.
 
 Use these models for:
 
@@ -149,29 +152,30 @@ Use these models for:
 - working on unfamiliar technologies
 - broad exploration of solutions
 - complex architectural decisions
-- thinking outside the box
+- exploring unconventional solutions
 - long-horizon agentic tasks
 
-### Daily driver for most tasks
+### General development tasks
 
-Best model: Claude 4.5 Sonnet.
+Best models are Claude Sonnet 4.6, GPT-5.4, Gemini 3 Flash.
 
-Characteristics: strong reasoning, excellent code generation, balanced agency.
+These models have strong reasoning, good code generation, balanced agency and are fast enough for iterative work.
 
-Use this model for:
+Use these models for:
 
 - general development work
 - building features
 - code reviews and explanations
 - coding tasks that need reliable, high quality output
+- iterative development where response speed matters
 
 ### Precise, instruction-following tasks
 
-Best model: Claude 4.5 Sonnet or older versions for lower agency.
+Best models are Claude Sonnet 4.6, GPT-5.4 mini, Claude Sonnet 4.5.
 
-Characteristics: balanced agency, executes what you ask for.
+These models have balanced agency and execute what you ask for without going beyond the prompt.
 
-Use this model for:
+Use these models for:
 
 - stricter adherence to requirements
 - simple, well defined tasks
@@ -180,9 +184,9 @@ Use this model for:
 
 ### Creative problem solving
 
-Best models: Claude 4.5 Opus, Claude Opus 4.6, GPT-5.3-Codex.
+Best models are Claude Opus 4.5, Claude Opus 4.6, GPT-5.3-Codex.
 
-Characteristics: higher agency, goes above and beyond, validates solutions.
+These models have higher agency. They exceed task requirements and validate solutions.
 
 Use these models for:
 
@@ -193,9 +197,9 @@ Use these models for:
 
 ### Long-running agentic workflows
 
-Best models: Claude Opus 4.6, GPT-5.3-Codex.
+Best models are Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, GPT-5.3-Codex.
 
-Characteristics: exceptional at sustained multi-step tasks, maintains context over extended sessions.
+These models are exceptional at sustained multi-step tasks and maintain context over extended sessions.
 
 Use these models for:
 
@@ -204,36 +208,71 @@ Use these models for:
 - complex feature builds requiring iteration
 - production-ready assistants for operational workflows
 
+### Opus 4.8 - enhanced collaboration and reliability
+
+Best model is Claude Opus 4.8. The application programming interface (API) ID is `claude-opus-4-8`.
+
+Released on 28 May 2026, Opus 4.8 builds on its predecessor with tangible improvements in coding, agentic tasks, reasoning and honesty. Early testers report better judgement in agentic tasks, with the model catching its own mistakes, pushing back on unsound plans and building confidence before making large changes. Opus 4.8 is around 4 times less likely than its predecessor to allow flaws in code to pass unremarked.
+
+Pricing is $5 and $25 per million tokens (the same token rate as Opus 4.7). Fast mode is now available at $10 and $50 per million tokens, 3 times cheaper than previous fast mode implementations. Opus 4.8 defaults to high effort, which uses similar tokens to Opus 4.7's default setting but delivers better performance. Users can select extra or max effort levels for difficult tasks.
+
+Use Opus 4.8 when your use case clearly requires the following:
+
+- tasks with 150+ sequential steps or high parallel tool call volume
+- agentic workflows where self-correction and judgement are critical
+- high-resolution vision tasks (images up to 3.75MP)
+- long-running autonomous work where sustained coherence across the full task matters
+- high-stakes analysis or edge-case resolution where Sonnet 4.6's output is demonstrably insufficient
+
+If you cannot answer 'what specific capability does Sonnet 4.6 not provide for this task?' then start with Sonnet 4.6.
+
+### Opus 4.7 - precision execution
+
+Best model is Claude Opus 4.7. The application programming interface (API) ID is `claude-opus-4-7`.
+
+This model resolves ambiguity through execution rather than hedging, maintains coherence across very long outputs and sustains performance on complex multi-step tasks. Pricing is $5 and $25 per million tokens. Opus 4.7 consumes more input and output tokens per task than Sonnet 4.6, so total cost per task is higher.
+
+Consider Opus 4.8 for new work. Opus 4.7 remains a strong choice for precision execution tasks.
+
 ## Model personality comparison
 
-| Model | Speed | Curiosity | Agency | Best for |
-|-------|-------|-----------|---------|----------|
-| GPT-5.2 Instant | Very fast | Medium | Medium | Rapid development, everyday work |
-| GPT-5.2 Thinking | Medium | High | High | Complex reasoning, professional work |
-| GPT-5.2-Codex | Medium | High | High | Agentic coding, long-context tasks |
-| GPT-5.3-Codex | Fast | Very high | Very high | Long-running development, multi-day projects |
-| Gemini 3 Flash | Very fast | Medium | Medium to high | Speed-optimised coding, fast iterations |
-| Gemini 3 Pro | Fast | High | High | Complex multimodal tasks, reasoning-first workflows |
-| Claude 4.5 Haiku | Fast | Medium | Medium | Fast tasks with reasoning |
-| Claude 4.5 Sonnet | Medium | Medium | Medium | Stable, predictable coding |
-| Claude 4.5 Opus | Medium to slow | High | Very high | Comprehensive solutions, deep reasoning |
-| Claude Opus 4.6 | Medium | Very high | Very high | Enterprise agents, long-running workflows |
+| Model             | Speed | Curiosity | Agency | Best for |
+|-------------------|-------|-----------|---------|----------|
+| GPT-5.3-Codex     | Fast | Very high | Very high | Long-running development, multi-day projects |
+| Gemini 3 Flash    | Very fast | Medium | Medium to high | Speed-optimised coding, fast iterations |
+| Gemini 3 Pro      | Fast | High | High | Complex multimodal tasks, reasoning-first workflows |
+| Claude Haiku 4.5  | Fast | Medium | Medium | Fast tasks with reasoning |
+| Claude Sonnet 4.5 | Medium | Medium | Medium | Stable, predictable coding |
+| Claude Sonnet 4.6 | Medium | High | Medium to high | General development, improved honesty |
+| Claude Opus 4.5   | Medium to slow | High | Very high | Comprehensive solutions, deep reasoning |
+| Claude Opus 4.7   | Medium | Very high | Very high | 150+ step tasks, precision execution |
+| Claude Opus 4.8   | Medium | Very high | Very high | Enhanced judgement, agentic reliability, self-correction |
 
 ### Model notes
 
 GPT-5.3-Codex (February 2026) is 25% faster than GPT-5.2-Codex and the first model to help build itself. API access being rolled out.
 
-Claude Opus 4.6 (February 2026) is the latest flagship, best for coding and enterprise agents. It includes agent team capabilities, 1M token context (beta) and discovered 500+ zero-day vulnerabilities in security testing.
+Claude Sonnet 4.6 (February 2026) provides near-Opus reasoning at fast latency, with improved honesty over 4.5.
 
-Gemini 3 Flash (January 2026) is 3x faster than Gemini 2.5 Pro while outperforming it.
+Claude Opus 4.6 (February 2026) is a flagship model best for coding and enterprise agents. It includes agent team capabilities, 1 million token context (beta) and discovered 500+ zero-day vulnerabilities in security testing.
 
-Gemini 3 Pro (November 2025) is a reasoning-first model with 1M token context window. It uses thinking levels (low/high) for controlling reasoning depth.
+Claude Opus 4.7 resolves ambiguity through execution rather than hedging. It maintains coherence across very long outputs and sustains performance on complex multi-step tasks. Total cost per task is higher than Sonnet 4.6 due to greater token consumption, even though the per-token rate is the same as previous Opus models.
+
+Claude Opus 4.8 (May 2026) improves on 4.7 with better judgement in agentic tasks, catching its own mistakes and pushing back on unsound plans. It is 4 times less likely to allow flaws in code to pass unremarked compared to 4.7. Fast mode pricing is now 3 times cheaper. Opus 4.8 includes new dynamic workflows in Claude Code, allowing hundreds of parallel subagents in a single session.
+
+Opus 4.8 introduced effort control in claude.ai and Cowork. This allows users to choose how much effort Claude puts into a response. Higher effort settings produce better responses with more frequent and deeper thinking. Lower effort settings respond faster and use rate limits more slowly. This control is available on all plans.
+
+Claude Mythos Preview represents a new class of model with even higher intelligence than Opus. As part of Project Glasswing, a small number of organisations are currently using Mythos Preview for cybersecurity work. Anthropic is developing stronger cyber safeguards and expects to bring Mythos-class models to all customers in the coming weeks.
+
+Gemini 3 Flash (January 2026) is 3 times faster than Gemini 2.5 Pro while outperforming it.
+
+Gemini 3 Pro (November 2025) is a reasoning-first model with 1 million token context window. It uses thinking levels (low or high) for controlling reasoning depth.
 
 ## Multi-model approach
 
 For complex problems, consider using multiple models to validate solutions.
 
-Technique: present the same problem to different AI assistants, then have each evaluate the other's solution.
+Present the same problem to different AI assistants, then have each evaluate the other's solution.
 
 To use multi-model validation, complete the following steps.
 
@@ -252,16 +291,16 @@ Each model will evaluate and return analysis. This approach adds overhead but ca
 When you are unsure which model to use, you should:
 
 - start with auto mode as many platforms offer automatic model selection based on task and capacity
-- use your daily driver, for example, Claude 4.5 Sonnet works well for most tasks
+- use your usual model, such as Claude Sonnet 4.6, GPT-5.4, or Gemini 3 Flash
 - switch models mid conversation if you are not getting the results you want
 
 ### Common switching scenarios
 
 You should switch models when you:
 
-- are stuck in a loop and need a different model for a fresh perspective
+- are not making progress and want to try a different model
 - need more creativity from high agency models
-- want faster responses from GPT-5.2 Instant or Gemini 3 Flash
+- want faster responses from GPT-5.4 mini or Gemini 3 Flash
 - need deeper analysis from Claude Opus 4.6, GPT-5.3-Codex, or other deep reasoning models
 - require sustained multi-step work from GPT-5.3-Codex or Claude Opus 4.6
 
@@ -286,7 +325,7 @@ There is no universal answer. Match the model to the task, and apply context opt
 
 ### Fallback strategies when access to large-context models is restricted
 
-If your team's access to large-context models changes — for example, due to a procurement decision, cost controls, or a data residency requirement — follow these steps to adapt your workflow.
+If your team's access to large-context models changes, follow these steps to adapt your workflow. This may happen due to a procurement decision, cost controls, or a data residency requirement.
 
 1. Identify which tasks in your current workflow relied on large context windows, such as whole-codebase refactors or long agentic sessions.
 2. Apply chunking and summarisation techniques to break those tasks into smaller, context-appropriate units of work.
@@ -301,12 +340,12 @@ For context and efficiency, consider:
 
 - separate chat sessions, using different models for different types of tasks
 - response time, balancing quality needs with speed requirements
-- matching verbosity preference, some models are more verbose than others
-- context window size: Gemini 3 Pro (1M), Claude Opus 4.6 (1M with beta), GPT-5.2 (400K)
+- matching verbosity preference, as some models are more verbose than others
+- context window size, such as Gemini 3 Pro (1M), Claude Opus 4.6 (1M with beta), GPT-5.4 (check GitHub docs)
 
-Context window size is particularly important when your tasks involve multiple files, long conversations, or agentic workflows. A model with a larger context window can consider more of your codebase at once, but may be less capable or more expensive than a smaller-window alternative.
+Context window size is particularly important when your tasks involve multiple files, long conversations, or agentic workflows. A model with a larger context window can consider more of your codebase at once. However, it may be less capable or more expensive than a smaller-window alternative.
 
-For teams with access restrictions — for example, those using older procured models, on-premises deployments, or models available under data residency constraints — context windows may be as small as 4,096 to 32,768 tokens. In these situations, see [Working with constrained context windows](working-with-constrained-context-windows.md) for techniques to adapt your workflow.
+For teams with access restrictions, context windows may be as small as 4,096 to 32,768 tokens. This includes teams using older procured models, on-premises deployments, or models available under data residency constraints. See [Working with constrained context windows](working-with-constrained-context-windows.md) for techniques to adapt your workflow.
 
 #### Context window size by task type
 
@@ -320,11 +359,11 @@ For teams with access restrictions — for example, those using older procured m
 
 ## Premium credit management
 
-Teams learn which AI code assistant models and approaches suit different tasks, optimising cost to use trade-offs and preventing licence waste.
+Teams learn which AI code assistant models and approaches suit different tasks, optimising cost-to-use trade-offs and preventing licence waste.
 
-Principle: use premium models for complex reasoning tasks and smaller or standard models for specialist or routine tasks.
+Use premium models for complex reasoning tasks and smaller or standard models for specialist or routine tasks.
 
-Sustainable usage patterns across billing periods ensure that premium model calls are distributed effectively without exhausting limits early, maintaining consistent impact throughout the period.
+GitHub Copilot uses usage-based billing through GitHub AI Credits. Teams should monitor credit consumption and adjust model choices to sustain productivity without excessive spend.
 
 Credit allocation is based on team size and maturity, with monitoring set up to track usage. Intervention occurs if burn rate is unsustainable.
 
@@ -339,7 +378,7 @@ The programme is structured so that:
 - differential impact is tracked as teams progress through maturity levels
 - evidence feeds back into this guide
 
-Current status: comparative data collection is ongoing. This section will be updated with findings as evidence accumulates.
+Comparative data collection is ongoing. This section will be updated with findings as evidence accumulates.
 
 ## Advanced considerations
 
@@ -347,9 +386,9 @@ Current status: comparative data collection is ongoing. This section will be upd
 
 Model recommendations should be task-specific and include:
 
-- a code explanation using high curiosity models such as Claude 4.5 Opus or Claude Opus 4.6
-- advice on bug fixing using balanced models such as Claude 4.5 Sonnet
-- advice feature implementation using lower agency models for precision
+- a code explanation using high curiosity models such as Claude Opus 4.5 or Claude Opus 4.6
+- advice on bug fixing using balanced models such as Claude Sonnet 4.5
+- advice on feature implementation using lower agency models for precision
 - architecture design using high curiosity and high agency models
 - advice on applying long-running refactors using GPT-5.3-Codex or Claude Opus 4.6
 - advice on agentic workflows using Gemini 3 Pro or Claude Opus 4.6
@@ -371,17 +410,17 @@ Cost and capacity factors include:
 - budget constraints that balance model capability with usage costs
 - batch processing for non-urgent tasks (50% cost savings available for GPT and Claude models)
 - prompt caching for repeated contexts (up to 90% savings on Claude models)
-- Gemini 3 thinking levels - use 'low' for faster, cheaper responses when complex reasoning is not required
+- the Gemini 3 thinking levels, using 'low' for faster, cheaper responses when complex reasoning is not required
 
 ## Getting started
 
-1. Begin with a balanced model such as Claude Sonnet 4.5.
+1. Begin with a balanced model such as Claude Sonnet 4.6, GPT-5.4, or Gemini 3 Flash.
 2. Experiment with different models for the same task.
 3. Note which models work best for your specific use cases.
-4. Build your personal quiver of 3 to 4 go-to models.
-5. Do not be afraid to switch if you are not getting good results.
+4. Build your personal set of 3 to 4 go-to models across providers.
+5. Switch models if you are not getting good results.
 
-Model selection is highly personal and task dependent. What works best for one developer or use case may not work for another. The important thing is experimentation and building familiarity with different model characteristics.
+Model selection is highly personal and task-dependent. What works best for one developer or use case may not work for another. The important thing is experimentation and building familiarity with different model characteristics.
 
 ## Further reading
 
@@ -396,6 +435,8 @@ Model selection is highly personal and task dependent. What works best for one d
 [Prompt library](../prompt-library/) provides ready to use examples.
 
 [Working with constrained context windows](working-with-constrained-context-windows.md) provides guidance on adapting workflows when access to large-context models is restricted.
+
+[Token cost management](token-cost-management.md) covers techniques for reducing token consumption and managing spend in agentic workflows.
 
 ### Model documentation
 
