@@ -2,7 +2,7 @@
 
 # MCP servers introduction
 
-This guide explains MCP servers in straightforward terms – what they are, why they are useful, and how to set them up.
+This guide explains Model Context Protocol (MCP) servers in straightforward terms – what they are, why they are useful, and how to set them up.
 
 ## Contents
 
@@ -91,7 +91,7 @@ When you send a prompt, your AI assistant queries the MCP server for relevant co
 
 ## Why it matters
 
-When working with AI code assistants, you often find yourself reminding the AI about the same requirements:
+When working with AI code assistants, you often find yourself repeating the same instructions to the AI:
 
 - 'use our design system'
 - 'ensure this meets WCAG accessibility requirements'

@@ -65,8 +65,8 @@ MCP servers fall into distinct categories based on their purpose and the type of
 
 Knowledge servers provide standards, guidelines, documentation, and reference materials to AI assistants without allowing modifications.
 
-Knowledge servers have the following characteristics:
-- primarily expose resources (read only data)
+Knowledge server's characteristics include:
+- primary exposure of resources (read only data)
 - few or no tools
 - focus on context retrieval and search
 - examples such as standards documentation, API specifications, coding guidelines
@@ -94,10 +94,10 @@ server.addResource({
 
 Function servers provide tools that perform specific actions or operations, such as querying databases, calling APIs, or processing data.
 
-Function servers have the following characteristics:
-- primarily expose tools (executable operations)
-- may include supporting resources for tool documentation
-- enable AI to perform actions on behalf of users
+Function server's characteristics include:
+- primary exposure of tools (executable operations)
+- supporting resources for tool documentation where needed
+- ability to perform actions on behalf of users
 - examples such as database queries, API integrations, file operations
 
 Use function servers when:
@@ -163,10 +163,10 @@ server.addTool({
 
 Hybrid servers combine reference knowledge with operational capabilities, providing both context and the ability to act on that context.
 
-Hybrid servers have the following characteristics:
-- expose both resources and tools
-- resources inform tool usage
-- tools may create or modify resources
+Hybrid server's characteristics include:
+- exposure of both resources and tools
+- resources that inform tool usage
+- tools that may create or modify resources
 - examples such as documentation with validation tools, standards with compliance checkers
 
 Use hybrid servers when:
@@ -205,10 +205,10 @@ server.addTool({
 
 Prompt servers use MCP's prompts feature to provide pre configured workflows that chain multiple operations together, simplifying complex tasks.
 
-Prompt servers have the following characteristics:
-- expose prompts as reusable workflows
-- may delegate to tools or other servers
-- reduce cognitive load for common tasks
+Prompt server's characteristics include:
+- exposure of prompts as reusable workflows
+- ability to delegate to tools or other servers
+- reduced cognitive load for common tasks
 - examples such as multi step analysis workflows, guided processes
 
 Use prompt servers when:
@@ -674,15 +674,15 @@ Many organisations have existing documentation repositories or internal wikis. Y
 Configure your server to fetch content from existing sources at runtime.
 
 Benefits include:
-- always up to date
+- content that is always up to date
 - no content duplication
 - single source of truth maintained
 
 Considerations include:
-- requires network access to content source
+- requirement for network access to the content source
 - potential latency on first fetch
 - need for authentication if content is private
-- should implement caching for performance
+- caching implementation needed for performance
 
 #### Build time generation
 
@@ -691,13 +691,13 @@ Generate MCP server resources from existing documentation as part of your build 
 Benefits include:
 - no runtime dependencies
 - fast response times
-- can preprocess and optimise content
-- works offline
+- ability to preprocess and optimise content
+- offline capability
 
 Considerations include:
-- need rebuild to pick up changes
+- rebuild required to pick up changes
 - larger deployment artifact
-- must sync with documentation updates
+- synchronisation required with documentation updates
 
 ## Integration and deployment
 
@@ -876,10 +876,10 @@ server.middleware((req, res, next) => {
 The problem is creating a single server with 50 or more tools that spans multiple domains.
 
 Symptoms include:
-- difficult to maintain and test
-- security boundaries unclear
+- difficulty maintaining and testing
+- unclear security boundaries
 - poor performance
-- overwhelming for AI to navigate
+- overwhelming tool count for AI to navigate
 
 The solution is to split into multiple focused servers following single responsibility principle. If you have more than 10 to 15 tools in one server, consider splitting by domain.
 
@@ -889,8 +889,8 @@ The problem is that tool names and descriptions focus on technical mechanisms ra
 
 Symptoms include:
 - tools named like execute-sql, call-api-endpoint, run-script
-- users need to understand implementation to use effectively
-- changes to implementation break user workflows
+- requiring users to understand implementation to use effectively
+- implementation changes that break user workflows
 
 The solution is to design outcome focused interfaces. Name tools for what users want to achieve, not how it is implemented internally.
 
@@ -901,7 +901,7 @@ The problem is that errors from upstream systems bubble up without context.
 Symptoms include:
 - generic error messages like 'Request failed'
 - no guidance on how to resolve issues
-- AI cannot determine if error is retryable
+- no indication of whether an error is retryable
 
 The solution is to implement comprehensive error handling with actionable messages.
 
@@ -934,10 +934,10 @@ try {
 The problem is that the server works in unit tests but fails when used with actual AI code assistants.
 
 Symptoms include:
-- tools do not appear in AI's tool list
-- AI cannot understand tool descriptions
-- responses are not in expected format
-- authentication fails in real usage
+- tools missing from AI's tool list
+- tool descriptions the AI cannot understand
+- responses in unexpected format
+- authentication failures in real usage
 
 The solution is to always test with the actual AI tools your users will use (Claude Code, GitHub Copilot, and similar) in addition to unit and integration tests.
 
@@ -958,10 +958,10 @@ The solution is to implement security from day one.
 The problem is making breaking changes to tools without versioning.
 
 Symptoms include:
-- existing prompts and workflows break unexpectedly
-- users cannot pin to stable versions
+- unexpected breakage of existing prompts and workflows
+- inability to pin to stable versions
 - no way to test changes before rollout
-- rollback is difficult
+- difficult rollback
 
 The solution is to use semantic versioning for your server and individual tools. Maintain backwards compatibility or provide clear migration paths.
 

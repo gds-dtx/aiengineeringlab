@@ -203,8 +203,8 @@ The recommended tool is MCP Inspector (`npx @modelcontextprotocol/inspector`) to
 Testing should cover the complete MCP server lifecycle, which has two distinct phases.
 
 The connection phase should verify:
-- can clients connect with minimal configuration?
-- are tools discoverable even if full configuration is incomplete?
+- that clients can connect with minimal configuration
+- that tools are discoverable even if full configuration is incomplete
 
 The tool invocation phase should ensure:
 - each tool call is self contained
@@ -231,10 +231,10 @@ Metrics should track:
 - token usage and costs
 - connection counts and durations
 
-Tracing:
-- implement distributed tracing for complex workflows
-- correlate requests across multiple tool calls
-- track performance across MCP server boundaries
+Tracing should include:
+- implementing distributed tracing for complex workflows
+- correlating requests across multiple tool calls
+- tracking performance across MCP server boundaries
 
 ### Implement health checks
 
@@ -359,8 +359,8 @@ When building custom servers:
 ### Follow platform guidelines
 
 Important considerations include:
-- MCP adoption varies across platforms (Windows, macOS, Linux)
-- not all clients support all features (OAuth 2.1, structured content, elicitation)
+- noting that MCP adoption varies across platforms (Windows, macOS, Linux)
+- recognising that not all clients support all features (OAuth 2.1, structured content, elicitation)
 - checking platform documentation before relying on specific features
 - implementing graceful degradation for unsupported features
 

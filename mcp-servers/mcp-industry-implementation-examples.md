@@ -84,9 +84,9 @@ The Axe MCP Server is an official enterprise-grade accessibility testing tool fr
 
 Find the documentation at [deque.com/axe/devtools/mcp](https://www.deque.com/axe/devtools/mcp/).
 
-Key differences from community alternatives:
+Key differences from community alternatives include:
 
-- officially maintained and supported by Deque Systems
+- official maintenance and support by Deque Systems
 - integration with axe Assistant AI chatbot trained on Deque University knowledge base
 - full axe Platform integration with enterprise features
 - requirement for an API key and commercial subscription
@@ -214,17 +214,17 @@ If existing servers do not meet your needs, you can build custom implementations
 
 When evaluating MCP servers for development and testing, consider the following criteria.
 
-Vendor trust factors include:
+When assessing a vendor, look for:
 
-- official maintenance by platform vendor or testing framework
-- track record for security updates and active development
-- long term support commitment
+- official maintenance by the platform vendor or testing framework
+- a proven track record for security updates and active development
+- a long term support commitment
 
 Functional fit factors include:
 
-- addresses clear development workflow needs
-- supports required test frameworks and browsers
-- integrates with CI and CD pipeline
+- clear development workflow coverage
+- support for required test frameworks and browsers
+- integration with CI and CD pipeline
 
 Security and compliance requirements include:
 

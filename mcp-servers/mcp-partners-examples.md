@@ -50,9 +50,7 @@ Each vendor section includes links to official documentation where you can find 
 
 ## Industry adoption and governance
 
-The Model Context Protocol (MCP) was donated to the Agentic AI Foundation (AAIF) under the Linux Foundation in December 2025. Founding members include:
-
-Platinum members:
+The MCP was donated to the Agentic AI Foundation (AAIF) under the Linux Foundation in December 2025. Founding platinum members include:
 
 - Amazon Web Services (AWS)
 - Anthropic
