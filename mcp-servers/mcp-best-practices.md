@@ -1,7 +1,7 @@
 
-> Model Context Protocol (MCP) server availability depends on your organisation's approval. Check with your organisation before setting up Model Context Protocol (MCP) servers.
+> MCP server availability depends on your organisation's approval. Check with your organisation before setting up MCP servers.
 
-# Model Context Protocol (MCP) server best practices
+# MCP server best practices
 
 This document helps you operate, test, and maintain Model Context Protocol (MCP) servers effectively. It covers proven patterns for security, monitoring, and reliability.
 
@@ -149,9 +149,9 @@ For guidance on designing error messages AI agents can understand, see [MCP serv
 
 Use STDIO (Standard Input and Output) for local development, maximum client compatibility, and single-user scenarios. It is simple and secure by default but does not support remote access or horizontal scaling.
 
-Use Streamable HTTP for live environments, networked access, horizontal scaling, and incremental results. It supports remote access, load balancing, and standard HTTP tooling. It requires OAuth 2.1 authentication, TLS encryption, and proper CORS configuration.
+Use Streamable HTTP for live environments, networked access, horizontal scaling, and incremental results. It supports remote access, load balancing, and standard HTTP tooling. It requires OAuth 2.1 authentication, Transport Layer Security (TLS) encryption, and proper Cross-Origin Resource Sharing (CORS) configuration.
 
-Note that SSE (Server-Sent Events) transport has been deprecated as of the June 2025 specification update and replaced by Streamable HTTP.
+Note that the June 2025 specification update deprecated SSE (Server-Sent Events) transport and replaced it with Streamable HTTP.
 
 ### Implement request cancellation
 
@@ -171,6 +171,8 @@ When using Streamable HTTP, best practices include:
 - for large payloads, returning handles or URIs to resources instead of inlining data
 - implementing proper backpressure handling
 - setting and documenting streaming limits
+
+---
 
 ## Testing and quality
 
@@ -192,7 +194,7 @@ Tools include:
 
 Beyond functional testing, validate the complete user experience.
 
-1. Connection testing. Verify all necessary configuration is captured correctly.
+1. Connection testing. Verify you have configured all required settings correctly.
 2. Tool discovery. Confirm AI agents see the expected tool list.
 3. Tool invocation. Validate behaviour matches expectations, including all failure modes.
 
@@ -206,12 +208,14 @@ The connection phase should verify:
 - that clients can connect with minimal configuration
 - that tools are discoverable even if full configuration is incomplete
 
-The tool invocation phase should ensure:
-- each tool call is self contained
-- connections are created per tool call, not on server start
-- graceful degradation is allowed when dependencies are unavailable
+The tool invocation phase must:
+- keep each tool call self-contained
+- create connections per tool call, not on server start
+- allow graceful degradation when dependencies are unavailable
 
 This pattern improves usability and reliability. Users can explore available tools even when the server is not fully configured.
+
+---
 
 ## Operating MCP servers
 
@@ -238,11 +242,11 @@ Tracing should include:
 
 ### Implement health checks
 
-Expose a comprehensive health status endpoint that covers the following components:
+Your MCP server should expose a health status endpoint so your infrastructure can detect failures, route traffic appropriately, and trigger restarts when needed. The endpoint should report on:
 
-- liveness (is the server process running?)
-- readiness (can the server accept requests?)
-- dependency health (are external dependencies available?)
+- liveness, which checks whether the server process is running
+- readiness, which checks whether the server can accept and handle requests
+- dependency health, which checks whether external services such as databases and APIs are available
 
 An example health check response.
 ```json
@@ -268,8 +272,8 @@ Container best practices include:
 - signing and verifying container images
 
 Documentation requirements include:
-- tool catalog with descriptions
-- complete input and output schemas including output schemas
+- tool catalogue with descriptions
+- complete input and output schemas
 - security notes and required permissions
 - configuration examples and troubleshooting guide
 
@@ -296,6 +300,8 @@ try {
 }
 ```
 
+---
+
 ## Authorisation and consent
 
 ### Use elicitation carefully
@@ -313,7 +319,7 @@ Security requirements include:
 - validating responses against your tool's schema
 - falling back gracefully if host does not support elicitation
 
-Elicitation was introduced in the June 2025 MCP revision and is not universally supported. Always check client capabilities before using elicitation.
+The June 2025 MCP revision introduced Elicitation. Not all clients support it. Always check client capabilities before using elicitation.
 
 ### Obtain explicit consent for impactful actions
 
@@ -329,7 +335,7 @@ An example workflow.
 2. The tool responds with a list of 47 backups to delete (3.2TB) and their last modified dates.
 3. The user explicitly confirms before deletion proceeds.
 
-### Implement fine grained authorisation
+### Implement fine-grained authorisation
 
 Best practices include:
 - enforcing per tool authorisation checks
@@ -337,10 +343,11 @@ Best practices include:
 - supporting role-based access control (RBAC)
 - documenting required permissions clearly
 
-For example:
-- `read_documents` permission → can list and read documents
-- `write_documents` permission → can create and modify documents
-- `delete_documents` permission → can delete documents (requires additional confirmation)
+A document management server might define permissions at three levels. This includes:
+- creating and modifying documents (`write_documents` permission)
+- deleting documents (`delete_documents` permission) – requires additional confirmation
+
+---
 
 ## Community and ecosystem
 
@@ -350,11 +357,11 @@ Selection criteria include:
 - starting with vendor provided MCP servers for common services
 - only adopting servers that are actively maintained, security reviewed, version controlled, and policy compliant
 
-When building custom servers:
-- contributing fixes upstream to existing servers when possible
-- wrapping with gateway policies rather than forking
-- building custom servers only when gaps are material
-- planning migration paths if third party servers fall behind
+When building custom servers, you should:
+- contribute fixes upstream to existing servers when possible
+- wrap with gateway policies rather than forking
+- build custom servers only when gaps are material
+- plan migration paths if third party servers fall behind
 
 ### Follow platform guidelines
 

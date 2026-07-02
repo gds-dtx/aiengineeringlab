@@ -15,7 +15,7 @@
 
 [Next steps](#5-next-steps)
 
-This guide helps you start using GitHub Copilot in a development environment. It is written for developers with a range of experience.
+This guide helps you start using GitHub Copilot in a development environment. It is for developers with a range of experience.
 
 The guide is split into clear steps. Follow them in order.
 
@@ -52,7 +52,7 @@ Determine whether you are on a personal plan (Free/Pro/Pro+) or an organisation-
 
 See [How to check your GitHub Copilot licence type](licence-type-check.md) for step-by-step instructions.
 
-If you are on a personal plan and should be on an organisation-managed plan, ask your line manager or Copilot administrator to add you to your organisation's subscription before continuing.
+If you are on a personal plan and should be on an organisation-managed plan, contact your line manager or Copilot administrator. Ask them to add you to your organisation's subscription before continuing.
 
 ### Data handling and public sector use
 

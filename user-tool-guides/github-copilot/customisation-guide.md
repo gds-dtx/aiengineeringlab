@@ -93,7 +93,7 @@ The model a custom agent uses determines the credit cost of every session. An ag
 
 ### File format
 
-Create agent profile files in `.github/agents/`. Both `.md` and `.agent.md` extensions are supported. The `.agent.md` extension is the recommended convention in VS Code.
+Create agent profile files in `.github/agents/`. You can use either `.md` or `.agent.md` extensions. The `.agent.md` extension is the recommended convention in VS Code.
 
 ```markdown
 ---
@@ -513,7 +513,7 @@ Result
 
 ### Complete example workflow
 
-In this example task, comprehensive tests are added for an authentication module.
+In this example task, you add comprehensive tests for an authentication module.
 
 1. Custom agent where user selects `@test-specialist` with restricted tools that cannot modify production code and testing expertise.
 
@@ -525,7 +525,7 @@ In this example task, comprehensive tests are added for an authentication module
 
 5. Subagent where test specialist needs research, invokes `@documentation-reader`, gets Jest best practices summary and returns to main agent.
 
-6. Result is a complete test suite following project conventions (instructions), created by the specialist (custom agent) and validated by security policies (hooks). It uses templates (skill) and is informed by research (subagent).
+6. Result is a complete test suite following project conventions (instructions), created by the specialist (custom agent) and validated by security policies (hooks). It uses templates (skill) and draws on research (subagent).
 
 ### Comparison
 
@@ -561,7 +561,7 @@ Implement `preToolUse` hooks that block hardcoded credentials and dangerous comm
 
 Track all actions through comprehensive audit logging for instructions. Use `@compliance-auditor` as a custom agent with role-specific tools limited to read and reporting functions.
 
-Implement `sessionStart` hooks to log user and session metadata, `preToolUse` hooks to enforce file access policies, `postToolUse` hooks to track all actions to a database, and `sessionEnd` hooks to generate compliance reports. Create an `audit-trail-generator` skill with automated report generation and policy templates.
+Implement `sessionStart` hooks to log user and session metadata and `preToolUse` hooks to enforce file access policies. Use `postToolUse` hooks to track all actions to a database, and `sessionEnd` hooks to generate compliance reports. Create an `audit-trail-generator` skill with automated report generation and policy templates.
 
 #### Quality focused testing
 
@@ -594,7 +594,7 @@ Implement hooks to enforce policies and maintain audit trails.
 
 1. Add `preToolUse` hooks for security validation.
 2. Add `postToolUse` hooks for audit logging.
-3. Test hook scripts locally: `echo '{"toolName":"bash"}' | ./script.sh`
+3. Test hook scripts locally: `echo '{"toolName":"bash"}' | ./script.sh`.
 
 ### Phase 4: automation
 

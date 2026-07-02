@@ -139,7 +139,7 @@ When performing a code review, focus on readability and avoid nested ternary ope
 When performing a code review, ensure all database queries use parameterised statements.
 ```
 
-Copilot code review reads the first 4,000 characters of custom instruction files. Instructions beyond this limit are ignored.
+Copilot code review reads the first 4,000 characters of custom instruction files. Copilot ignores instructions beyond this limit.
 
 Custom instructions are read from the base branch of the PR. This is typically `main`, not the feature branch.
 
@@ -238,7 +238,7 @@ In pull request comments:
 - Copilot responds in the comment thread
 - it can explain changes, suggest improvements, or answer questions about the PR
 - it cannot push commits to the branch
-- responses are based on the current PR state
+- responses reflect the current PR state
 
 In issue comments:
 
@@ -262,7 +262,7 @@ Assigning issues to `@copilot` (not just mentioning):
 
 A simple `@copilot` mention in a comment does not always trigger the autonomous coding agent.
 
-The coding agent is triggered when:
+The coding agent activates when:
 
 - you formally assign an issue to `@copilot` using the assignees dropdown
 - you comment `@copilot implement this` or similar implementation directives on an issue
@@ -295,17 +295,17 @@ When you interact with `@copilot` in a PR:
 - Copilot cannot directly modify code in the PR—it can only suggest changes
 - you must apply suggested changes yourself by pushing new commits
 - Copilot does not have write access to your repository branches
-- responses are based on the current state of the PR and may not reflect very recent commits
+- responses reflect the current state of the PR and may not include very recent commits
 
 ## 3. Assigning issues to Copilot for autonomous implementation
 
-GitHub Copilot can autonomously implement solutions for issues you assign to it. When you assign an issue to `@copilot`, it analyses the issue description, makes the necessary code changes, runs tests, and opens a pull request for your review.
+GitHub Copilot can autonomously implement solutions for issues you assign to it. When you assign an issue to `@copilot`, it analyses the issue description and makes the necessary code changes. It then runs tests and opens a pull request for your review.
 
 ### How to assign an issue
 
-1. Create a GitHub issue describing the task, feature, or bug fix
-2. Provide clear context including affected files, expected behaviour, or acceptance criteria
-3. Assign the issue to `@copilot` using the assignees dropdown or by commenting `@copilot implement this`
+1. Create a GitHub issue describing the task, feature, or bug fix.
+2. Provide clear context including affected files, expected behaviour, or acceptance criteria.
+3. Assign the issue to `@copilot` using the assignees dropdown or by commenting `@copilot implement this`.
 
 Copilot works autonomously in its own environment. Once complete, it opens a pull request with you as the reviewer.
 
@@ -421,7 +421,7 @@ When Copilot flags an issue:
 
 Copilot code review does not satisfy mandatory human code review requirements.
 
-Copilot reviews are marked as 'Comment' reviews, not 'Approve' reviews. They do not count toward required approvals and do not block merging.
+GitHub marks Copilot reviews as 'Comment' reviews, not 'Approve' reviews. They do not count toward required approvals and do not block merging.
 
 Government services may require:
 
@@ -473,7 +473,7 @@ Do not:
 
 ### Security considerations with content exclusions
 
-Content exclusions are enforced for Copilot code review but not for the autonomous coding agent.
+Copilot enforces content exclusions for code review but not for the autonomous coding agent.
 
 When you request a code review from Copilot:
 
@@ -483,7 +483,7 @@ When you request a code review from Copilot:
 
 When you assign an issue to `@copilot` for autonomous implementation:
 
-- content exclusions are not enforced
+- content exclusions do not apply
 - the coding agent can read, modify, and commit excluded files
 - this applies to all files in the repository
 
@@ -491,8 +491,8 @@ Implications for government teams:
 
 If your repository contains OFFICIAL-SENSITIVE files protected by content exclusions:
 
-- Copilot code review is safe to use (exclusions are enforced)
-- assigning issues to `@copilot` is not safe (exclusions are ignored)
+- Copilot code review is safe to use (exclusions apply)
+- assigning issues to `@copilot` is not safe (exclusions do not apply)
 
 Recommended approach for repositories with sensitive content:
 
@@ -542,7 +542,7 @@ Access external systems or services:
 Guarantee security or correctness:
 
 - Copilot may miss security vulnerabilities or logic errors
-- all code must be reviewed by humans, particularly for production systems
+- humans must review all code, particularly for production systems
 
 Work across multiple repositories:
 

@@ -7,7 +7,7 @@ Practical guidance for engineers working with AI models that have limited contex
 
 ## Purpose
 
-Not all teams can access the latest large-context models. Government departments may be constrained by procurement timelines, cost controls, data residency requirements, or the availability of on-premises model deployments. In these situations, engineers may work with models that have smaller context windows under 32,000 tokens. These are significantly smaller than the windows on current flagship models, which range from 200,000 to 1 million tokens.
+Not all teams can access the latest large-context models. Government departments may face constraints from procurement timelines, cost controls, data residency requirements, or the availability of on-premises model deployments. In these situations, engineers may work with models that have smaller context windows under 32,000 tokens. These are significantly smaller than the windows on current flagship models, which range from 200,000 to 1 million tokens.
 
 ## Who this applies to
 
@@ -45,7 +45,7 @@ This guide is for engineers, technical leads and delivery teams in UK government
 
 A context window is the maximum amount of text an AI model can consider at one time. This includes your prompt, any files or code you provide, the model's previous responses in the conversation, and any system instructions.
 
-When the total input exceeds the context window, the tool needs to drop something. The tool and model determine what is dropped, and this is not always obvious.
+When the total input exceeds the context window, the tool needs to drop something. The tool and model determine what to drop, and this is not always obvious.
 
 ### Common context window sizes
 
@@ -133,7 +133,7 @@ Start a new chat session. Re-provide the most critical context at the start of t
 
 #### How it behaves
 
-Claude Code tracks context usage and warns you as you approach the limit. It may suggest compacting the conversation to summarise earlier exchanges. If the limit is reached, it asks you to start a new session.
+Claude Code tracks context usage and warns you as you approach the limit. It may suggest compacting the conversation to summarise earlier exchanges. If you reach the limit, it asks you to start a new session.
 
 #### How to detect it
 
@@ -141,13 +141,13 @@ You will see explicit warnings in the interface. The `/compact` command summaris
 
 #### What to do
 
-Use `/compact` to summarise the conversation history before the limit is reached. On older Claude models accessible via Application Programming Interface (API) with smaller windows, the model may return a `context_length_exceeded` error.
+Use `/compact` to summarise the conversation history before you reach the limit. On older Claude models accessible via Application Programming Interface (API) with smaller windows, the model may return a `context_length_exceeded` error.
 
 ### Gemini Code Assist
 
 #### How it behaves
 
-Behaviour depends on the underlying model. Newer Gemini models (3.0 Pro and later) have very large context windows and are unlikely to be exceeded in normal use. Older Gemini models have a 32,768-token window. When context is full, the API typically returns an error rather than silently truncating.
+Behaviour depends on the underlying model. Newer Gemini models (3.0 Pro and later) have very large context windows. You are unlikely to exceed them in normal use. Older Gemini models have a 32,768-token window. When context is full, the API typically returns an error rather than silently truncating.
 
 #### How to detect it
 
@@ -298,7 +298,7 @@ Each session is self-contained and uses a fraction of the context that a combine
 
 ## Breaking tasks into context-appropriate chunks
 
-For models with windows under 32,000 tokens, large tasks need to be broken into smaller, self-contained units of work.
+For models with windows under 32,000 tokens, break large tasks into smaller, self-contained units of work.
 
 ### Planning your chunks
 
@@ -371,7 +371,7 @@ For each task type, create a constrained equivalent.
 
 ### Step 3: create handoff notes between sessions
 
-When a task spans multiple sessions, maintain a handoff note that carries forward what was decided or completed. Keep it under 500 tokens.
+When a task spans multiple sessions, maintain a handoff note that carries forward what you decided or completed. Keep it under 500 tokens.
 
 ```markdown
 # Handoff note — Payment refactor (session 3 of 5)

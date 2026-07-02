@@ -65,11 +65,11 @@ MCP servers fall into distinct categories based on their purpose and the type of
 
 Knowledge servers provide standards, guidelines, documentation, and reference materials to AI assistants without allowing modifications.
 
-Knowledge server's characteristics include:
-- primary exposure of resources (read only data)
+A knowledge server's characteristics include:
+- the primary exposure of resources (read only data)
 - few or no tools
-- focus on context retrieval and search
-- examples such as standards documentation, API specifications, coding guidelines
+- a focus on context retrieval and search
+- examples such as standards documentation, API specifications, and coding guidelines
 
 Use knowledge servers when:
 - integrating organisational standards
@@ -94,11 +94,11 @@ server.addResource({
 
 Function servers provide tools that perform specific actions or operations, such as querying databases, calling APIs, or processing data.
 
-Function server's characteristics include:
-- primary exposure of tools (executable operations)
+A function server's characteristics include:
+- the primary exposure of tools (executable operations)
 - supporting resources for tool documentation where needed
-- ability to perform actions on behalf of users
-- examples such as database queries, API integrations, file operations
+- the ability to perform actions on behalf of users
+- examples such as database queries, API integrations, and file operations
 
 Use function servers when:
 - integrating with existing systems
@@ -117,7 +117,7 @@ Key security requirements include:
 - implementing fine grained access control with least privilege
 - requiring user confirmation for actions that alter data or environment state
 - strictly validating all inputs from clients
-- implementing rate limiting and encrypted channels (TLS)
+- implementing rate limiting and encrypted channels (Transport Layer Security (TLS))
 - monitoring for session abuse with anomaly detection
 
 Primary threats to mitigate include:
@@ -163,19 +163,19 @@ server.addTool({
 
 Hybrid servers combine reference knowledge with operational capabilities, providing both context and the ability to act on that context.
 
-Hybrid server's characteristics include:
-- exposure of both resources and tools
+A hybrid server's characteristics include:
+- the exposure of both resources and tools
 - resources that inform tool usage
 - tools that may create or modify resources
-- examples such as documentation with validation tools, standards with compliance checkers
+- examples such as documentation with validation tools, and standards with compliance checkers
 
 Use hybrid servers when:
 - providing guidance alongside enforcement
 - offering reference materials with related actions
-- creating self documenting systems
+- creating self-documenting systems
 - building domain specific assistants
 
-An example is an accessibility server that provides WCAG guidance (resources) and validates HTML for compliance (tools).
+An example is an accessibility server that provides Web Content Accessibility Guidelines (WCAG) guidance (resources) and validates HTML for compliance (tools).
 
 The following example shows the architecture pattern.
 ```javascript
@@ -205,11 +205,11 @@ server.addTool({
 
 Prompt servers use MCP's prompts feature to provide pre configured workflows that chain multiple operations together, simplifying complex tasks.
 
-Prompt server's characteristics include:
-- exposure of prompts as reusable workflows
-- ability to delegate to tools or other servers
+A prompt server's characteristics include:
+- the exposure of prompts as reusable workflows
+- the ability to delegate to tools or other servers
 - reduced cognitive load for common tasks
-- examples such as multi step analysis workflows, guided processes
+- examples such as multi step analysis workflows and guided processes
 
 Use prompt servers when:
 - standardising complex workflows
@@ -248,44 +248,33 @@ Code: ${args.code}`
 
 A critical principle in MCP server design is focusing on what users want to achieve. Design for outcomes rather than the specific operations users must perform.
 
-Tools designed around operations (poor pattern):
-- list-files, read-file, parse-content, search-text, format-results
-- requires user or AI to orchestrate multiple steps
+Tools designed around operations (poor pattern) include list-files, read-file, parse-content, search-text, and format-results. This approach:
+
+- requires the user or AI to orchestrate multiple steps
 - increases token usage and latency
 - exposes implementation details
 
-Tools designed around outcomes (good pattern):
-- find-in-documentation – single tool that handles all steps
-- AI specifies desired outcome
-- server handles implementation details
-- cleaner interface, better performance
+Tools designed around outcomes (good pattern) include find-in-documentation, which handles all steps in a single call. This approach:
+
+- allows the AI to specify the desired outcome
+- lets the server handle implementation details
+- provides a cleaner interface with better performance
 
 ### Naming conventions
 
 Your tool and resource names should describe the outcome, not the mechanism.
 
-Poor names (operation focused):
-- execute-database-query
-- make-http-request
-- parse-json-response
-- write-to-file
+Names that focus on operations are poor choices. Examples include execute-database-query, make-http-request, parse-json-response, and write-to-file.
 
-Good names (outcome focused):
-- find-active-cases
-- get-user-profile
-- submit-form
-- save-configuration
+Names that focus on outcomes are good choices. Examples include find-active-cases, get-user-profile, submit-form, and save-configuration.
 
-Use verb-noun pairs that describe business or user intent:
-- verify-compliance not run-checker-script
-- generate-report not fetch-data-and-format
-- schedule-review not insert-calendar-entry
+Use verb-noun pairs that describe business or user intent. For example, use verify-compliance rather than run-checker-script, generate-report rather than fetch-data-and-format, and schedule-review rather than insert-calendar-entry.
 
 ### Encapsulating workflows
 
-When a task naturally requires multiple steps, encapsulate the entire workflow in one tool or prompt rather than exposing each step.
+When a task naturally requires multiple steps, you should encapsulate the entire workflow in one tool or prompt rather than exposing each step.
 
-Onboarding workflow example
+Onboarding workflow example.
 
 The poor approach exposes individual steps.
 ```javascript
@@ -326,9 +315,9 @@ server.addTool({
 
 ### Think tasks, not endpoints (API integration)
 
-The most common mistake when creating MCP servers from APIs is attempting a one-to-one transformation of API endpoints to MCP tools. This approach fails because APIs are resource based (designed for machines) whilst MCP servers must be task based (designed for AI understanding).
+The most common mistake when creating MCP servers from APIs is attempting a one-to-one transformation of API endpoints to MCP tools. This approach fails because APIs are resource-based (designed for machines) whilst MCP servers must be task-based (designed for AI understanding).
 
-Do not expose raw API endpoints raises problems for the LLM.
+Do not expose raw API endpoints. This raises problems for the LLM.
 ```javascript
 // Do not do this - exposing raw API endpoints
 server.addTool({ name: 'get-laptop' });
@@ -352,7 +341,7 @@ server.addTool({
 
 Start by defining what users need to accomplish, not what your API can do. Bundle related API calls into single tools that represent complete workflows.
 
-Laptop procurement MCP server example
+Laptop procurement MCP server example.
 
 Rather than exposing 10 or more procurement API endpoints as individual tools, create 3 task-based tools.
 
@@ -378,10 +367,11 @@ The current API_TOKEN is invalid or expired.
 Please update the API_TOKEN in your MCP configuration."
 ```
 
-Agents need actionable information to decide what to do next. Help them understand:
-- is this a configuration problem they can report to the user?
-- is this a temporary failure they should retry?
-- is this a permanent constraint they should work around?
+Agents need actionable information to decide what to do next. Design error messages that help them understand whether:
+
+- the problem is a configuration issue they can report to the user
+- the failure is temporary and they should retry
+- the constraint is permanent and they should work around it
 
 The following example shows the error message structure.
 ```json
@@ -430,16 +420,17 @@ The following example shows the output structure.
 
 ### Authentication layers for API integration
 
-Handle authentication in layers:
-- MCP client to MCP server – OAuth 2.1
-- MCP server to upstream APIs – whatever each API requires (API keys, OAuth 2.0, certificates)
-- never expose upstream credentials to the LLM
+Authentication should be handled in layers. You should ensure:
+
+- the MCP client authenticates to your MCP server using OAuth 2.1
+- the MCP server authenticates to each upstream API using whichever method that API requires (API keys, OAuth 2.0, or certificates)
+- upstream credentials are never exposed to the LLM
 
 Transform API responses into natural language summaries alongside structured data. Filter technical details and sensitive information before returning to the LLM.
 
 ### Security requirements for API integration
 
-Beyond standard function server security, API integration servers must address:
+Beyond standard function server security, API integration servers must address the following areas.
 
 Address credential isolation by:
 - storing each upstream API's credentials separately in secret managers
@@ -447,7 +438,7 @@ Address credential isolation by:
 
 Enforce per API permissions by ensuring:
 - MCP server access does not grant access to all upstream APIs
-- per API authorisation checks are enforced
+- the server enforces per API authorisation checks
 
 Perform request validation by:
 - validating all parameters before calling upstream APIs
@@ -473,15 +464,17 @@ When building a completely new MCP server, follow this process to ensure a solid
 
 Start by clearly defining what your server will and will not do. Apply the single responsibility principle ruthlessly.
 
-Questions to answer:
-- what specific domain or capability does this server address?
-- what context or actions must be included?
-- what related capabilities belong in separate servers?
-- who are the primary users and what are their workflows?
+Before you start, define the following.
+
+1. The specific domain or capability this server addresses.
+2. The context or actions you should include.
+3. The related capabilities that belong in separate servers.
+4. The primary users and their workflows.
 
 ### Step 2: Choose server type and architecture
 
-Based on your scope, determine which server type best fits your needs:
+Based on your scope, select the server type that best fits your needs. Options include:
+
 - knowledge server for standards and documentation
 - function server for actions and integrations
 - hybrid server for combining guidance with enforcement
@@ -493,16 +486,18 @@ Select the appropriate design pattern from the examples above.
 
 Sketch out the resources, tools, and prompts you will expose. Write descriptions from both human and AI perspectives.
 
-For resources:
-- what content will you provide?
-- how will it be organised and searchable?
-- what format works best for AI consumption?
+For resources, consider:
 
-For tools:
-- what inputs do they require?
-- what outputs do they produce?
-- what side effects do they have?
-- what can go wrong and how should errors be handled?
+- what content you will provide
+- how you will organise and search it
+- what format works best for AI consumption
+
+For tools, consider:
+
+- what inputs they require
+- what outputs they produce
+- what side effects they have
+- what can go wrong and how you handle errors
 
 ### Step 4: Implement security first
 
@@ -528,22 +523,26 @@ Start with the minimum viable server.
 4. Add logging and monitoring.
 5. Iterate by adding more capabilities.
 
-Validate and test your server by configuring it in actual AI code assistants (Claude Code, GitHub Copilot, and similar) and checking:
-- discovery – do tools appear as expected?
-- execution – do operations work correctly?
-- error handling – are errors handled gracefully?
+Validate and test your server by configuring it in actual AI code assistants (Claude Code, GitHub Copilot, and similar) and checking that:
+- tools appear as expected during discovery
+- operations work correctly during execution
+- errors are handled gracefully
 
-For testing strategy and operational patterns, see:
-- [MCP best practices – testing and quality](mcp-best-practices.md#testing-and-quality) – high level testing requirements
-- this guide's [Validation and testing](#validation-and-testing) section below – detailed test implementation
+For testing strategy and operational patterns, see the following resources.
+
+| Resource | Location |
+|----------|----------|
+| High-level testing requirements | [MCP best practices – testing and quality](mcp-best-practices.md#testing-and-quality) |
+| Detailed test implementation | [Validation and testing](#validation-and-testing) (this guide) |
 
 ### Step 6: Document and deploy
 
-Create documentation for both humans and AI:
-- README with setup instructions
-- tool catalogue with examples
+Documentation for both humans and AI should include:
+
+- a README with setup instructions
+- a tool catalogue with examples
 - configuration templates
-- troubleshooting guide
+- a troubleshooting guide
 
 Package your server as a container and deploy using standard microservice practices.
 
@@ -651,7 +650,7 @@ class GovStandardsServer {
 Fork an existing open source MCP server and add your specific requirements.
 
 Use the fork and enhance pattern when:
-- existing server is close but missing critical features
+- the existing server is close but missing critical features
 - upstream is inactive or unresponsive
 - you need deep customisation
 - security review requires code ownership
@@ -705,19 +704,22 @@ Considerations include:
 
 MCP servers need to integrate with your organisation's existing systems and practices.
 
-For authentication and authorisation:
+For authentication and authorisation, you should:
+
 - use your organisation's identity provider (Azure AD, Google Workspace, and similar)
 - implement OAuth 2.1 with your identity service as the authorisation server
 - enforce role based access control aligned with existing roles
 - integrate with existing secret management solutions
 
-For networking and deployment:
+For networking and deployment, you should:
+
 - deploy MCP servers in your existing container orchestration platform
 - use internal DNS and service discovery
 - configure network policies and firewalls appropriately
 - integrate with API gateways if using HTTP transport
 
-For observability:
+For observability, you should:
+
 - send logs to your central logging service (ELK, Splunk, and similar)
 - expose metrics in your standard format (Prometheus, DataDog, and similar)
 - implement distributed tracing compatible with your tools
@@ -892,7 +894,7 @@ Symptoms include:
 - requiring users to understand implementation to use effectively
 - implementation changes that break user workflows
 
-The solution is to design outcome focused interfaces. Name tools for what users want to achieve, not how it is implemented internally.
+The solution is to design outcome focused interfaces. Name tools for what users want to achieve, not how the server implements them internally.
 
 ### Pitfall: insufficient error handling
 

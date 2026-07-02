@@ -59,7 +59,7 @@ Key features of the Playwright MCP server are that it:
 - requires no vision models or screenshot based approaches
 - supports cross-browser automation (Chromium, Firefox, WebKit)
 - is configurable via JSON for custom setups
-- supports headless mode for CI and CD pipelines
+- supports headless mode for continuous integration and continuous delivery (CI and CD) pipelines
 - supports persistent profiles and isolated contexts
 
 ---
@@ -68,7 +68,7 @@ Key features of the Playwright MCP server are that it:
 
 Browserbase provides official MCP servers for cloud browser automation, designed for real world automation workflows.
 
-Browserbase is an official cloud browser automation platform with 2 MCP server implementations. Browserbase provides direct browser control while Stagehand provides natural language driven workflows. It offers remote headless browser sessions for navigation, data extraction, form filling, and multi-step actions. It includes anti-detection capabilities and session persistence. Use it for reliable web scraping and automated testing in cloud environments.
+Browserbase is an official cloud browser automation platform with 2 MCP server implementations. Browserbase provides direct browser control whilst Stagehand provides natural language driven workflows. It offers remote headless browser sessions for navigation, data extraction, form filling, and multi-step actions. It includes anti-detection capabilities and session persistence. Use it for reliable web scraping and automated testing in cloud environments.
 
 Find the documentation at [browserbase.com](https://www.browserbase.com/) and [github.com/browserbase/mcp-server-browserbase](https://github.com/browserbase/mcp-server-browserbase).
 
@@ -80,7 +80,7 @@ Find the documentation at [browserbase.com](https://www.browserbase.com/) and [g
 
 #### Deque Axe MCP Server
 
-The Axe MCP Server is an official enterprise-grade accessibility testing tool from Deque Systems. It is powered by axe DevTools and provides WCAG testing with context-aware analysis. It supports major IDEs including GitHub Copilot, Cursor, Claude Code, Windsurf, and VS Code. It includes configurable privacy controls, audit logging, and full axe Platform integration. Use it for professional accessibility testing with enterprise support and long-term maintenance.
+The Axe MCP Server is an official enterprise-grade accessibility testing tool from Deque Systems. It uses axe DevTools and provides Web Content Accessibility Guidelines (WCAG) testing with context-aware analysis. It supports major IDEs including GitHub Copilot, Cursor, Claude Code, Windsurf, and VS Code. It includes configurable privacy controls, audit logging, and full axe Platform integration. Use it for professional accessibility testing with enterprise support and long-term maintenance.
 
 Find the documentation at [deque.com/axe/devtools/mcp](https://www.deque.com/axe/devtools/mcp/).
 
@@ -123,7 +123,7 @@ This is a community maintained server, not an official product from Deque System
 
 #### A11y MCP (Community)
 
-A11y MCP is a community developed accessibility testing server by Ronan Takizawa. It uses Axe core API and Puppeteer to test web pages and HTML snippets against WCAG standards. It provides colour contrast analysis, ARIA validation, and orientation lock detection. Use it for WCAG compliance testing during development.
+A11y MCP is a community developed accessibility testing server by Ronan Takizawa. It uses Axe core API and Puppeteer to test web pages and HTML snippets against WCAG standards. It provides colour contrast analysis, Accessible Rich Internet Applications (ARIA) validation, and orientation lock detection. Use it for WCAG compliance testing during development.
 
 Find the documentation at [github.com/ronantakizawa/a11y-mcp](https://github.com/ronantakizawa/a11y-mcp) or install the npm package `a11y-mcp-server`.
 
@@ -169,11 +169,13 @@ This is a beta feature. Evaluate it thoroughly for government use and ensure it 
 
 Anthropic provides reference MCP server implementations demonstrating protocol features and best practices. These serve as educational examples and templates for custom server development.
 
-- Fetch – fetches web content and converts it to markdown for efficient use by AI assistants ([repository](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch))
-- Filesystem – provides secure file operations with access controls and manages permissions for local file system access ([repository](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem))
-- Git – reads, searches, and manipulates Git repositories, including commit history, branches, and file contents ([repository](https://github.com/modelcontextprotocol/servers/tree/main/src/git))
-- Memory – stores data that persists across AI assistant sessions using a knowledge graph structure ([repository](https://github.com/modelcontextprotocol/servers/tree/main/src/memory))
-- Sequential Thinking – breaks down complex problems through structured thinking processes ([repository](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking))
+The reference implementations provides capability. This includes:
+
+- fetching web content and converting it to markdown for efficient AI use – Fetch ([repository](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch))
+- performing secure file operations with access controls and managing local file system permissions – Filesystem ([repository](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem))
+- reading, searching, and manipulating Git repositories including commit history, branches, and file contents – Git ([repository](https://github.com/modelcontextprotocol/servers/tree/main/src/git))
+- persisting data across AI assistant sessions using a knowledge graph structure – Memory ([repository](https://github.com/modelcontextprotocol/servers/tree/main/src/memory))
+- breaking down complex problems through structured thinking processes – Sequential Thinking ([repository](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking))
 
 Find all reference implementations at [github.com/modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers).
 
@@ -181,18 +183,22 @@ Find all reference implementations at [github.com/modelcontextprotocol/servers](
 
 ## Community repositories for reference
 
-While this document focuses on officially maintained development and testing servers, these community repositories catalogue additional MCP servers:
+Whilst this document focuses on officially maintained development and testing servers, these community repositories catalogue additional MCP servers.
 
-- [MCP reference servers repository](https://github.com/modelcontextprotocol/servers) – reference implementations maintained by Anthropic
-- [MCP server registry](https://github.com/modelcontextprotocol/registry) – official registry
-- [Awesome MCP Servers by punkpeye](https://github.com/punkpeye/awesome-mcp-servers) – 7,000 and more categorised servers
-- [Awesome MCP Servers by wong2](https://github.com/wong2/awesome-mcp-servers) – community curated list (independently maintained, assess suitability before use)
+| Repository | Description |
+|------------|-------------|
+| [MCP reference servers](https://github.com/modelcontextprotocol/servers) | Reference implementations maintained by Anthropic |
+| [MCP server registry](https://github.com/modelcontextprotocol/registry) | Official MCP server registry |
+| [Awesome MCP Servers by punkpeye](https://github.com/punkpeye/awesome-mcp-servers) | 7,000 and more categorised servers |
+| [Awesome MCP Servers by wong2](https://github.com/wong2/awesome-mcp-servers) | Community curated list, independently maintained (assess suitability before use) |
 
-Several community developed MCP servers exist for test frameworks (Vitest, Jest, Cypress). These are not officially maintained by the respective testing framework organisations. Evaluate them carefully before use:
+Several community developed MCP servers exist for test frameworks (Vitest, Jest, Cypress). These are not officially maintained by the respective testing framework organisations.
 
-- [Vitest MCP servers](https://github.com/djankies/vitest-mcp) – community implementations for Vitest integration
-- [MCP Jest](https://github.com/josharsh/mcp-jest) – community testing framework for MCP servers
-- [Frontend Testing MCP](https://github.com/StudentOfJS/frontend-testing-mcp) – community Jest and Cypress integration
+| Repository | Description |
+|------------|-------------|
+| [Vitest MCP servers](https://github.com/djankies/vitest-mcp) | Community implementations for Vitest integration |
+| [MCP Jest](https://github.com/josharsh/mcp-jest) | Community testing framework for MCP servers |
+| [Frontend Testing MCP](https://github.com/StudentOfJS/frontend-testing-mcp) | Community Jest and Cypress integration |
 
 Community maintained servers should be assessed for security vulnerabilities, active maintenance status, code quality, and compliance requirements before use in government projects. Unlike officially vendor maintained servers, community implementations may lack:
 

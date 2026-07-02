@@ -1,6 +1,8 @@
 > ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
+> MCP server availability depends on your organisation's approval. Check with your organisation before setting up MCP servers.
+
 # MCP servers: partner implementations
 
 This guide covers examples of Model Context Protocol (MCP) servers from major technology vendors to evaluate for your team's needs.
@@ -50,7 +52,7 @@ Each vendor section includes links to official documentation where you can find 
 
 ## Industry adoption and governance
 
-The MCP was donated to the Agentic AI Foundation (AAIF) under the Linux Foundation in December 2025. Founding platinum members include:
+Anthropic donated the MCP to the Agentic AI Foundation (AAIF) under the Linux Foundation in December 2025. Founding platinum members include:
 
 - Amazon Web Services (AWS)
 - Anthropic
@@ -65,7 +67,7 @@ This vendor-neutral governance ensures MCP remains open, interoperable, and comm
 
 Adoption metrics as of January 2026 include:
 
-- over 97 million monthly SDK downloads
+- over 97 million monthly software development kit (SDK) downloads
 - 10,000 active MCP servers and more
 - first class client support across major AI platforms (ChatGPT, Claude, Cursor, Gemini, Microsoft Copilot)
 - enterprise deployments at Block, Bloomberg, Amazon, and hundreds of Fortune 500 companies
@@ -78,7 +80,7 @@ Adoption metrics as of January 2026 include:
 
 Microsoft provides the Azure MCP Server for Azure cloud management.
 
-The Azure MCP Server enables AI agents to interact with Azure resources through natural language. It provides access to Azure services including Storage, Cosmos DB, Log Analytics, Azure CLI, Azure Developer CLI (azd), PostgreSQL, and MySQL. It uses the Azure Identity library with Entra ID authentication and supports RBAC for fine-grained permissions. It is available as an npm package, a Docker container, or through VS Code integration.
+The Azure MCP Server enables AI agents to interact with Azure resources through natural language. It provides access to Azure services including Storage, Cosmos DB, Log Analytics, Azure CLI, Azure Developer CLI (azd), PostgreSQL, and MySQL. It uses the Azure Identity library with Entra ID authentication and supports role-based access control (RBAC) for fine-grained permissions. It is available as an npm package, a Docker container, or through VS Code integration.
 
 Find the documentation at [learn.microsoft.com/azure/developer/azure-mcp-server](https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/) and [github.com/Azure/azure-mcp](https://github.com/Azure/azure-mcp).
 
@@ -110,7 +112,7 @@ For information about AWS security certifications and compliance, see [AWS compl
 
 Google provides managed remote MCP servers for Google Cloud and Workspace services.
 
-Google Cloud MCP Servers provide a unified interface across Google and Google Cloud services. They are currently available for BigQuery, Google Maps, Google Kubernetes Engine, Google Compute Engine, and Cloud Storage. Additional services are rolling out, including Cloud Run, AlloyDB, Cloud SQL, Spanner, Looker, Pub/Sub, and Dataplex. They use OAuth authentication with IAM controls and audit logging.
+Google Cloud MCP Servers provide a unified interface across Google and Google Cloud services. They are currently available for BigQuery, Google Maps, Google Kubernetes Engine, Google Compute Engine, and Cloud Storage. Additional services are rolling out, including Cloud Run, AlloyDB, Cloud SQL, Spanner, Looker, Pub/Sub, and Dataplex. They use OAuth authentication with Identity and Access Management (IAM) controls and audit logging.
 
 Google Workspace MCP Servers are remote MCP servers for Google Workspace services including Docs, Sheets, Slides, Calendar, and Gmail. They enable document creation, spreadsheet manipulation, presentation generation, and email management using OAuth 2.0 with workspace level permissions.
 
@@ -118,7 +120,7 @@ The Google Cloud Database Toolbox provides an MCP server for databases including
 
 Find the documentation at [docs.cloud.google.com/mcp](https://docs.cloud.google.com/mcp/overview), [github.com/googleapis/gcloud-mcp](https://github.com/googleapis/gcloud-mcp), and [github.com/google/mcp](https://github.com/google/mcp).
 
-These servers were announced on 10 December 2025.
+Google announced these servers on 10 December 2025.
 
 For information about Google Cloud security certifications and compliance, see [Google Cloud Compliance](https://cloud.google.com/security/compliance).
 
@@ -130,7 +132,7 @@ Cloudflare provides infrastructure for deploying MCP servers on their edge netwo
 
 The Cloudflare Workers MCP integration enables deployment of MCP servers on Cloudflare's edge network. It provides low-latency, globally distributed MCP server hosting with automatic scaling. Cloudflare's Agents SDK provides OAuth support and remote MCP server capabilities. Find documentation at [developers.cloudflare.com](https://developers.cloudflare.com/).
 
-Cloudflare is a platinum member of the Agentic AI Foundation. Cloudflare infrastructure is used by partners including Atlassian for their remote MCP server hosting.
+Cloudflare is a platinum member of the Agentic AI Foundation. Partners including Atlassian use Cloudflare infrastructure for their remote MCP server hosting.
 
 For information about Cloudflare security certifications and compliance, see [Cloudflare Trust Hub](https://www.cloudflare.com/trust-hub/).
 
@@ -142,13 +144,13 @@ For information about Cloudflare security certifications and compliance, see [Cl
 
 Microsoft builds MCP servers for their development ecosystem, integrating with Azure, documentation, and business tools.
 
-Microsoft provides the following MCP servers:
-
-- Microsoft Learn Docs – searches Microsoft's official documentation including Microsoft Learn, Azure, and Microsoft 365
-- Microsoft Clarity – provides behavioural analytics data showing user interactions and website performance
-- Microsoft Dataverse – queries business data using natural language, discovering tables, running queries, and retrieving data
-- Microsoft Teams – enables agent orchestration and multi-agent collaboration with Teams messaging
-- Microsoft Business Central – manages Dynamics 365 Business Central customers, contacts, sales opportunities, invoices, and vendors
+| Server | Capability |
+|--------|------------|
+| Microsoft Learn Docs | Searches Microsoft's official documentation including Microsoft Learn, Azure, and Microsoft 365 |
+| Microsoft Clarity | Provides behavioural analytics data showing user interactions and website performance |
+| Microsoft Dataverse | Queries business data using natural language, discovering tables and retrieving data |
+| Microsoft Teams | Enables agent orchestration and multi-agent collaboration with Teams messaging |
+| Microsoft Business Central | Manages Dynamics 365 Business Central customers, contacts, sales opportunities, invoices, and vendors |
 
 Find the documentation at [developer.microsoft.com/blog/10-microsoft-mcp-servers](https://developer.microsoft.com/blog/10-microsoft-mcp-servers-to-accelerate-your-development-workflow) and [github.com/microsoft/mcp](https://github.com/microsoft/mcp).
 
@@ -160,7 +162,7 @@ Microsoft has integrated MCP into Windows 11 and Azure AI Foundry.
 
 Atlassian provides a remote MCP server for Jira and Confluence integration.
 
-The Atlassian Rovo MCP Server connects Jira, Confluence, and Compass to AI tools. It enables you to search and read Confluence spaces and pages, access Jira issues and project metadata, create work items, and manage Atlassian Cloud products. It was built in partnership with Anthropic and is hosted on Cloudflare infrastructure.
+The Atlassian Rovo MCP Server connects Jira, Confluence, and Compass to AI tools. It enables you to search and read Confluence spaces and pages, access Jira issues and project metadata, create work items, and manage Atlassian Cloud products. Atlassian built it in partnership with Anthropic and runs it on Cloudflare infrastructure.
 
 Find the documentation at [atlassian.com/platform/remote-mcp-server](https://www.atlassian.com/platform/remote-mcp-server), [github.com/atlassian/atlassian-mcp-server](https://github.com/atlassian/atlassian-mcp-server), and [support.atlassian.com/atlassian-rovo-mcp-server](https://support.atlassian.com/atlassian-rovo-mcp-server/).
 
@@ -190,7 +192,7 @@ OpenAI provides MCP support across their AI products and development tools.
 
 OpenAI provides full MCP support in GPT-4o, the Agents SDK, and the ChatGPT desktop application. OpenAI officially adopted MCP in March 2025 after integrating the standard across its products. It enables developers to connect AI applications with external data sources and tools.
 
-OpenAI also contributed AGENTS.md, a universal standard that provides AI coding agents with project-specific guidance for reliable operation across repositories. It has been adopted by 60,000 or more open source projects. Find documentation at [docs.aaif.ai](https://docs.aaif.ai/).
+OpenAI also contributed AGENTS.md, a universal standard that provides AI coding agents with project-specific guidance for reliable operation across repositories. More than 60,000 open source projects have adopted it. Find documentation at [docs.aaif.ai](https://docs.aaif.ai/).
 
 Find the documentation at [platform.openai.com](https://platform.openai.com/).
 
@@ -229,7 +231,7 @@ For evaluation guidance, see:
 | Government framework | G-Cloud 14 | G-Cloud 14 | G-Cloud 14 |
 | Documentation | docs.aws.amazon.com/aws-mcp | learn.microsoft.com | docs.cloud.google.com/mcp |
 
-For current compliance and security certifications, consult each vendor's trust center.
+For current compliance and security certifications, consult each vendor's trust centre.
 
 ---
 

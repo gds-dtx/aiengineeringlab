@@ -14,15 +14,11 @@ This guide explains Model Context Protocol (MCP) servers in straightforward term
 
 [Why it matters](#why-it-matters)
 
-[A practical example](#a-practical-example)
-
 [What MCP servers can provide](#what-mcp-servers-can-provide)
 
 [Setting up MCP servers](#setting-up-mcp-servers)
 
 [Agent skills](#agent-skills)
-
-[Frequently asked questions](#frequently-asked-questions)
 
 [Further reading](#further-reading)
 
@@ -67,22 +63,18 @@ With MCP, the MCP server provides your AI assistant with the right information a
 ```
 Without MCP:
 
-┌──────────┐                    ┌─────────────┐
-│   You    │ ◄── You explain ─► │     AI      │
-│          │     everything     │  Assistant  │
-└──────────┘                    └─────────────┘
+  ┌──────────┐                    ┌─────────────┐
+  │   You    │ ◄── You explain ─► │     AI      │
+  │          │     everything     │  Assistant  │
+  └──────────┘                    └─────────────┘
 
 
 With MCP:
 
-┌──────────┐                    ┌─────────────┐      ┌──────────────┐
-│   You    │ ◄─── Better ────► │     AI      │ ◄─── │  MCP Server  │
-│          │      results      │  Assistant  │      │  (Standards) │
-└──────────┘                    └─────────────┘      └──────────────┘
-                                       ▲
-                                       │
-                               Standards applied
-                                 automatically
+  ┌──────────┐                    ┌─────────────┐      ┌──────────────┐
+  │   You    │ ◄─── Better ────►  │     AI      │ ◄──► │  MCP Server  │
+  │          │      results       │  Assistant  │      │  (Standards) │
+  └──────────┘                    └─────────────┘      └──────────────┘
 ```
 
 When you send a prompt, your AI assistant queries the MCP server for relevant context. The server returns applicable standards, patterns, or guidance. Your AI incorporates this into its response automatically.
@@ -91,49 +83,25 @@ When you send a prompt, your AI assistant queries the MCP server for relevant co
 
 ## Why it matters
 
-When working with AI code assistants, you often find yourself repeating the same instructions to the AI:
+When working with AI code assistants, you often repeat instructions such as:
 
-- 'use our design system'
-- 'ensure this meets WCAG accessibility requirements'
-- 'follow our security guidelines'
-- 'apply our team's coding standards'
+- use our design system
+- ensure this meets Web Content Accessibility Guidelines (WCAG) accessibility requirements
+- follow our security guidelines
+- apply our team's coding standards
 
 This repetition takes time, and requirements can get missed.
 
 Configure an MCP server once, and your AI applies this knowledge automatically. Benefits include:
 
-- less repetition – you do not need to explain the same requirements each time
-- higher quality output – standards are applied from the start
-- fewer errors – the same guidance is applied consistently
-- faster onboarding – new team members learn standards naturally through the AI's responses
-
----
-
-## A practical example
-
-### Without MCP
-
-You say 'Create a date input component'.
-
-AI creates a generic component that may not follow your organisation's patterns.
-
-You say 'Can you ensure it uses our design system? Also add proper ARIA labels for accessibility, and it needs to work without JavaScript.'
-
-AI revises the code.
-
-This back and forth occurs with most requests.
-
-### With MCP
-
-You say 'Create a date input component'.
-
-AI creates a component that already follows your patterns, includes accessibility features, and works without JavaScript.
+- less repetition because you do not need to explain the same requirements each time
+- higher quality output because standards apply from the start
+- fewer errors because the server applies the same guidance consistently
+- faster onboarding because new team members learn standards naturally through the AI's responses
 
 ---
 
 ## What MCP servers can provide
-
-MCP servers act as expert reference libraries. They can provide guidance on:
 
 | Category | Examples | Benefit |
 |----------|----------|---------|
@@ -166,7 +134,7 @@ Before setting up MCP servers, ensure you have:
 
 ### Step 2: Add an MCP server
 
-Configuration depends on whether your MCP server runs locally or is hosted remotely.
+Configuration depends on whether your MCP server runs locally or you host it remotely.
 
 #### Local servers
 
@@ -269,11 +237,13 @@ Close and reopen your editor or IDE to pick up the new configuration.
 
 Start your AI assistant and ask:
 
-> 'What MCP servers are currently connected?'
+```
+What MCP servers are currently connected?
+```
 
 The AI should list active servers and their capabilities.
 
-To test that context is being applied, try a prompt that would normally require you to specify your standards manually. If the MCP server is working, the AI will apply them automatically.
+To test that the AI is applying context, try a prompt that would normally require you to specify your standards manually. If the MCP server is working, the AI will apply them automatically.
 
 ### Troubleshooting
 
@@ -287,7 +257,7 @@ If your MCP server is not connecting, follow these steps.
    npx -y @your-org/your-mcp-server
    ```
 
-If standards are not being applied, follow these steps.
+If the AI is not applying standards, follow these steps.
 
 1. Verify your MCP server is running.
 2. Be specific in your prompts – the server matches relevant standards to your request.
@@ -295,13 +265,13 @@ If standards are not being applied, follow these steps.
 
 'Command not found' error
 
-Ensure Node.js and npm are installed and available in your PATH.
+Ensure you have Node.js and npm installed and available in your PATH.
 
 ---
 
 ## Agent skills
 
-In addition to MCP servers, you can provide context to your AI assistant through agent skills – markdown files that contain project specific instructions, standards, or guidance.
+In addition to MCP servers, you can provide context to your AI assistant through agent skills. These are markdown files that contain project specific instructions, standards, or guidance.
 
 ### What are agent skills?
 
@@ -378,33 +348,6 @@ In practice, you will likely use both.
 
 ---
 
-## Frequently asked questions
-
-Do I need to change how I use my AI tool?
-
-No. You use it exactly as before. The MCP server works in the background.
-
-What if I want to take a different approach than the MCP server suggests?
-
-You remain in control. You can ask the AI to deviate from the guidance when needed. MCP provides recommendations, not constraints.
-
-Will this affect performance?
-
-Not noticeably. Modern MCP servers respond in milliseconds.
-
-Can our team create a custom MCP server?
-
-Yes. If your organisation has specific standards not covered by existing servers, you can build your own. See the [MCP server design and architecture guide](mcp-server-design-and-architecture-guide.md) for details.
-
-What happens if the MCP server is unavailable?
-
-Your AI tool continues working normally. You simply will not receive automatic standards guidance until the connection is restored.
-
-Is this secure?
-
-MCP servers only share the information you configure them to share. Security depends on how the server is built and deployed. 
-
----
 
 ## Further reading
 
