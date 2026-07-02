@@ -161,7 +161,7 @@ For best results, keep PRs small and focused. If you must review a large PR, con
 
 Copilot code review consistently misses or gets wrong certain types of issues.
 
-Copilot commonly misses the following:
+Copilot commonly misses:
 
 - business logic errors (Copilot does not understand domain requirements)
 - architectural mismatches (it does not know your system design)
@@ -262,13 +262,13 @@ Assigning an issue to `@copilot`, rather than simply mentioning it, causes the a
 
 A simple `@copilot` mention in a comment does not always trigger the autonomous coding agent.
 
-The coding agent is activated in the following circumstances:
+The coding agent activates when:
 
 - formally assigning an issue to `@copilot` using the assignees dropdown
 - commenting `@copilot implement this` or a similar implementation directive on an issue
 - clicking "Implement suggestion" on a Copilot code review comment (if enabled)
 
-The coding agent is not activated in the following circumstances:
+The coding agent is not triggered when:
 
 - asking `@copilot` to explain something in a pull request comment
 - requesting suggestions or asking questions without requesting implementation
@@ -290,11 +290,11 @@ See [Content exclusions](content-exclusions.md) for full details on where exclus
 
 ### Important constraints
 
-The following constraints apply when interacting with `@copilot` in a pull request:
+When you interact with `@copilot` in a PR:
 
-- copilot cannot directly modify code in the pull request; it can only suggest changes
+- it cannot directly modify code in the pull request; it can only suggest changes
 - suggested changes must be applied manually by pushing new commits
-- copilot does not have write access to repository branches
+- it does not have write access to repository branches
 - responses reflect the current state of the pull request and may not include very recent commits
 
 ## 3. Assigning issues to Copilot for autonomous implementation
@@ -319,7 +319,7 @@ Action:
 2. Describe expected behaviour: 'The endpoint should return an empty array when the query is empty'.
 3. Assign to `@copilot`.
 
-Copilot responds by performing the following actions:
+Copilot responds by performing actions, such as:
 
 - analysing the issue and identifying the affected endpoint
 - adding input validation to handle empty query parameters
@@ -330,7 +330,7 @@ You review the PR, test locally, and either merge or request changes by mentioni
 
 ### When to use issue assignment
 
-Issue assignment is well suited to the following tasks:
+Issue assignment works well for:
 
 - well-defined bug fixes with clear reproduction steps
 - adding small features with explicit requirements
@@ -367,7 +367,7 @@ This section provides specific guidance for government development teams using C
 
 ### When to use Copilot PR review
 
-Copilot review is appropriate in the following circumstances:
+Use Copilot review when:
 
 - performing a quick automated scan before human review
 - working on a small, focused pull request (1 to 5 files)
@@ -375,7 +375,7 @@ Copilot review is appropriate in the following circumstances:
 - identifying code quality issues before requesting colleague review
 - prototyping and requiring rapid feedback
 
-Copilot review should not be used as the sole review mechanism in the following circumstances:
+Do not rely solely on Copilot review when:
 
 - the pull request modifies security-critical code (authentication, authorisation, cryptography)
 - the pull request handles personal data or OFFICIAL-SENSITIVE information
@@ -491,7 +491,7 @@ Implications for government teams:
 
 If your repository contains OFFICIAL-SENSITIVE files protected by content exclusions:
 
-- Copilot code review is safe to use (exclusions apply)
+- code review is safe to use (exclusions apply)
 - assigning issues to `@copilot` is not safe (exclusions do not apply)
 
 Recommended approach for repositories with sensitive content:
@@ -512,42 +512,15 @@ See [Content exclusions](content-exclusions.md) for comprehensive details.
 
 Copilot pull request capabilities have clear limitations. Understanding these helps you use Copilot effectively without creating unrealistic expectations.
 
-### Copilot cannot:
+Copilot cannot:
 
-Copilot cannot approve or merge pull requests:
-
-- it can review and comment, but is unable to approve or merge a pull request
-- all approvals and merges require human action
-
-Copilot cannot directly modify pull request branches:
-
-- it cannot push commits to feature branches
-- suggested changes must be applied manually
-
-Copilot cannot understand organisational context:
-
-- it does not know an organisation's coding standards, architectural decisions, or security policies
-- it cannot verify compliance with government-specific requirements such as data residency or accessibility standards
-
-Copilot cannot make architectural decisions:
-
-- it cannot decide between different design patterns or approaches
-- complex technical decisions require human judgement
-
-Copilot cannot access external systems or services:
-
-- it cannot interact with deployment pipelines, monitoring tools, or internal APIs
-- it works only with the code and context within the GitHub repository
-
-Copilot cannot guarantee security or correctness:
-
-- it may miss security vulnerabilities or logic errors
-- all code must be reviewed by a human, particularly for production systems
-
-Copilot cannot work across multiple repositories:
-
-- it operates within a single repository context
-- changes spanning multiple repositories require manual coordination
+- approve or merge pull requests, as it is only able to review and comment, and all approvals and merges remain the responsibility of a human
+- directly modify pull request branches, as it is unable to push commits to feature branches, and any suggested changes must be applied manually by the developer
+- understand organisational context, as it has no knowledge of an organisation's coding standards, architectural decisions or security policies, and is unable to verify compliance with government-specific requirements such as data residency or accessibility standards
+- make architectural decisions, as it is unable to evaluate or choose between different design patterns or approaches, and all complex technical decisions require human judgement
+- access external systems or services, as it is unable to interact with deployment pipelines, monitoring tools or internal APIs, and operates solely within the code and context of the GitHub repository
+- guarantee security or correctness, as it may fail to identify security vulnerabilities or logic errors, and all code must be reviewed by a human, particularly for production systems
+- work across multiple repositories, as it operates within a single repository context, and any changes spanning multiple repositories require manual coordination
 
 ## 6. Credit usage and billing
 
