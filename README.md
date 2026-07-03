@@ -23,6 +23,7 @@ This repository is a central home for all AI Engineering Lab content across gove
 | [Security](security/) | Security policies and threat modelling guidance |
 | [Sustainable AI](sustainable-ai/) | AI environmental sustainability |
 | [Training materials](training-materials/) | Onboarding, scenarios, and guided learning paths |
+| [Containerisation](containerisation/) | Explanation and example of containerisation |
 
 ## Audience
 
