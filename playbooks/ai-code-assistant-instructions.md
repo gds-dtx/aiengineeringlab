@@ -90,7 +90,7 @@ You should:
 - prefer linking to authoritative guidance rather than copying long policy text
 - assign an owner and review cadence (for example, quarterly or when standards change)
 
-For further guidance on risks and mitigations, link to your governance and security material. For example, [guardrails](../governance/guardrails-base.md) and [MCP security, risks and mitigations](../mcp-servers/mcp-security-risks-and-mitigations.md).
+For further guidance on risks and mitigations, link to your governance and security material. For example, [guardrails](../governance/guardrails-base.md).
 
 ## Introduction
 

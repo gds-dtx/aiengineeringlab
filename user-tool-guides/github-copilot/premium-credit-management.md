@@ -52,7 +52,7 @@ A premium request is any interaction where you ask Copilot to use premium featur
 
 Each time you use these capabilities, you consume premium requests based on the feature and model complexity.
 
-### What is included in your plan
+### What your plan includes
 
 All paid Copilot plans include unlimited:
 
@@ -145,9 +145,11 @@ The table below shows which features consume premium requests and whether you ca
 
 Costs shown are before model multipliers. Premium models multiply the base cost (for example, Claude Opus 4.6 at 3x means 3 requests per use).
 
+For detailed guidance on Copilot code review and autonomous coding agent capabilities in pull requests, including when to use them and their limitations, see [Pull request capabilities](pull-request-capabilities.md).
+
 ### Understanding agent mode, coding agent, and Copilot CLI
 
-These three features all involve autonomous or agentic behaviour but work differently and are billed differently.
+These three features all involve autonomous or agentic behaviour but work differently and GitHub bills them differently.
 
 Agent mode works in your IDE as part of Copilot Chat. Each prompt you send counts as one premium request, multiplied by the selected model's multiplier. Internal tool calls are not charged separately. These include:
 
@@ -161,7 +163,7 @@ Copilot coding agent works on GitHub.com autonomously. You assign it a task and 
 
 Copilot CLI is a terminal-based agent that reached general availability on 25 February 2026. Its autopilot mode bills per autonomous step rather than per user prompt. This means costs can accumulate faster than in IDE agent mode. For full billing detail, plan requirements, and a cost comparison table, see the [Copilot CLI billing guide](copilot-cli-billing.md).
 
-For example, sending 10 messages in agent mode using GPT-5 mini costs 0 premium requests. Triggering one coding agent session on GitHub.com costs 1 premium request, regardless of how many files it changes. Running a 10-step CLI autopilot session with Claude Sonnet 4.5 costs 10 premium requests.s
+For example, sending 10 messages in agent mode using GPT-5 mini costs 0 premium requests. Triggering one coding agent session on GitHub.com costs 1 premium request, regardless of how many files it changes. Running a 10-step CLI autopilot session with Claude Sonnet 4.5 costs 10 premium requests.
 
 ### Important notes on specific features
 
@@ -208,7 +210,7 @@ See [when you run out of credits](#when-you-run-out-of-credits) for detailed com
 
 ### Step 5: enable budget alerts
 
-Enable budget threshold alerts at 75%, 90% and 100% of budget consumption. Configure these in your billing settings to notify administrators before you reach limits. You will receive email notifications and a banner on GitHub when each threshold is reached.
+Enable budget threshold alerts at 75%, 90% and 100% of budget consumption. Configure these in your billing settings to notify administrators before you reach limits. You will receive email notifications and a banner on GitHub when you reach each threshold.
 
 ### Step 6: enable additional paid requests (if needed)
 
@@ -245,7 +247,7 @@ GitHub Copilot's behaviour when you exceed your premium request allowance depend
 
 Enabling 'Stop usage when budget limit is reached' means:
 
-- premium request usage stops when budget is exhausted
+- premium request usage stops when you exhaust the budget
 - users automatically switch to included models (GPT-5 mini)
 - no charges beyond the budget
 - usage resumes when the budget resets or you increase it
@@ -287,7 +289,7 @@ You will see this message in your IDE:
 
 > 'You have exceeded your premium request allowance. We have automatically switched you to an included model (GPT-5 mini). Enable additional paid premium requests to continue using premium models.'
 
-This is not an error. It is how the system maintains service availability while controlling costs.
+This is not an error. It is how the system maintains service availability whilst controlling costs.
 
 ### What remains available
 
@@ -304,7 +306,10 @@ You cannot use:
 
 - premium AI models (Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, Claude Opus 4.5, Claude Sonnet 4.6, Claude Sonnet 4.5, Gemini 2.5 Pro, GPT-5.4)
 - Copilot Code Review on pull requests
+- Copilot coding agent for autonomous issue implementation
 - features requiring premium model access
+
+For full details on what Copilot can and cannot do in pull request workflows, see [Pull request capabilities](pull-request-capabilities.md).
 
 [Response times for included models may vary during periods of high usage and may be subject to rate limiting](https://docs.github.com/en/copilot/concepts/rate-limits).
 
@@ -341,7 +346,7 @@ With $200 USD budget cap:
 
 ## Monitoring and optimising usage
 
-Control costs while maintaining developer productivity through monitoring and smart model selection.
+Control costs whilst maintaining developer productivity through monitoring and smart model selection.
 
 ### Track your usage
 
@@ -399,5 +404,6 @@ GitHub Copilot is billed in US dollars (USD). UK government departments should a
 
 [GitHub Copilot getting started guide](getting-started.md) covers initial setup and safe usage
 
-[GitHub Copilot advanced use guide](advanced-use.md) describes advanced features and techniques including agent mode workflows
+[Pull request capabilities](pull-request-capabilities.md) explains code review, @Copilot mentions, and autonomous issue implementation in PRs
 
+[GitHub Copilot advanced use guide](advanced-use.md) describes advanced features and techniques including agent mode workflows

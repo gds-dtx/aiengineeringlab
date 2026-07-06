@@ -93,7 +93,7 @@ The model a custom agent uses determines the credit cost of every session. An ag
 
 ### File format
 
-Create agent profile files in `.github/agents/`. Both `.md` and `.agent.md` extensions are supported. The `.agent.md` extension is the recommended convention in VS Code.
+Create agent profile files in `.github/agents/`. You can use either `.md` or `.agent.md` extensions. The `.agent.md` extension is the recommended convention in VS Code.
 
 ```markdown
 ---
@@ -190,19 +190,19 @@ Use subagents to:
 
 You can invoke subagents using three methods.
 
-Method 1 uses an explicit request.
+Method 1 uses an explicit request:
 
 ```
 'Use #runSubagent to research React 18 best practices and return a summary'
 ```
 
-Method 2 invokes a custom agent as a subagent.
+Method 2 invokes a custom agent as a subagent:
 
 ```
 'Use @documentation-reader as a subagent to fetch and summarise the migration guide'
 ```
 
-Method 3 configures agents to use subagents through agent instructions.
+Method 3 configures agents to use subagents through agent instructions:
 
 ```markdown
 Before implementing features use the following steps.
@@ -292,7 +292,7 @@ The preToolUse hook is the most powerful because it can block agent actions.
 
 ### File location
 
-Create `*.json` files in `.github/hooks/`.
+Create `*.json` files in `.github/hooks/`:
 
 ```json
 {
@@ -370,7 +370,7 @@ echo "$(date -d @$((TIMESTAMP/1000))): Tool=$TOOL_NAME Result=$RESULT" >> audit.
 
 Hooks receive input as JSON via stdin containing context about the action.
 
-For preToolUse hooks only, output a JSON object with your permission decision.
+For preToolUse hooks only, output a JSON object with your permission decision:
 
 ```json
 {
@@ -381,13 +381,13 @@ For preToolUse hooks only, output a JSON object with your permission decision.
 
 ### Common use cases
 
-Hooks support common use cases to:
+Hooks support the following common use cases:
 
-- block destructive commands and enforce file access policies for security
-- log all actions for audit trails for compliance
-- run linters before code edits and validate test coverage for quality
-- alert teams on production changes for notifications
-- track tool usage across teams for cost management
+- blocking destructive commands and enforcing file access policies for security
+- logging all actions for audit trails for compliance
+- running linters before code edits and validating test coverage for quality
+- alerting teams on production changes for notifications
+- tracking tool usage across teams for cost management
 
 For broader guidance on controlling credit spend and setting spending limits, see the [premium credit management guide](premium-credit-management.md#managing-agent-mode-and-premium-credit-spend).
 
@@ -413,7 +413,7 @@ Skills are folders with instructions, scripts and resources. Copilot automatical
         └── baseline.png
 ```
 
-Each folder type has a specific role:
+Each folder serves a specific role with:
 
 - templates containing code that Copilot modifies
 - references containing documentation that Copilot reads for guidance
@@ -437,7 +437,7 @@ Content sections should include:
 - available tools for scripts and their usage
 - best practices for key guidelines
 
-Script usage example where `--param` is the parameter description.
+Script usage example where `--param` is the parameter description:
 
 ```bash
 python scripts/tool.py --param value
@@ -483,7 +483,7 @@ This script creates a:
 
 Use `templates/basic-component.tsx` as the base template with placeholder values that get replaced during generation.
 
-Use:
+Conventions to follow, include:
 
 - PascalCase matching component name for files
 - `ComponentNameProps` interfaces for props
@@ -513,11 +513,11 @@ Result
 
 ### Complete example workflow
 
-This example task adds comprehensive tests to an authentication module.
+In this example task, you add comprehensive tests for an authentication module.
 
 1. Custom agent where user selects `@test-specialist` with restricted tools that cannot modify production code and testing expertise.
 
-2. Instructions that Copilot applies automatically where project uses Jest, requiring 80% coverage and follows the Arrange, Act, Assert (AAA) pattern.
+2. Instructions that Copilot applies automatically where project uses Jest, requiring 80% coverage and follows the AAA pattern.
 
 3. Hooks where `sessionStart` logs task initiation, `preToolUse` validates file edits, `postToolUse` logs test creation and `sessionEnd` generates coverage reports.
 
@@ -525,7 +525,7 @@ This example task adds comprehensive tests to an authentication module.
 
 5. Subagent where test specialist needs research, invokes `@documentation-reader`, gets Jest best practices summary and returns to main agent.
 
-6. Result is a complete test suite following project conventions (instructions), created by the specialist (custom agent), validated by security policies (hooks), using templates (skill) and informed by research (subagent).
+6. Result is a complete test suite following project conventions (instructions), created by the specialist (custom agent) and validated by security policies (hooks). It uses templates (skill) and draws on research (subagent).
 
 ### Comparison
 
@@ -561,7 +561,7 @@ Implement `preToolUse` hooks that block hardcoded credentials and dangerous comm
 
 Track all actions through comprehensive audit logging for instructions. Use `@compliance-auditor` as a custom agent with role-specific tools limited to read and reporting functions.
 
-Implement `sessionStart` hooks to log user and session metadata, `preToolUse` hooks to enforce file access policies, `postToolUse` hooks to track all actions to a database, and `sessionEnd` hooks to generate compliance reports. Create an `audit-trail-generator` skill with automated report generation and policy templates.
+Implement `sessionStart` hooks to log user and session metadata and `preToolUse` hooks to enforce file access policies. Use `postToolUse` hooks to track all actions to a database, and `sessionEnd` hooks to generate compliance reports. Create an `audit-trail-generator` skill with automated report generation and policy templates.
 
 #### Quality focused testing
 
@@ -594,7 +594,7 @@ Implement hooks to enforce policies and maintain audit trails.
 
 1. Add `preToolUse` hooks for security validation.
 2. Add `postToolUse` hooks for audit logging.
-3. Test hook scripts locally: `echo '{"toolName":"bash"}' | ./script.sh`
+3. Test hook scripts locally: `echo '{"toolName":"bash"}' | ./script.sh`.
 
 ### Phase 4: automation
 

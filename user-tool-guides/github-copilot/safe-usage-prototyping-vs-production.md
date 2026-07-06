@@ -9,7 +9,7 @@ This guidance defines safe usage boundaries for GitHub Copilot across prototypin
 
 ## Who this is for
 
-This guidance is for:
+This guidance is intended for:
 
 - engineering managers implementing GitHub Copilot
 - technical leads defining development workflows
@@ -18,12 +18,12 @@ This guidance is for:
 
 ## Before you start
 
-Before using this guidance, ensure you have:
+Before using this guidance, readers should ensure they have:
 
 - read the [base guardrails](../../governance/guardrails-base.md)
 - completed department-specific AI tool onboarding
-- understood your team's data classification levels
-- identified which environments your team uses
+- understood their team's data classification levels
+- identified which environments their team uses
 
 ## Contents
 
@@ -112,26 +112,26 @@ The table below defines which GitHub Copilot usage is permitted based on data cl
 
 #### OFFICIAL prototyping
 
-Standard controls apply. You should:
+Standard controls apply, meaning teams should:
 
 - use synthetic or anonymised data
 - follow core guardrails
 
 #### OFFICIAL production
 
-Enhanced controls apply. You must:
+Enhanced controls apply, meaning teams must:
 
 - ensure all generated code passes security scanning
 - perform a mandatory peer review before merging
 
 #### OFFICIAL-SENSITIVE (both environments)
 
-Requires enterprise GitHub Copilot with:
+Enterprise GitHub Copilot is required and must be configured to ensure:
 
-- data residency controls (UK or approved regions)
-- audit logging enabled
-- code suggestions filtered by organisation policy
-- no training on your code (opt-out enforced)
+- data residency is restricted to UK or approved regions
+- audit logging is enabled
+- code suggestions are filtered by organisation policy
+- no organisational code is used for model training (opt-out enforced)
 
 #### SECRET and above
 
@@ -255,16 +255,20 @@ You must not:
 
 All AI-generated code for production must undergo human review before commit. The review must verify the following aspects.
 
+Important: Copilot code review does not satisfy mandatory human code review requirements. Copilot reviews are marked as 'Comment' reviews, not 'Approve' reviews. They do not count toward required approvals and will not block merging. See [Pull request capabilities](pull-request-capabilities.md#copilot-review-and-mandatory-code-review-requirements) for full details on Copilot PR review limitations.
+
 | Review aspect | Requirement |
 |---------------|-------------|
 | Logic correctness | Code performs intended function correctly |
-| Security | No vulnerabilities (injection, XSS, auth bypass, etc.) |
+| Security | No vulnerabilities (injection, XSS, auth bypass) |
 | Error handling | Appropriate exception handling and logging |
 | Dependencies | All packages verified and approved |
 | Test coverage | Adequate tests exist for generated code |
 | Accessibility | WCAG compliance for user-facing code |
 | Standards compliance | Follows GDS Service Standard and Technology Code of Practice |
 | Documentation | Code is maintainable and documented |
+
+You can use Copilot code review as an additional automated scan before human review. However, it does not replace any mandatory human review step. See [Pull request capabilities](pull-request-capabilities.md) for guidance on when to use Copilot PR review and how to interpret its suggestions.
 
 ### PR-03: security scanning requirements
 
@@ -330,10 +334,10 @@ All agentic actions must:
 
 #### OWASP AI security guidance
 
-Engineers working with AI-generated code should be familiar with:
+Engineers working with AI-generated code should consult:
 
-- [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) top security risks for large language model applications
-- [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/), security considerations for autonomous AI systems
+- the [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) covering top security risks for large language model applications
+- the [OWASP Agentic AI Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) covering security considerations for autonomous AI systems
 
 These resources help identify vulnerabilities specific to AI-generated code and applications that integrate AI.
 
@@ -421,11 +425,11 @@ For internal services, you must:
 - maintain clear records of where AI is used in decision-making processes
 - ensure AI usage does not conflict with departmental transparency commitments
 
-General principles include:
+The general principles to observe are that:
 
 - transparency builds public trust in digital government services
 - citizens have a right to know when AI influences decisions affecting them
-- AI should augment human decision-making, not replace accountability
+- AI should augment human decision-making and not replace accountability
 
 Consult your department's data protection officer before deploying AI-assisted features that process personal data.
 
@@ -560,13 +564,13 @@ Context: engineer building data generators for testing.
 
 Environment: depends on data classification
 
-Follow guidance:
+Engineers in this scenario should:
 
-- if generators create synthetic data for prototypes, refer to prototyping controls
-- if generators create test data for pre-production environments, refer to production controls
-- to ensure generated data does not inadvertently resemble real users
-- to not use AI to synthesise data based on production datasets
-- to use established libraries (Faker, Bogus) over custom AI-generated approaches
+- refer to prototyping controls if generators create synthetic data for prototypes
+- refer to production controls if generators create test data for pre-production environments
+- ensure generated data does not inadvertently resemble real users
+- not use AI to synthesise data based on production datasets
+- use established libraries such as Faker or Bogus over custom AI-generated approaches
 
 ### Scenario 5: infrastructure as code (IaC)
 
@@ -583,7 +587,7 @@ You must:
 - ensure least privilege access configured
 - review for security misconfigurations (public S3 buckets, open security groups)
 - use department-approved base modules where available
-- pay special attention to Identity and Access Management (IAM) policies and network configurations
+- pay particular attention to Identity and Access Management (IAM) policies and network configurations
 
 You must not accept infrastructure code without security review.
 
@@ -693,20 +697,20 @@ Engineers must only use tools on the approved list unless an exception has been 
 ### Exception and waiver process
 If GitHub Copilot is not on the approved list, you should consider the following.
 
-For prototyping and research:
+When engaged in prototyping or research, teams should note that:
 
-- unapproved tools may be used for non-production activities (training, proof of concept, research)
+- unapproved tools may be used for non-production activities such as training, proof of concept work, or research
 - no department or citizen data must be used
-- document the tool use and purpose
+- the tool use and purpose must be documented
 - results must not be deployed to production
 
-For production use:
+When seeking an exception for production use, teams must:
 
-- submit exception request to AI governance board or equivalent
-- provide business justification and risk mitigation
+- submit an exception request to the AI governance board or equivalent body
+- provide a business justification and a risk mitigation plan
 - obtain senior management approval
-- time-bound approval (for example, 3 months pending full approval process)
-- re-assessment required if tool terms or usage change
+- note that approval will be time-bound (for example, three months, pending completion of the full approval process)
+- re-assess if tool terms or usage change
 
 ### Denied tool list
 

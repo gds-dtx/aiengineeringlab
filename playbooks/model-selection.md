@@ -245,6 +245,7 @@ Consider Opus 4.8 for new work. Opus 4.7 remains a strong choice for precision e
 | Claude Sonnet 4.5 | Medium | Medium | Medium | Stable, predictable coding |
 | Claude Sonnet 4.6 | Medium | High | Medium to high | General development, improved honesty |
 | Claude Opus 4.5   | Medium to slow | High | Very high | Comprehensive solutions, deep reasoning |
+| Claude Opus 4.6   | Medium | Very high | Very high | Enterprise agents, long-running workflows |
 | Claude Opus 4.7   | Medium | Very high | Very high | 150+ step tasks, precision execution |
 | Claude Opus 4.8   | Medium | Very high | Very high | Enhanced judgement, agentic reliability, self-correction |
 

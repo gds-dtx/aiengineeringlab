@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.2] - 2026-07-02
+
+### Added
+- MCP Servers section including introduction, best practices, server design and architecture guide, industry implementation examples, and partner examples
+- GitHub Copilot guide for checking your licence type
+- GitHub Copilot pull request capabilities guide
+- GitHub Copilot content exclusions guide
+- Token cost management playbook
+- Claude Code guide on evaluating AI agents
+- MCP signpost link added to repository README
+
+### Updated
+- Model selection playbook with latest guidance on Anthropic and Google model families
+- Context engineering playbook
+- Prompt engineering AI roles guide
+- Working with constrained context windows playbook
+- AI code assistant instructions playbook
+- Team classification guide in assessment framework
+- GitHub Enterprise AI controls governance documentation
+- Secure by design AI evidence documentation
+- Comparative guidance for manager tool guides
+- GitHub Copilot manager tool guide and usage guide
+- Claude Code user guides including setup guide and customisation guide
+- GitHub Copilot user guides including getting started, advanced use, customisation, agent mode billing, CLI billing, premium credit management, and safe usage guidance
+- Quality assurance README
+
 ## [0.1.1] - 2026-05-29
 
 ### Added
