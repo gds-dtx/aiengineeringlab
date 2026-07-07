@@ -289,7 +289,7 @@ You will see this message in your IDE:
 
 > 'You have exceeded your premium request allowance. We have automatically switched you to an included model (GPT-5 mini). Enable additional paid premium requests to continue using premium models.'
 
-This is not an error. It is how the system maintains service availability whilst controlling costs.
+This is not an error. It is how the system maintains service availability while controlling costs.
 
 ### What remains available
 
@@ -346,7 +346,7 @@ With $200 USD budget cap:
 
 ## Monitoring and optimising usage
 
-Control costs whilst maintaining developer productivity through monitoring and smart model selection.
+Control costs while maintaining developer productivity through monitoring and smart model selection.
 
 ### Track your usage
 

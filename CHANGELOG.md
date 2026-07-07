@@ -2,8 +2,6 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.1.2] - 2026-07-02
-
 ### Added
 - MCP Servers section including introduction, best practices, server design and architecture guide, industry implementation examples, and partner examples
 - GitHub Copilot guide for checking your licence type

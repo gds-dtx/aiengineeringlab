@@ -190,19 +190,19 @@ Use subagents to:
 
 You can invoke subagents using three methods.
 
-Method 1 uses an explicit request:
+Method 1 uses an explicit request.
 
 ```
 'Use #runSubagent to research React 18 best practices and return a summary'
 ```
 
-Method 2 invokes a custom agent as a subagent:
+Method 2 invokes a custom agent as a subagent.
 
 ```
 'Use @documentation-reader as a subagent to fetch and summarise the migration guide'
 ```
 
-Method 3 configures agents to use subagents through agent instructions:
+Method 3 configures agents to use subagents through agent instructions.
 
 ```markdown
 Before implementing features use the following steps.
@@ -292,7 +292,7 @@ The preToolUse hook is the most powerful because it can block agent actions.
 
 ### File location
 
-Create `*.json` files in `.github/hooks/`:
+Create `*.json` files in `.github/hooks/`.
 
 ```json
 {
@@ -370,7 +370,7 @@ echo "$(date -d @$((TIMESTAMP/1000))): Tool=$TOOL_NAME Result=$RESULT" >> audit.
 
 Hooks receive input as JSON via stdin containing context about the action.
 
-For preToolUse hooks only, output a JSON object with your permission decision:
+For preToolUse hooks only, output a JSON object with your permission decision.
 
 ```json
 {
@@ -413,7 +413,7 @@ Skills are folders with instructions, scripts and resources. Copilot automatical
         └── baseline.png
 ```
 
-Each folder serves a specific role with:
+Each folder type has a specific role:
 
 - templates containing code that Copilot modifies
 - references containing documentation that Copilot reads for guidance
@@ -437,7 +437,7 @@ Content sections should include:
 - available tools for scripts and their usage
 - best practices for key guidelines
 
-Script usage example where `--param` is the parameter description:
+Script usage example where `--param` is the parameter description.
 
 ```bash
 python scripts/tool.py --param value
@@ -517,7 +517,7 @@ In this example task, you add comprehensive tests for an authentication module.
 
 1. Custom agent where user selects `@test-specialist` with restricted tools that cannot modify production code and testing expertise.
 
-2. Instructions that Copilot applies automatically where project uses Jest, requiring 80% coverage and follows the AAA pattern.
+2. Instructions that Copilot applies automatically where project uses Jest, requiring 80% coverage and follows the Arrange, Act, Assert (AAA) pattern.
 
 3. Hooks where `sessionStart` logs task initiation, `preToolUse` validates file edits, `postToolUse` logs test creation and `sessionEnd` generates coverage reports.
 
