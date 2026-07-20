@@ -15,7 +15,7 @@ This guide explains how GitHub Copilot CLI (command-line interface) consumes Git
 
 [How Copilot CLI billing works](#how-copilot-cli-billing-works)
 
-[Using included models in Copilot CLI](#using-included-models-in-copilot-cli)
+[Using lower-cost models in Copilot CLI](#using-lower-cost-models-in-copilot-cli)
 
 [Autopilot mode in Copilot CLI](#autopilot-mode-in-copilot-cli)
 
