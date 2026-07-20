@@ -14,7 +14,7 @@ Developer user guides for GitHub Copilot.
 | [Advanced use of GitHub Copilot](advanced-use.md) | Guide to advanced GitHub Copilot usage |
 | [Pull request capabilities](pull-request-capabilities.md) | Code review, @Copilot mentions, issue assignment, and PR workflow integration |
 | [Customisation guide for GitHub Copilot](customisation-guide.md) | A practical guide to customising GitHub Copilot through instructions, custom agents, sub agents, hooks and skills |
-| [Premium credit management](premium-credit-management.md) | Historical reference for the pre-June 2026 premium request system, plus budget management guidance that remains current |
+| [Premium credit management](premium-credit-management.md) | Historical reference for the pre-June 2026 premium request system only |
 | [Agent mode billing](agent-mode-billing.md) | How agent mode consumes credits, model selection, and admin controls |
 | [Copilot CLI billing](copilot-cli-billing.md) | How Copilot CLI charges credits, autopilot mode billing, and plan requirements |
 | [Safe usage guidance: prototyping vs production](safe-usage-prototyping-vs-production.md) | Differentiated controls for prototyping and production environments |

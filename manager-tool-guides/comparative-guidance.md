@@ -301,7 +301,7 @@ Each tool uses different underlying models. Understanding model capabilities hel
 
 | Tool | Primary models | Model selection |
 |------|---------------|-----------------|
-| GitHub Copilot | GPT-5 mini (included). Claude Sonnet 4.6, Claude Opus 4.8, Claude Opus 4.6, Gemini 2.5 Pro (premium) | user selectable via model picker. Auto mode stays within 0x to 1x cost models |
+| GitHub Copilot | GPT-5 mini, Claude Sonnet 4.6, Claude Opus 4.8, Claude Opus 4.6, Gemini 2.5 Pro | User selectable via model picker |
 | Claude Code | Claude Opus 4.5, Claude Sonnet 4.5, Claude Haiku 4.5 | user selectable via /model command |
 | Amazon Kiro | Claude Sonnet 4.0, Claude Sonnet 3.7 (via Bedrock) | auto-routing for efficiency |
 | Amazon Q Developer | AWS proprietary models | automatic selection based on task |

@@ -256,7 +256,7 @@ Assigning an issue to `@copilot`, rather than simply mentioning it, causes the a
 
 - trigger autonomous implementation via a coding agent session
 - create a pull request without human intervention
-- consume one premium request per session (see section 3 for details)
+- consume AI credits and GitHub Actions minutes according to the model used and total token consumption (see section 6 for details)
 
 ### When does @Copilot trigger the coding agent?
 
@@ -274,7 +274,7 @@ The coding agent is not triggered when:
 - requesting suggestions or asking questions without requesting implementation
 - mentioning `@copilot` in a discussion or general comment
 
-When the coding agent runs, it consumes 1 premium request. Monitor your usage if your team frequently assigns issues to Copilot.
+When the coding agent runs, it consumes AI credits and GitHub Actions minutes. Monitor your usage if your team frequently assigns issues to Copilot.
 
 ### Repository instructions and content exclusions
 
@@ -528,29 +528,29 @@ Different Copilot features consume credits differently. Understanding credit usa
 
 ### Code review
 
-Each code review request uses 1 premium request. This is a fixed cost regardless of PR size or review complexity.
+Each code review consumes AI credits based on the model GitHub selects and the number of tokens processed.
 
-If you have zero premium requests remaining, code review is unavailable until your allowance resets or you increase your budget.
+Code review also consumes GitHub Actions minutes for its agentic capabilities. If a user-level or organisation-level budget is reached, code review is blocked along with other AI-credit-consuming features.
 
 ### Coding agent (issue assignment)
 
-Each coding agent session uses 1 premium request per session. This is true regardless of how many files Copilot modifies or how complex the task is.
+Each coding agent session consumes AI credits based on the model used and the number of tokens processed during the session.
 
-For substantial multi-file work, this flat rate is more cost-effective than a long agent mode session with a premium model in your IDE.
+Coding agent sessions also consume GitHub Actions minutes. For substantial multi-file work, compare current cloud-agent billing with IDE agent mode before deciding which workflow is cheaper.
 
 ### @Copilot mentions in PR comments
 
-Interactions with `@copilot` in PR comments do not directly consume premium requests. However, complex requests may trigger the coding agent, which uses 1 premium request per session.
+Interactions with `@copilot` in PR comments can lead to AI credit consumption if they trigger code review or the coding agent.
 
 ### Managing credit usage
 
 Teams that frequently use pull request capabilities should:
 
-- monitor premium request usage in their GitHub organisation settings
+-  monitor AI credit and GitHub Actions usage in their GitHub organisation settings
 - set appropriate monthly budgets for the team
 - consider whether to enable code review and coding agent features for all repositories or only selected ones
 
-See [Premium credit management](premium-credit-management.md) for detailed guidance on managing credits and budgets.
+See GitHub's [models and pricing reference](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing) and the [enterprise AI controls](../../governance/github-enterprise-ai-controls.md#usage-based-billing-from-1-june-2026) for current billing and budget guidance.
 
 ## 7. Official documentation
 

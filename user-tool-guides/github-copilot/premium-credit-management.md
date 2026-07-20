@@ -1,15 +1,15 @@
 > ALPHA
 > This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
 
-# GitHub Copilot premium credit management
+# GitHub Copilot premium credit management (legacy premium request system)
 
-This page describes the premium request billing system that was in place before 1 June 2026. On 1 June 2026, GitHub moved all Copilot plans to usage-based billing tracked in GitHub AI Credits (1 credit = $0.01 USD) based on token consumption per model. For current billing guidance, see the [enterprise AI controls](../../governance/github-enterprise-ai-controls.md#usage-based-billing-from-1-june-2026) and the [agent mode billing guide](agent-mode-billing.md).
+This page describes the premium request billing system that was in place before 1 June 2026. On 1 June 2026, GitHub moved all Copilot plans to usage-based billing tracked in GitHub AI Credits (1 credit = $0.01) based on token consumption per model. For current billing guidance, see the [enterprise AI controls](../../governance/github-enterprise-ai-controls.md#usage-based-billing-from-1-june-2026), the [agent mode billing guide](agent-mode-billing.md), the [Copilot CLI billing guide](copilot-cli-billing.md), and GitHub's [models and pricing reference](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing).
 
-The budget management, model multiplier, and cost control sections below remain relevant because the new system uses the same budget infrastructure. Model multipliers and spending caps work the same way under usage-based billing.
+Do not use the sections below as current guidance for model pricing, automatic fallback behaviour, or per-feature charging. They are retained as historical reference for older documentation, screenshots, and changelog entries that refer to premium requests.
 
 ---
 
-The guidance below describes how the premium request system worked and how to manage budgets effectively.
+Historical content follows.
 
 ## Who this is for
 

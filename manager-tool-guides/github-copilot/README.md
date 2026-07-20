@@ -128,7 +128,7 @@ The table below combines task suitability information from the [GitHub Copilot m
 
 | Model | Provider | Best for | Cost | Notes |
 |---|---|---|---|---|
-| GPT-5 mini | OpenAI | Balanced speed and capability | Included | No credits consumed on paid plans |
+| GPT-5 mini | OpenAI | Balanced speed and capability | Lower-cost | Lower token rates than frontier models |
 | GPT-5.4 | OpenAI | General coding | Check GitHub docs | Newly enabled in enterprise |
 | GPT-5.4 mini | OpenAI | Fast, cost-effective coding | Check GitHub docs | Newly enabled in enterprise |
 | GPT-5.4 nano | OpenAI | Codex VS Code extension only | Check GitHub docs | Not available in Copilot Chat |
@@ -149,7 +149,7 @@ The recommendations below come from the [GitHub Copilot model comparison](https:
 
 | Task | Recommended model | Why |
 |---|---|---|
-| Autocomplete as you type | GPT-5 mini (default) | Fast response, no premium cost |
+| Autocomplete as you type | GPT-5 mini (default) | Fast response, usually the lowest-cost option |
 | Generate unit tests | Claude Sonnet 4.6 or GPT-5.3-Codex | Better understanding of edge cases |
 | Debug complex issues | Claude Opus 4.6 or Claude Sonnet 4.6 | Superior reasoning about code behaviour |
 | Write boilerplate code | GPT-5 mini or Claude Haiku 4.5 | Sufficient for repetitive patterns, cost-effective |
@@ -162,13 +162,13 @@ The recommendations below come from the [GitHub Copilot model comparison](https:
 
 ### Controlling model selection
 
-In Copilot Chat, engineers select models from the model picker dropdown. When using Auto mode, Copilot automatically selects the best model based on availability and stays within 0× to 1× multiplier models. This means it won't route to high-cost models such as Claude Opus. Read more about [Copilot auto model selection](https://docs.github.com/en/copilot/concepts/auto-model-selection). 
+In Copilot Chat, engineers select models from the model picker dropdown. When using Auto mode, Copilot automatically selects a model based on availability and its routing logic. Read more about [Copilot auto model selection](https://docs.github.com/en/copilot/concepts/auto-model-selection).
 
-Included models (no credits consumed on paid plans) are:
+Lower-cost default models include:
 
 - GPT-5 mini
 
-Premium models (consume credits) are:
+Higher-cost models include:
 
 - all Claude models (Haiku, Sonnet, Opus variants)
 - GPT-5.4, GPT-5.3-Codex, and other GPT-5.x models
@@ -176,7 +176,7 @@ Premium models (consume credits) are:
 
 Model availability depends on your licence tier. Business and Enterprise tiers have access to all models. Premium model usage is tracked through GitHub AI Credits.
 
-For detailed guidance on managing credit budgets, preventing unexpected costs, and understanding spending controls, see [Premium credit management](../../user-tool-guides/github-copilot/premium-credit-management.md).
+For detailed guidance on managing credit budgets, preventing unexpected costs, and understanding spending controls, see the [agent mode billing guide](../../user-tool-guides/github-copilot/agent-mode-billing.md) and GitHub's [models and pricing reference](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing).
 
 ### Adding additional models
 
@@ -324,17 +324,17 @@ This briefing should be delivered as a presentation with a question and answer s
 
 ## Managing agent mode and premium credit spend
 
-GitHub Copilot uses usage-based billing through GitHub AI Credits (1 credit = $0.01 USD). Usage is based on token consumption per model with multipliers determining relative cost. See the [enterprise AI controls](../../governance/github-enterprise-ai-controls.md#usage-based-billing-from-1-june-2026) for details.
+GitHub Copilot uses usage-based billing through GitHub AI Credits (1 credit = $0.01). Usage is based on token consumption per model, with model pricing determining relative cost. For Copilot Business and Copilot Enterprise, included allowances are pooled at the billing-entity level. See the [enterprise AI controls](../../governance/github-enterprise-ai-controls.md#usage-based-billing-from-1-june-2026) for details.
 
-Agent mode is one of the most productive features in GitHub Copilot, but it is also the most likely to drive high credit consumption when used with premium models. This section gives administrators the controls they need to prevent unexpected costs across their teams.
+Agent mode is one of the most productive features in GitHub Copilot, but it is also the most likely to cause high credit consumption when used with premium models. This section gives administrators the controls they need to prevent unexpected costs across their teams.
 
 [Agent mode is the default in Copilot Chat since VS Code 1.107](https://code.visualstudio.com/updates/v1_107). Engineers can switch to Ask mode from the mode dropdown in the Chat view. To disable agent mode entirely, set [`chat.agent.enabled`](https://code.visualstudio.com/docs/copilot/reference/copilot-settings) to `false` in your organisation's VS Code configuration. This removes access to agent mode for all engineers.
 
-Before diving into the admin controls, it helps to understand how engineers actually use agent mode day to day and what tasks they are likely to run in it. The [GitHub Copilot advanced use guide](../../user-tool-guides/github-copilot/advanced-use.md) covers refactoring, test generation, and multi-file editing patterns. These are the tasks most likely to drive credit consumption. The [GitHub Copilot customisation guide](../../user-tool-guides/github-copilot/customisation-guide.md) covers custom agents, hooks for security and cost logging, and skills. All of these interact with agent mode and affect how your team uses it at scale.
+Before diving into the admin controls, it helps to understand how engineers actually use agent mode day to day and what tasks they are likely to run in it. The [GitHub Copilot advanced use guide](../../user-tool-guides/github-copilot/advanced-use.md) covers refactoring, test generation, and multi-file editing patterns. These are the tasks most likely to increase credit consumption. The [GitHub Copilot customisation guide](../../user-tool-guides/github-copilot/customisation-guide.md) covers custom agents, hooks for security and cost logging, and skills. All of these interact with agent mode and affect how your team uses it at scale.
 
 ### Understanding how agent mode consumes credits
 
-[Each prompt an engineer sends in agent mode consumes credits based on the selected model's multiplier](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/asking-github-copilot-questions-in-your-ide). Internal tool calls the agent makes between prompts, such as reading files or running terminal commands, are not charged separately. Only the prompts the engineer sends trigger a charge.
+[Each prompt an engineer sends in agent mode consumes tokens that are billed according to the selected model and total token volume](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide#using-agent-mode). Internal tool use contributes to the overall interaction, so longer sessions and larger context windows increase spend.
 
 Complex tasks require many messages. Two or three feature implementation sessions with a premium model can consume significant credits quickly. GitHub Copilot does not warn engineers before credits are charged and there is no automatic notification when an individual approaches a spending threshold.
 
@@ -346,31 +346,31 @@ As an enterprise or organisation owner, you can disable premium models to preven
 
 Disabling a model removes it from both Auto routing and manual selection. Engineers cannot use a model you have disabled, even if they choose it themselves. Administrators cannot set a default model for engineers.
 
-For the full step-by-step procedure, including how to enforce included-only model use and a middle-ground option that keeps low-cost premium models available, see [Enforcing included model use through model policies](../../user-tool-guides/github-copilot/agent-mode-billing.md#enforcing-included-model-use-through-model-policies) in the agent mode billing guide.
+For the full step-by-step procedure, including how to enforce lower-cost model use and a middle-ground option that keeps stronger models available, see [Enforcing lower-cost model use through model policies](../../user-tool-guides/github-copilot/agent-mode-billing.md#enforcing-lower-cost-model-use-through-model-policies) in the agent mode billing guide.
 
 ### Setting a hard spending limit
 
-You can set a monthly budget and enable a hard limit to automatically block premium model access once the budget is exhausted. Once the limit is reached, engineers are switched to included models automatically and no further charges accrue. This is the recommended configuration for cost governance. The [premium request paid usage policy](https://docs.github.com/en/copilot/how-tos/manage-and-track-spending/manage-request-allowances) has been available for Business and Enterprise plans since August 2025.
+You can set a monthly budget and enable a hard limit to automatically block further paid usage once the budget is exhausted. This is the recommended configuration for cost governance. Check GitHub's current billing documentation to confirm the exact end-user behaviour when the limit is reached.
 
 Since November 2025, the Copilot coding agent has its own dedicated stock keeping unit (SKU) separate from chat and agent mode in the IDE. This allows you to set separate budgets for each feature if you want more detailed control.
 
-For the full procedure including budget configuration, alert thresholds, and the difference between hard and soft limits, see [Managing premium credits](../../user-tool-guides/github-copilot/premium-credit-management.md#managing-premium-credits) in the premium credit management guide.
+For the full procedure including budget configuration, alert thresholds, and current usage-based billing controls, see GitHub's [usage-based billing for organizations and enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises).
 
 ### Monitoring usage by engineer
 
 [Download monthly usage reports](https://docs.github.com/en/billing/how-tos/products/view-productlicense-use) to identify which engineers are consuming the most credits and which models they are using. Filter by feature and model to identify agent mode usage specifically.
 
-Contact engineers who are consistently exceeding expected spend. Share the [premium credit management guide](../../user-tool-guides/github-copilot/premium-credit-management.md) to help them understand how to reduce consumption and choose appropriate models for each task type.
+Contact engineers who are consistently exceeding expected spend. Share the [agent mode billing guide](../../user-tool-guides/github-copilot/agent-mode-billing.md) and the [GitHub models and pricing reference](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing) to help them understand how to reduce consumption and choose appropriate models for each task type.
 
 ### What to communicate to engineers
 
-Engineers may not realise how quickly agent mode sessions with premium models consume requests. You should make sure that your team understands that:
+Engineers may not realise how quickly agent mode sessions with higher-cost models consume credits. You should make sure that your team understands that:
 
-- agent mode with included models (GPT-5 mini) costs nothing, so this should be used as default
-- [Auto model selection stays within 0× to 1× multiplier models](https://docs.github.com/en/copilot/concepts/auto-model-selection) and gives a 10% discount on paid plans, making it a safe default if engineers want automatic model selection
+- GPT-5 mini is usually the lowest-cost default option for routine work
+- [Auto model selection](https://docs.github.com/en/copilot/concepts/auto-model-selection) should be treated as managed routing, not as a guarantee of zero-cost usage or a free-model fallback
 - for advanced tasks, choose a model appropriate to the work — see the [model selection guide](../../playbooks/model-selection.md)
 - premium models such as Claude Opus 4.6 and Claude Opus 4.7 should be reserved for tasks that genuinely require advanced reasoning
-- [the Copilot coding agent on GitHub.com uses one credit per session](https://github.blog/changelog/2025-07-10-github-copilot-coding-agent-now-uses-one-premium-request-per-session/) regardless of task complexity, making it far more cost-effective than agent mode chat for large, multi-file tasks
+- review current GitHub documentation before assuming the Copilot coding agent is billed as a flat per-session charge
 - agent mode is the default when opening Copilot Chat in VS Code. Engineers who want a read-only, non-destructive chat experience should switch to Ask mode manually at the start of each session
 
 ## Measuring success

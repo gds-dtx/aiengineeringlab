@@ -341,10 +341,13 @@ The next steps depend on which type of licence you hold:
 
 Your Copilot administrator should:
 
-- see [Premium credit management](premium-credit-management.md) for subscription and billing guidance
+- see the [enterprise AI controls](../../governance/github-enterprise-ai-controls.md#usage-based-billing-from-1-june-2026) and GitHub's [models and pricing reference](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing) for current subscription and billing guidance
 - see [Customisation guide](customisation-guide.md) for setting up custom instructions and policies
 
 All developers should:
 
+- see [Safe usage guidance](safe-usage-prototyping-vs-production.md) for appropriate usage patterns
+- see [Content exclusions](content-exclusions.md) if you work with sensitive files
+- use [Defra GitHub Copilot config examples](https://defra.github.io/defra-ai-config-examples/) when moving from individual usage to a governed team setup
 - see [Safe usage guidance](safe-usage-prototyping-vs-production.md) for appropriate usage patterns
 - see [Content exclusions](content-exclusions.md) if you work with sensitive files
