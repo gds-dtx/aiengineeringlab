@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.3] - 2026-07-20
+
+### Added
+- Defra GitHub Copilot configuration examples links in the getting started, advanced use, customisation, and licence type guides to support governed public sector setup patterns
+
+
+### Updated
+- GitHub Copilot manager and user guides to align billing guidance with usage-based AI Credits and token-based charging terminology
+- Agent mode billing guide to emphasise lower-cost model selection, current auto model selection caveats, and revised cost-behaviour examples
+- Copilot CLI billing guide to clarify autopilot continuation cost behaviour and replace fixed multiplier examples with relative cost guidance
+- Pull request capabilities guide to reflect AI Credits and GitHub Actions minutes usage for code review and coding agent workflows
+- Premium credit management guide reframed as historical reference for the pre-1 June 2026 premium request system
+- Comparative guidance and GitHub Copilot index pages updated to reflect current model and pricing language and references
+
+
+## [0.1.2] - 2026-07-06
+
 ### Added
 - MCP Servers section including introduction, best practices, server design and architecture guide, industry implementation examples, and partner examples
 - GitHub Copilot guide for checking your licence type

@@ -5,6 +5,8 @@
 
 This guide builds on the [getting started guide for GitHub Copilot](getting-started.md). It is for developers who already use Copilot regularly and want to use it more effectively and safely.
 
+Teams that want practical public sector examples can also adapt the [Defra GitHub Copilot config examples](https://defra.github.io/defra-ai-config-examples/), which show instructions, agents, prompts and skills in a governed environment.
+
 Follow the steps in order. Each step focuses on a specific capability.
 
 ## Contents
@@ -107,7 +109,7 @@ You can improve the quality of outputs by:
 - ensuring generated tests still fail when code breaks
 - ensuring documentation reflects real behaviour rather than intent
 
-If you use agent mode to generate tests across multiple files, the number of messages you send determines how many credits you consume. See [Agent mode billing](agent-mode-billing.md) for worked examples showing credit usage for test generation sessions, including how to keep costs to zero using included models.
+If you use agent mode to generate tests across multiple files, the number of messages you send and the amount of context you pull into the session both affect credit usage. See [Agent mode billing](agent-mode-billing.md) for worked examples showing how test generation sessions consume credits and how lower-cost models help contain spend.
 
 ### References
 [Generate unit tests with GitHub Copilot](https://docs.github.com/en/copilot/tutorials/customization-library/prompt-files/generate-unit-tests)
@@ -118,7 +120,7 @@ If you use agent mode to generate tests across multiple files, the number of mes
 
 ## 4. Refactor code safely
 
-Copilot can assist with refactoring, but it should not drive it.
+Copilot can assist with refactoring, but it should not lead the work.
 
 Safe refactoring practices include making one logical change at a time. Ask Copilot to suggest options rather than applying changes without review. Run tests after each change to confirm behaviour remains correct.
 
@@ -133,7 +135,7 @@ You can refactor more safely by:
 - avoiding large multi-file changes generated in one step
 - keeping changes reviewable in pull requests
 
-Multi-file refactoring is one of the most credit-intensive agent mode tasks. A complex refactoring job can involve 15 to 25 messages, which adds up quickly if you use a premium model. See [Agent mode billing](agent-mode-billing.md) for a cost comparison across model choices. It also explains how to use agent mode for refactoring at zero cost with included models.
+Multi-file refactoring is one of the most credit-intensive agent mode tasks. A complex refactoring job can involve 15 to 25 messages, which adds up quickly if you use a higher-cost model. See [Agent mode billing](agent-mode-billing.md) for a cost comparison across model choices and guidance on reducing spend through model choice and tighter scope.
 
 ### References
 [Refactoring code with GitHub Copilot](https://docs.github.com/en/copilot/tutorials/refactor-code)
@@ -181,3 +183,5 @@ You can now:
 GitHub Copilot is a tool. You remain accountable for the code you ship.
 
 Once you are comfortable with the techniques in this guide, the [GitHub Copilot customisation guide](customisation-guide.md) covers how to go further, including setting up custom agents, repository instructions, hooks for security and compliance, and skills for repeatable workflows.
+
+For implementation patterns, see [Defra GitHub Copilot config examples](https://defra.github.io/defra-ai-config-examples/).

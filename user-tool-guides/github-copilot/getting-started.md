@@ -156,3 +156,5 @@ After you are comfortable with the basics, you can:
 - explore advanced features such as refactoring and code review
 
 Once you are confident using GitHub Copilot, consider reading the [advanced guide on using GitHub Copilot](advanced-use.md).
+
+If you need practical UK government examples for repository setup, see [Defra GitHub Copilot config examples](https://defra.github.io/defra-ai-config-examples/), which includes ready to use instructions, agents, prompts, skills and MCP setup patterns.

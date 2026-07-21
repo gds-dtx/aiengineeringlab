@@ -89,7 +89,7 @@ Custom agents are specialised personas you select for specific workflows. Use th
 - consistent expertise such as testing, security or documentation
 - restricted available tools
 
-The model a custom agent uses determines the credit cost of every session. An agent running on an included model (GPT-5 mini) costs nothing. An agent running on Claude Opus 4.6 costs 3 credits per message. Before deploying custom agents for team-wide use, check which model they will run on and what your credit budget supports. Read [agent mode and credit consumption](premium-credit-management.md#agent-mode-and-credit-consumption) for worked examples showing how agent sessions translate into credit costs.
+The model a custom agent uses strongly affects the credit cost of every session. Lower-cost models can be suitable for routine tasks, while higher-cost models can become expensive quickly if the agent works through long iterative chats. Before deploying custom agents for team-wide use, check which model they will run on and what your credit budget supports. Read the [agent mode billing guide](agent-mode-billing.md) for worked examples showing how agent sessions translate into credit usage.
 
 ### File format
 
@@ -389,7 +389,7 @@ Hooks support the following common use cases:
 - alerting teams on production changes for notifications
 - tracking tool usage across teams for cost management
 
-For broader guidance on controlling credit spend and setting spending limits, see the [premium credit management guide](premium-credit-management.md#managing-agent-mode-and-premium-credit-spend).
+For broader guidance on controlling credit spend and setting spending limits, see the [agent mode billing guide](agent-mode-billing.md) and GitHub's [models and pricing reference](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing).
 
 ## Skills
 
@@ -639,3 +639,5 @@ Refine your configuration based on usage patterns.
 [Awesome Copilot repository](https://github.com/github/awesome-copilot) for community examples
 
 [AGENTS.md standard](https://agents.md/) for cross-tool format
+
+[Defra GitHub Copilot config examples](https://defra.github.io/defra-ai-config-examples/) for UK government examples of agents, instructions, prompts, skills and MCP setup
