@@ -1,5 +1,5 @@
 > ALPHA
-> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/gds-dtx/aiengineeringlab/discussions) will help us to improve it.
 
 > MCP server availability depends on your organisation's approval. Check with your organisation before setting up MCP servers.
 

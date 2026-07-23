@@ -1,5 +1,5 @@
 > ALPHA
-> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/gds-dtx/aiengineeringlab/discussions) will help us to improve it.
 # Prompt template
 
 > Use this template when contributing new prompts to the library.

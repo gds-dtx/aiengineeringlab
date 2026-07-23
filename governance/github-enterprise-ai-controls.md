@@ -163,7 +163,7 @@ Read more about [content exclusions](../user-tool-guides/github-copilot/content-
 
 Developers are responsible for removing sensitive data before submitting prompts to Copilot. No tooling enforces this. Content exclusions are a backstop against accidental indexing. They do not prevent a developer from copying a secret into a chat window. Tech leads should make this expectation explicit in onboarding and code review guidance for their teams.
 
-For more security information, see the [AI Engineering Lab security policies](https://github.com/govuk-digital-backbone/aiengineeringlab/blob/main/security/security-policies.md).
+For more security information, see the [AI Engineering Lab security policies](https://github.com/gds-dtx/aiengineeringlab/blob/main/security/security-policies.md).
 
 #### Secrets, keys, and credentials
 ```

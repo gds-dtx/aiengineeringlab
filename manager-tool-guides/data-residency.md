@@ -1,5 +1,5 @@
 > ALPHA
-> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/gds-dtx/aiengineeringlab/discussions) will help us to improve it.
 
 # AI code assistant data residency
 Data residency refers to the geographic location where data is stored and processed, which is critical for compliance with regulations like UK data protection laws and organisational security requirements.

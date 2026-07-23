@@ -1,5 +1,5 @@
 > ALPHA
-> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/gds-dtx/aiengineeringlab/discussions) will help us to improve it.
 # Amazon Q - security and support guidance
 
 > Central home for Amazon Q security best practices and support content across government departments.

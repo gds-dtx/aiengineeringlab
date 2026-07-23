@@ -1,5 +1,5 @@
 > ALPHA
-> This is a new service. Your https://github.com/govuk-digital-backbone/aiengineeringlab/discussions will help us to improve it.
+> This is a new service. Your https://github.com/gds-dtx/aiengineeringlab/discussions will help us to improve it.
 
 # Advanced use of GitHub Copilot
 
