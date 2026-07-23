@@ -1,5 +1,5 @@
 > ALPHA
-> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us improve it.
+> This is a new service. Your [feedback](https://github.com/gds-dtx/aiengineeringlab/discussions) will help us improve it.
 
 # GitHub Copilot content exclusions
 

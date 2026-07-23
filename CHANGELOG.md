@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.4] - 2026-07-23
+
+### Refactored
+- The AI Engineering Lab url link to match the most up-to-date state across entire repo
+
+
 ## [0.1.3] - 2026-07-20
 
 ### Added

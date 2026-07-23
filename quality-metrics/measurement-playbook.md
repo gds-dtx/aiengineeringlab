@@ -1,5 +1,5 @@
 > ALPHA
-> This is a new service. Your [feedback](https://github.com/govuk-digital-backbone/aiengineeringlab/discussions) will help us to improve it.
+> This is a new service. Your [feedback](https://github.com/gds-dtx/aiengineeringlab/discussions) will help us to improve it.
 # AI Engineering Lab measurement playbook
 
 > Practical guidance for implementing measurement and demonstrating the value of AI Engineering Lab adoption.
