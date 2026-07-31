@@ -44,7 +44,7 @@ GitHub Copilot CLI is a standalone terminal-based agent. It is a distinct produc
 
 Each prompt you submit in Copilot CLI consumes tokens that are billed in AI Credits according to the selected model and total token volume.
 
-The [default model is Claude Sonnet 4.5](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli#model-usage). You can change the model at any time using the `/model` command in interactive mode or the `--model` flag when running non-interactively.
+The [default model is Claude Sonnet 4.5](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli#model-usage). You can change the model at any time using the `/model` command in interactive mode or the `--model` flag when running non-interactively, including selecting Claude Sonnet 5 where it is enabled for your organisation.
 
 Copilot CLI does not use auto model selection. You must choose your model explicitly, either in the CLI config file or per session.
 
@@ -96,11 +96,13 @@ In autopilot mode, [each continuation step adds more model usage](https://docs.g
 | Model | Relative cost position | Typical use | Cost behaviour over 10 interactions |
 |-------|------------------------|-------------|-------------------------------------|
 | GPT-5 mini | Lower-cost | Routine terminal tasks | Usually lowest spend among chat-capable models |
+| Claude Sonnet 5 | Mid-range | Strong general coding and multi-step implementation | Moderate spend that scales with prompt size and output size |
 | Claude Sonnet 4.6 | Mid-range | Strong general coding tasks | Moderate spend that scales with prompt size and output size |
 | Claude Sonnet 4.5 | Mid-range | General coding tasks | Moderate spend that scales with prompt size and output size |
 | Claude Opus 4.5 | High-cost | Complex reasoning tasks | High spend if used for long autopilot sessions |
 | Claude Opus 4.6 | High-cost | Complex reasoning tasks | High spend if used for long autopilot sessions |
 | Claude Opus 4.7 | Highest-cost | Precision and long-horizon reasoning | Very high spend risk over many continuation steps |
+| Claude Opus 5 | Highest-cost | Frontier reasoning, complex agentic work | Very high spend risk over many continuation steps |
 
 > The above is true as of 1 June 2026
 

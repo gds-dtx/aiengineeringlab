@@ -77,6 +77,7 @@ The models it may currently select include:
 
 - GPT-5 mini
 - Claude Haiku 4.5
+- Claude Sonnet 5
 - Claude Sonnet 4.5
 - Claude Sonnet 4.6
 
@@ -164,9 +165,10 @@ Selecting the right model for the type of work you are doing is the most effecti
 | Task type | Recommended model | Cost on paid plan |
 |-----------|------------------|-------------------|
 | Writing functions, tests, refactoring, documentation, debugging | GPT-5 mini | Lower token rates relative to frontier models; still billed per token |
-| Complex business logic where a lower-cost model gave insufficient output | Claude Sonnet 4.6 | Mid-range token rates |
+| Complex business logic where a lower-cost model gave insufficient output | Claude Sonnet 5 (or Sonnet 4.6 where 5 is not enabled) | Mid-range token rates |
 | Complex problem-solving, sophisticated reasoning, and architecture decisions | Claude Opus 4.6 | High token rates |
 | Precision execution, 150+ step agentic tasks, and long-horizon reasoning | Claude Opus 4.7 | High token rates |
+| Frontier-level reasoning, complex agentic and knowledge work, long-running autonomous tasks | Claude Opus 5 | High token rates |
 
 Use lower-cost models as your default. Move to higher-cost models only when the lower-cost option cannot meet your need.
 

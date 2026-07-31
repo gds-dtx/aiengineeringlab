@@ -142,7 +142,7 @@ Use these models for:
 
 ### Deep problem analysis and new projects
 
-Best models are Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, GPT-5.3-Codex, Gemini 3 Pro.
+Best models are Claude Opus 5, Claude Opus 4.8, GPT-5.3-Codex, Gemini 3 Pro.
 
 These models have very high curiosity, excellent reasoning through complex problems and strong multimodal understanding.
 
@@ -157,7 +157,7 @@ Use these models for:
 
 ### General development tasks
 
-Best models are Claude Sonnet 4.6, GPT-5.4, Gemini 3 Flash.
+Best models are Claude Sonnet 5, GPT-5.4, Gemini 3 Flash.
 
 These models have strong reasoning, good code generation, balanced agency and are fast enough for iterative work.
 
@@ -171,7 +171,7 @@ Use these models for:
 
 ### Precise, instruction-following tasks
 
-Best models are Claude Sonnet 4.6, GPT-5.4 mini, Claude Sonnet 4.5.
+Best models are Claude Sonnet 5, GPT-5.4 mini, Claude Sonnet 4.6.
 
 These models have balanced agency and execute what you ask for without going beyond the prompt.
 
@@ -184,7 +184,7 @@ Use these models for:
 
 ### Creative problem solving
 
-Best models are Claude Opus 4.5, Claude Opus 4.6, GPT-5.3-Codex.
+Best models are Claude Opus 5, Claude Opus 4.8, GPT-5.3-Codex.
 
 These models have higher agency. They exceed task requirements and validate solutions.
 
@@ -197,7 +197,7 @@ Use these models for:
 
 ### Long-running agentic workflows
 
-Best models are Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, GPT-5.3-Codex.
+Best models are Claude Opus 5, Claude Opus 4.8, GPT-5.3-Codex.
 
 These models are exceptional at sustained multi-step tasks and maintain context over extended sessions.
 
@@ -207,6 +207,30 @@ Use these models for:
 - code migrations across codebases
 - complex feature builds requiring iteration
 - production-ready assistants for operational workflows
+
+### Opus 5 - frontier intelligence at Opus cost
+
+Best model is Claude Opus 5. The application programming interface (API) ID is `claude-opus-5`.
+
+Released on 24 July 2026, Opus 5 is Anthropic's most capable generally available model. It approaches the intelligence of Claude Fable 5 at half the price. It is the new state-of-the-art on coding and knowledge work benchmarks including Frontier-Bench v0.1 and GDPval-AA. On ARC-AGI 3, a novel problem-solving evaluation, Opus 5 scores three times as high as the next-best model.
+
+Opus 5 is meaningfully stronger than Opus 4.8 at verifying its own work and iterating until it succeeds. Early-access testing reports examples of the model building its own tools when none were available, finding root causes rather than surface symptoms, and maintaining coherence across long, multi-step tasks with significantly fewer turns and tool calls than Opus 4.8.
+
+Pricing is $5 and $25 per million tokens (the same as Opus 4.8). Fast mode runs at around 2.5 times the default speed at twice the base price ($10 and $50 per million tokens). Opus 5 defaults to high effort. Effort control allows users to trade off response quality against speed and token usage.
+
+Opus 5 is the most aligned Claude model to date. It adheres to Claude's Constitution better than any previous model, has the lowest rate of deceptive behaviour, and is the least susceptible to being tricked into misuse.
+
+On cybersecurity tasks, Opus 5 remains behind Mythos 5. Its cyber classifiers block binary-based vulnerability scanning, penetration testing, and exploit generation. Requests that are flagged fall back to Opus 4.8 by default.
+
+Opus 5 is available on all Anthropic platforms. It is the new default model on Claude Max and the strongest model on Claude Pro. It does not have data retention requirements for general access.
+
+Use Opus 5 when your use case requires:
+
+- tasks with 150+ sequential steps or high parallel tool call volume
+- agentic workflows where self-correction, thoroughness, and judgement are critical
+- long-running autonomous work across complex, multi-step tasks
+- high-stakes analysis where model reasoning quality and alignment matter
+- knowledge work including scientific research, financial modelling, or legal analysis
 
 ### Opus 4.8 - enhanced collaboration and reliability
 
@@ -222,17 +246,17 @@ Use Opus 4.8 when your use case clearly requires the following:
 - agentic workflows where self-correction and judgement are critical
 - high-resolution vision tasks (images up to 3.75MP)
 - long-running autonomous work where sustained coherence across the full task matters
-- high-stakes analysis or edge-case resolution where Sonnet 4.6's output is demonstrably insufficient
+- high-stakes analysis or edge-case resolution where Sonnet 5's output is demonstrably insufficient
 
-If you cannot answer 'what specific capability does Sonnet 4.6 not provide for this task?' then start with Sonnet 4.6.
+If you cannot answer 'what specific capability does Sonnet 5 not provide for this task?' then start with Sonnet 5.
 
 ### Opus 4.7 - precision execution
 
 Best model is Claude Opus 4.7. The application programming interface (API) ID is `claude-opus-4-7`.
 
-This model resolves ambiguity through execution rather than hedging, maintains coherence across very long outputs and sustains performance on complex multi-step tasks. Pricing is $5 and $25 per million tokens. Opus 4.7 consumes more input and output tokens per task than Sonnet 4.6, so total cost per task is higher.
+This model resolves ambiguity through execution rather than hedging, maintains coherence across very long outputs and sustains performance on complex multi-step tasks. Pricing is $5 and $25 per million tokens. Opus 4.7 consumes more input and output tokens per task than Sonnet 5, so total cost per task is higher.
 
-Consider Opus 4.8 for new work. Opus 4.7 remains a strong choice for precision execution tasks.
+Consider Opus 5 or Opus 4.8 for new work. Opus 4.7 remains a strong choice for precision execution tasks.
 
 ## Model personality comparison
 
@@ -243,27 +267,33 @@ Consider Opus 4.8 for new work. Opus 4.7 remains a strong choice for precision e
 | Gemini 3 Pro      | Fast | High | High | Complex multimodal tasks, reasoning-first workflows |
 | Claude Haiku 4.5  | Fast | Medium | Medium | Fast tasks with reasoning |
 | Claude Sonnet 4.5 | Medium | Medium | Medium | Stable, predictable coding |
+| Claude Sonnet 5   | Medium | High | Medium to high | General development, strong coding and tool use |
 | Claude Sonnet 4.6 | Medium | High | Medium to high | General development, improved honesty |
 | Claude Opus 4.5   | Medium to slow | High | Very high | Comprehensive solutions, deep reasoning |
 | Claude Opus 4.6   | Medium | Very high | Very high | Enterprise agents, long-running workflows |
 | Claude Opus 4.7   | Medium | Very high | Very high | 150+ step tasks, precision execution |
 | Claude Opus 4.8   | Medium | Very high | Very high | Enhanced judgement, agentic reliability, self-correction |
+| Claude Opus 5     | Medium | Very high | Very high | Frontier intelligence at Opus cost, complex agentic and knowledge work |
 
 ### Model notes
 
-GPT-5.3-Codex (February 2026) is 25% faster than GPT-5.2-Codex and the first model to help build itself. API access being rolled out.
-
 Claude Sonnet 4.6 (February 2026) provides near-Opus reasoning at fast latency, with improved honesty over 4.5.
+
+Claude Sonnet 5 (30 June 2026) is a drop-in upgrade over Sonnet 4.6 and is designed as the most agentic Sonnet model so far. It improves coding, tool use, and multi-step execution, and can approach Opus 4.8 capability on some workloads at lower cost. The API model ID is `claude-sonnet-5`.
 
 Claude Opus 4.6 (February 2026) is a flagship model best for coding and enterprise agents. It includes agent team capabilities, 1 million token context (beta) and discovered 500+ zero-day vulnerabilities in security testing.
 
-Claude Opus 4.7 resolves ambiguity through execution rather than hedging. It maintains coherence across very long outputs and sustains performance on complex multi-step tasks. Total cost per task is higher than Sonnet 4.6 due to greater token consumption, even though the per-token rate is the same as previous Opus models.
+Claude Opus 4.7 resolves ambiguity through execution rather than hedging. It maintains coherence across very long outputs and sustains performance on complex multi-step tasks. Total cost per task is higher than Sonnet 5 due to greater token consumption, even though the per-token rate is the same as previous Opus models.
 
 Claude Opus 4.8 (May 2026) improves on 4.7 with better judgement in agentic tasks, catching its own mistakes and pushing back on unsound plans. It is 4 times less likely to allow flaws in code to pass unremarked compared to 4.7. Fast mode pricing is now 3 times cheaper. Opus 4.8 includes new dynamic workflows in Claude Code, allowing hundreds of parallel subagents in a single session.
 
 Opus 4.8 introduced effort control in claude.ai and Cowork. This allows users to choose how much effort Claude puts into a response. Higher effort settings produce better responses with more frequent and deeper thinking. Lower effort settings respond faster and use rate limits more slowly. This control is available on all plans.
 
+Claude Opus 5 (July 2026) is Anthropic's most capable generally available model. It approaches Fable 5 intelligence at half the price and is the new state-of-the-art on Frontier-Bench v0.1, GDPval-AA, ARC-AGI 3, Zapier AutomationBench, and OSWorld 2.0. It is the most aligned Claude model to date, with the lowest rate of deceptive behaviour of any Claude release. Pricing is $5 and $25 per million tokens, the same as Opus 4.8. Fast mode runs at around 2.5 times default speed at $10 and $50 per million tokens. The API model ID is `claude-opus-5`.
+
 Claude Mythos Preview represents a new class of model with even higher intelligence than Opus. As part of Project Glasswing, a small number of organisations are currently using Mythos Preview for cybersecurity work. Anthropic is developing stronger cyber safeguards and expects to bring Mythos-class models to all customers in the coming weeks.
+
+GPT-5.3-Codex (February 2026) is 25% faster than GPT-5.2-Codex and the first model to help build itself. API access being rolled out.
 
 Gemini 3 Flash (January 2026) is 3 times faster than Gemini 2.5 Pro while outperforming it.
 
@@ -292,7 +322,7 @@ Each model will evaluate and return analysis. This approach adds overhead but ca
 When you are unsure which model to use, you should:
 
 - start with auto mode as many platforms offer automatic model selection based on task and capacity
-- use your usual model, such as Claude Sonnet 4.6, GPT-5.4, or Gemini 3 Flash
+- use your usual model, such as Claude Sonnet 5, GPT-5.4, or Gemini 3 Flash
 - switch models mid conversation if you are not getting the results you want
 
 ### Common switching scenarios
@@ -302,8 +332,8 @@ You should switch models when you:
 - are not making progress and want to try a different model
 - need more creativity from high agency models
 - want faster responses from GPT-5.4 mini or Gemini 3 Flash
-- need deeper analysis from Claude Opus 4.6, GPT-5.3-Codex, or other deep reasoning models
-- require sustained multi-step work from GPT-5.3-Codex or Claude Opus 4.6
+- need deeper analysis from Claude Opus 5, Claude Opus 4.8, GPT-5.3-Codex, or other deep reasoning models
+- require sustained multi-step work from GPT-5.3-Codex or Claude Opus 5
 
 ## Working with constrained model access
 
@@ -342,7 +372,7 @@ For context and efficiency, consider:
 - separate chat sessions, using different models for different types of tasks
 - response time, balancing quality needs with speed requirements
 - matching verbosity preference, as some models are more verbose than others
-- context window size, such as Gemini 3 Pro (1M), Claude Opus 4.6 (1M with beta), GPT-5.4 (check GitHub docs)
+- context window size, such as Gemini 3 Pro (1M), Claude Opus 5 (1M), GPT-5.4 (check GitHub docs)
 
 Context window size is particularly important when your tasks involve multiple files, long conversations, or agentic workflows. A model with a larger context window can consider more of your codebase at once. However, it may be less capable or more expensive than a smaller-window alternative.
 
@@ -387,12 +417,12 @@ Comparative data collection is ongoing. This section will be updated with findin
 
 Model recommendations should be task-specific and include:
 
-- a code explanation using high curiosity models such as Claude Opus 4.5 or Claude Opus 4.6
-- advice on bug fixing using balanced models such as Claude Sonnet 4.5
+- a code explanation using high curiosity models such as Claude Opus 5 or Claude Opus 4.8
+- advice on bug fixing using balanced models such as Claude Sonnet 5
 - advice on feature implementation using lower agency models for precision
 - architecture design using high curiosity and high agency models
-- advice on applying long-running refactors using GPT-5.3-Codex or Claude Opus 4.6
-- advice on agentic workflows using Gemini 3 Pro or Claude Opus 4.6
+- advice on applying long-running refactors using GPT-5.3-Codex or Claude Opus 5
+- advice on agentic workflows using Gemini 3 Pro or Claude Opus 5
 
 ### Team considerations
 
@@ -415,7 +445,7 @@ Cost and capacity factors include:
 
 ## Getting started
 
-1. Begin with a balanced model such as Claude Sonnet 4.6, GPT-5.4, or Gemini 3 Flash.
+1. Begin with a balanced model such as Claude Sonnet 5, GPT-5.4, or Gemini 3 Flash.
 2. Experiment with different models for the same task.
 3. Note which models work best for your specific use cases.
 4. Build your personal set of 3 to 4 go-to models across providers.
@@ -442,6 +472,10 @@ Model selection is highly personal and task-dependent. What works best for one d
 ### Model documentation
 
 [Claude API Documentation](https://docs.anthropic.com/claude/docs) is the official Anthropic Claude documentation.
+
+[Introducing Claude Sonnet 5](https://www.anthropic.com/news/claude-sonnet-5) provides launch details, safety summary and pricing.
+
+[What's new in Claude Sonnet 5](https://platform.claude.com/docs/en/about-claude/models/whats-new-sonnet-5) documents API model ID, behaviour changes and migration guidance.
 
 [OpenAI API Documentation](https://platform.openai.com/docs) covers GPT models and API reference.
 

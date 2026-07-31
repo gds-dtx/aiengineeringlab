@@ -77,7 +77,7 @@ The table below provides a single view of how all five tools compare across the 
 | Inline completion | excellent | via IDE extension | strong | good | excellent |
 | Chat interface | Copilot Chat | native CLI and IDE | chat and spec modes | Q Chat | Gemini Chat |
 | Agentic mode | Copilot Agent (Enterprise) | strong (native) | autopilot mode | preview (Pro) | yes |
-| Context window | repo indexing | large (200,000 tokens) | workspace context | large (100,000 or more tokens) | up to 2 million tokens |
+| Context window | repo indexing | up to 1,000,000 tokens (2,000,000 in beta for some workflows) | workspace context | large (100,000 or more tokens) | up to 2 million tokens |
 | Multi-file edits | Copilot Edits | native | native | limited | yes |
 | CLI interface | Copilot CLI | native | Kiro CLI | Q CLI | Gemini CLI |
 | PR and code review | native GitHub integration | manual | not available | native | limited |
@@ -142,7 +142,7 @@ The table below shows criteria you should consider when evaluating capabilities 
 |------------|----------------|-------------|-------------|--------------------|--------------------|
 | Inline completion | excellent | via IDE extension | strong | good | excellent |
 | Chat interface | Copilot Chat | native CLI | chat and spec modes | Q Chat | Gemini Chat |
-| Codebase context | repo indexing | large context (200,000 tokens) | workspace and steering files | repository-wide | up to 2 million tokens |
+| Codebase context | repo indexing | large context (up to 1,000,000 tokens, 2,000,000 in beta for some workflows) | workspace and steering files | repository-wide | up to 2 million tokens |
 | Multi-file edits | Copilot Edits | native | native | limited | yes |
 | Test generation | good | strong | good | good (Pro) | good |
 | PR and code review | native GitHub | manual | not available | native | limited |
@@ -203,7 +203,7 @@ The table below shows criteria you should consider when evaluating language and 
 | SQL | good | good | good | good | good |
 | Shell scripting | good | good | good | good | good |
 
-Note: quality varies by specific use case. Conduct proof-of-concept testing with your actual codebase.
+Quality varies by specific use case. Conduct proof-of-concept testing with your actual codebase.
 
 ---
 
@@ -301,8 +301,8 @@ Each tool uses different underlying models. Understanding model capabilities hel
 
 | Tool | Primary models | Model selection |
 |------|---------------|-----------------|
-| GitHub Copilot | GPT-5 mini, Claude Sonnet 4.6, Claude Opus 4.8, Claude Opus 4.6, Gemini 2.5 Pro | User selectable via model picker |
-| Claude Code | Claude Opus 4.5, Claude Sonnet 4.5, Claude Haiku 4.5 | user selectable via /model command |
+| GitHub Copilot | GPT-5 mini, Claude Sonnet 4.6, Claude Opus 4.6, GPT-5.3-Codex, Gemini 2.5 Pro (Claude Sonnet 5, Claude Opus 4.8, and Claude Opus 5 where enterprise policy enables them) | User selectable via model picker |
+| Claude Code | Claude Opus 5, Claude Opus 4.8, Claude Sonnet 5, Claude Haiku 4.5 | user selectable via /model command |
 | Amazon Kiro | Claude Sonnet 4.0, Claude Sonnet 3.7 (via Bedrock) | auto-routing for efficiency |
 | Amazon Q Developer | AWS proprietary models | automatic selection based on task |
 | Gemini Code Assist | Gemini models | automatic |
@@ -312,7 +312,7 @@ Each tool uses different underlying models. Understanding model capabilities hel
 | Task | Best suited tools | Why |
 |------|-------------------|-----|
 | Fast inline autocompletion | GitHub Copilot, Gemini Code Assist | optimised for speed and low latency |
-| Complex reasoning and debugging | Claude Code (Opus), GitHub Copilot (Claude Opus 4.8, Claude Opus or Claude Sonnet 4.6) | superior reasoning about multi-layer problems |
+| Complex reasoning and debugging | Claude Code (Opus), GitHub Copilot (GPT-5.3-Codex or Claude Opus 4.6, plus Claude Sonnet 5, Claude Opus 4.8, or Claude Opus 5 where enabled) | superior reasoning about multi-layer problems |
 | Large-scale refactoring | Claude Code, Amazon Kiro | agentic multi-step execution with deep context |
 | Specification-driven development | Amazon Kiro | native spec-to-task workflow |
 | AWS infrastructure tasks | Amazon Q Developer | native AWS service integration and CloudFormation |
@@ -386,7 +386,7 @@ Using this guide and security requirements, identify one to two tools for proof 
 
 #### Step 3: conduct proof of concept (weeks 2 to 4)
 
-The table below shows activities to complete during your proof of concept:
+The table below shows activities to complete during your proof of concept.
 
 | Activity | Purpose |
 |----------|---------|
@@ -412,7 +412,7 @@ Proof-of-concept evaluation template:
 
 #### Step 4: make recommendation (week 5)
 
-You should make a recommendation that documents the following information.
+You should make a recommendation that documents the following information:
 
 - evaluation criteria and weighting
 - proof-of-concept findings and scores

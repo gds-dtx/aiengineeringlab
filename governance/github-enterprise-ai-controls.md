@@ -1,5 +1,13 @@
 # AI Engineering Lab — GitHub Enterprise AI controls
 
+## Contents
+
+[Agents](#agents)
+
+[GitHub Copilot configuration](#github-copilot-configuration)
+
+[MCP servers](#mcp-servers)
+
 ### Purpose
 
 This page describes the AI-related controls configured on the DSIT AI Engineering Lab GitHub Enterprise. It covers agents, GitHub Copilot, and Model Context Protocol (MCP) servers.
@@ -7,16 +15,6 @@ This page describes the AI-related controls configured on the DSIT AI Engineerin
 ### Who this is for
 
 Tech leads and department owners who need to understand what is enabled, restricted, or pending configuration.
-
-### Contents
-
-This page covers:
-
-- agents
-- GitHub Copilot configuration
-- MCP servers
-
----
 
 ## Agents
 
@@ -65,6 +63,7 @@ The enterprise has the following models enabled. No custom models are configured
 
 The following models appear in the enterprise model settings but are not currently enabled or accessible. Raise a request with the AI Engineering Lab if your team requires any of these.
 
+- Anthropic Claude Opus 5 (policy not set - contact AI Engineering Lab to enable)
 - Anthropic Claude Opus 4.8 (policy not set - contact AI Engineering Lab to enable)
 - Anthropic Claude Opus 4.7 (policy not set - contact AI Engineering Lab to enable)
 - Anthropic Claude Opus 4.6 (fast mode) (Preview) (not accessible on current Copilot plan)
@@ -115,8 +114,6 @@ GPT-5.5 is generally available for Copilot Business and Enterprise users but mus
 | Custom models via API key | Disabled everywhere | Only enterprise-approved models allowed |
 | Premium request paid usage | Enabled | Overspend covered by DSIT until programme end |
 
-If your team requires additional or custom models, raise a request with AI Engineering Lab. All changes are assessed against DSIT data governance requirements.
-
 #### Usage-based billing (from 1 June 2026)
 
 As of 1 June 2026, GitHub moved all Copilot plans from [request-based billing to usage-based billing](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/). Usage is tracked in GitHub AI Credits. One credit equals $0.01 USD based on token consumption per model. This replaces the previous premium request system. Seat pricing remains unchanged at $19 per user per month for Copilot Business and $39 per user per month for Copilot Enterprise. Code completions and next edit suggestions remain unlimited and do not consume AI Credits.
@@ -155,7 +152,7 @@ Two mechanisms exist for keeping sensitive data out of Copilot. Both are necessa
 
 Organisation and enterprise admins can exclude file paths and patterns from Copilot indexing via repository or organisation settings. This is the only native mechanism for preventing Copilot from indexing specific files. The patterns configured for this enterprise are listed below.
 
-Content exclusions are not a security control. Do not rely on them to protect secrets or sensitive files.
+> Content exclusions are not a security control. Do not rely on them to protect secrets or sensitive files.
 
 Read more about [content exclusions](../user-tool-guides/github-copilot/content-exclusions.md).
 
@@ -208,5 +205,3 @@ Model Context Protocol (MCP) allows Copilot agents to connect to external tools 
 | MCP servers in Copilot | Disabled everywhere | No external tool connections allowed |
 | MCP Registry URL (Preview) | Not configured | No registry defined |
 | Restrict MCP access to registry servers | Disabled | Not applicable without a registry |
-
----

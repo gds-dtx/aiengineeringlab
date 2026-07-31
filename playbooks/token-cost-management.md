@@ -41,7 +41,7 @@ This guide is for:
 
 Token costs accumulate in 2 ways, where input tokens are what you send to the model, and output tokens are what the model generates.
 
-Output tokens are typically 3 to 5 times more expensive than input tokens. Models such as Opus 4.8 and Opus 4.7 consume more tokens per task than Sonnet 4.6, even when the per-token rate is similar. The total cost per task scales with model verbosity and reasoning depth.
+Output tokens are typically 3 to 5 times more expensive than input tokens. Models such as Opus 5, Opus 4.8, and Opus 4.7 consume more tokens per task than Sonnet 5, even when the per-token rate is similar. The total cost per task scales with model verbosity and reasoning depth.
 
 Reducing unnecessary tokens directly lowers spend without reducing quality. Verbose tool output, filler language, and running an expensive model for simple decisions all waste tokens.
 
@@ -58,7 +58,7 @@ The 4 strategies cover different parts of the stack, from output verbosity to mo
 
 ## Effort control
 
-Effort control, introduced with Opus 4.8, allows users to choose how much effort Claude puts into a response. This control appears alongside the model selector in claude.ai and Cowork.
+Effort control, introduced with Opus 4.8 and available on Opus 5, allows users to choose how much effort Claude puts into a response. This control appears alongside the model selector in claude.ai and Cowork.
 
 On higher effort settings, Claude will think more frequently and more deeply to give better responses. On lower effort settings, Claude will respond faster and use up a user's rate limits more slowly.
 
@@ -68,7 +68,9 @@ Note: Effort control is currently available in claude.ai and Cowork. It is not y
 
 ## Caveman skill
 
-The caveman skill reduces Claude Code output tokens by approximately 75% by stripping filler language while preserving full technical accuracy. Code blocks, error messages, technical terms and git outputs remain unchanged. The savings are most significant on Opus 4.8 and Opus 4.7, which consume more tokens per task than Sonnet 4.6, but any Claude Code session benefits.
+The caveman skill reduces Claude Code output tokens by approximately 75% by stripping filler language while preserving full technical accuracy. Code blocks, error messages, technical terms and git outputs remain unchanged. The savings are most significant on Opus 5, Opus 4.8, and Opus 4.7, which consume more tokens per task than Sonnet 5, but any Claude Code session benefits.
+
+When moving executor workflows from Sonnet 4.6 to Sonnet 5, measure token usage again. Sonnet 5 uses a newer tokenizer and equivalent inputs can use more tokens.
 
 The skill is available at [https://github.com/JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman).
 
@@ -84,7 +86,7 @@ claude install-skill JuliusBrussee/caveman
 
 Trigger with `/caveman`, 'caveman mode', or 'less tokens please'. Stop with 'normal mode'.
 
-If you run agentic pipelines on Opus 4.8 or Opus 4.7, add this skill to your repo documentation to address token overhead.
+If you run agentic pipelines on Opus 5, Opus 4.8, or Opus 4.7, add this skill to your repo documentation to address token overhead.
 
 ## RTK (Rust Token Killer)
 
@@ -158,7 +160,7 @@ The advisor tool is available on the Anthropic Claude Platform API. Add it to yo
 
 ```python
 response = client.messages.create(
-    model="claude-sonnet-4-6",  # executor
+    model="claude-sonnet-5",  # executor
     tools=[
         {
             "type": "advisor_20260301",
@@ -188,7 +190,7 @@ Example:
 
 ```python
 response = client.messages.create(
-    model="claude-sonnet-4-6",
+    model="claude-sonnet-5",
     messages=[
         {"role": "user", "content": "Start analysing the logs"},
         {"role": "assistant", "content": "I'll begin the analysis..."},
@@ -207,7 +209,7 @@ This feature is particularly useful for long-running agentic workflows where con
 | Claude Code interactive sessions | Caveman skill |
 | Any AI tool with heavy shell usage | RTK |
 | Custom agentic pipelines via API | Advisor strategy |
-| High-volume Opus 4.8 or 4.7 sessions | Caveman + RTK (combine both) |
+| High-volume Opus 5, Opus 4.8, or Opus 4.7 sessions | Caveman + RTK (combine both) |
 | Budget-constrained teams needing frontier reasoning | Advisor strategy (Haiku executor + Opus advisor) |
 
 These approaches are complementary. RTK reduces input tokens from tool output. Caveman reduces output tokens from the model. The advisor strategy reduces total cost by routing expensive reasoning only to where it is needed.
@@ -219,4 +221,3 @@ These approaches are complementary. RTK reduces input tokens from tool output. C
 [Working with constrained context windows](working-with-constrained-context-windows.md) covers techniques for managing limited context.
 
 [GitHub's billing documentation](https://docs.github.com/en/enterprise-cloud@latest/copilot/managing-copilot/managing-copilot-as-an-individual-subscriber/monitoring-your-copilot-usage-and-entitlements) covers Copilot usage-based billing details.
-
