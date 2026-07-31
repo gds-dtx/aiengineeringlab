@@ -210,13 +210,13 @@ Use these models for:
 
 ### Opus 5 - frontier intelligence at Opus cost
 
-Best model is Claude Opus 5. The application programming interface (API) ID is `claude-opus-5`.
+The best model is Claude Opus 5. The application programming interface (API) ID is `claude-opus-5`.
 
-Released on 24 July 2026, Opus 5 is Anthropic's most capable generally available model. It approaches the intelligence of Claude Fable 5 at half the price. It is the new state-of-the-art on coding and knowledge work benchmarks including Frontier-Bench v0.1 and GDPval-AA. On ARC-AGI 3, a novel problem-solving evaluation, Opus 5 scores three times as high as the next-best model.
+Opus 5 was released on 24 July 2026 as Anthropic's most capable and generally-available model. It approaches the intelligence of Claude Fable 5 at half the price, and features state-of-the-art coding and knowledge-work benchmarks which include Frontier-Bench v0.1 and GDPval-AA. On ARC-AGI 3, which is a novel problem-solving evaluation, Opus 5 scored three times higher the next-best model.
 
 Opus 5 is meaningfully stronger than Opus 4.8 at verifying its own work and iterating until it succeeds. Early-access testing reports examples of the model building its own tools when none were available, finding root causes rather than surface symptoms, and maintaining coherence across long, multi-step tasks with significantly fewer turns and tool calls than Opus 4.8.
 
-Pricing is $5 and $25 per million tokens (the same as Opus 4.8). Fast mode runs at around 2.5 times the default speed at twice the base price ($10 and $50 per million tokens). Opus 5 defaults to high effort. Effort control allows users to trade off response quality against speed and token usage.
+The pricing is $5 and $25 per million tokens (the same as Opus 4.8), and its fast mode runs at around 2.5 times the default speed at twice the base price ($10 and $50 per million tokens). While Opus 5 defaults to high effort, its effort control allows users to trade off response quality against speed and token usage.
 
 Opus 5 is the most aligned Claude model to date. It adheres to Claude's Constitution better than any previous model, has the lowest rate of deceptive behaviour, and is the least susceptible to being tricked into misuse.
 
@@ -289,7 +289,7 @@ Claude Opus 4.8 (May 2026) improves on 4.7 with better judgement in agentic task
 
 Opus 4.8 introduced effort control in claude.ai and Cowork. This allows users to choose how much effort Claude puts into a response. Higher effort settings produce better responses with more frequent and deeper thinking. Lower effort settings respond faster and use rate limits more slowly. This control is available on all plans.
 
-Claude Opus 5 (July 2026) is Anthropic's most capable generally available model. It approaches Fable 5 intelligence at half the price and is the new state-of-the-art on Frontier-Bench v0.1, GDPval-AA, ARC-AGI 3, Zapier AutomationBench, and OSWorld 2.0. It is the most aligned Claude model to date, with the lowest rate of deceptive behaviour of any Claude release. Pricing is $5 and $25 per million tokens, the same as Opus 4.8. Fast mode runs at around 2.5 times default speed at $10 and $50 per million tokens. The API model ID is `claude-opus-5`.
+Claude Opus 5 (available from July 2026) is Anthropic's most capable and generally-available model. It approaches Fable 5 intelligence at half the price, and features state-of-the-art Frontier-Bench v0.1, GDPval-AA, ARC-AGI 3, Zapier AutomationBench, and OSWorld 2.0 benchmarks. Opus 5 is the most aligned Claude model to date, with the lowest rate of deceptive behaviour of any Claude release. The pricing is $5 and $25 per million tokens, the same as Opus 4.8, and its fast mode runs at around 2.5 times the default speed at $10 and $50 per million tokens. The API model ID is claude-opus-5.
 
 Claude Mythos Preview represents a new class of model with even higher intelligence than Opus. As part of Project Glasswing, a small number of organisations are currently using Mythos Preview for cybersecurity work. Anthropic is developing stronger cyber safeguards and expects to bring Mythos-class models to all customers in the coming weeks.
 
