@@ -61,12 +61,15 @@ opencode_sandboxed() {
   mkdir -p "$HOME/.ai-sandbox-home/.opencode"
   chmod 700 "$HOME/.ai-sandbox-home/.local/share/opencode"
   chmod 700 "$HOME/.ai-sandbox-home/.opencode"
+  chmod 700 "$HOME/.ai-sandbox-home/.opencode/agents"
 
   # 2. Mirror host OpenCode config/auth into the sandbox before starting
   local OPENCODE_CONFIG_SRC="${OPENCODE_CONFIG_SRC:-$HOME/.config/opencode/opencode.jsonc}"
   local OPENCODE_SANDBOX_CONFIG="${OPENCODE_SANDBOX_CONFIG:-$HOME/.ai-sandbox-home/.opencode/opencode.jsonc}"
   local OPENCODE_AUTH_SRC="${OPENCODE_AUTH_SRC:-$HOME/.local/share/opencode/auth.json}"
   local OPENCODE_SANDBOX_AUTH="${OPENCODE_SANDBOX_AUTH:-$HOME/.ai-sandbox-home/.local/share/opencode/auth.json}"
+  local OPENCODE_AGENTS_SRC="${OPENCODE_AGENTS_SRC:-$HOME/.config/opencode/agents}"
+  local OPENCODE_SANDBOX_AGENTS="${OPENCODE_SANDBOX_AGENTS:-$HOME/.ai-sandbox-home/.opencode/agents}"
 
   if [ ! -f "$OPENCODE_CONFIG_SRC" ]; then
     printf 'Host opencode config not present at %s, skipping copy.\n' "$OPENCODE_CONFIG_SRC" >&2
@@ -94,6 +97,22 @@ opencode_sandboxed() {
       chmod 600 "$OPENCODE_SANDBOX_AUTH"
       printf 'Copied host opencode auth file into sandbox (%s).\n' "$OPENCODE_SANDBOX_AUTH" >&2
     fi
+  fi
+
+  if [ ! -d "$OPENCODE_AGENTS_SRC" ]; then
+    printf 'Host opencode agents dir not present at %s, skipping copy.\n' "$OPENCODE_AGENTS_SRC" >&2
+  else
+    mkdir -p "$OPENCODE_SANDBOX_AGENTS"
+    if command -v rsync >/dev/null 2>&1; then
+      rsync -a --delete "$OPENCODE_AGENTS_SRC"/ "$OPENCODE_SANDBOX_AGENTS"/
+    else
+      rm -rf "$OPENCODE_SANDBOX_AGENTS"
+      mkdir -p "$OPENCODE_SANDBOX_AGENTS"
+      cp -r "$OPENCODE_AGENTS_SRC"/. "$OPENCODE_SANDBOX_AGENTS"/
+    fi
+    find "$OPENCODE_SANDBOX_AGENTS" -type d -exec chmod 700 {} +
+    find "$OPENCODE_SANDBOX_AGENTS" -type f -exec chmod 600 {} +
+    printf 'Mirrored host opencode agents into sandbox (%s).\n' "$OPENCODE_SANDBOX_AGENTS" >&2
   fi
 
   echo "Starting sandbox for directory: $target_dir"
