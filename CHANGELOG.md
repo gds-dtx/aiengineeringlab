@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.5] - 2026-07-31
+
+### Added
+- Claude Opus 5 model section in model selection playbook with capability, pricing, alignment, cybersecurity constraints, and use-case guidance
+- Claude Sonnet 5 model notes and reference links in model selection playbook
+- Claude Opus 5 listed in GitHub Enterprise AI controls as available but policy not set
+- Claude Sonnet 5 added to Copilot agent mode auto model selection candidates
+- Claude Opus 5 and Sonnet 5 added to Copilot agent mode and CLI billing cost tables
+- Tokenizer migration note for Claude Sonnet 5 in constrained context windows playbook
+
+### Updated
+- Model selection playbook to recommend Claude Sonnet 5 and Opus 5 as default general-purpose and frontier models, replacing Sonnet 4.6 and Opus 4.5/4.6 references throughout
+- Claude Code manager guide model table and task recommendations updated to Opus 5, Opus 4.8, Sonnet 5, and Haiku 4.5
+- Comparative guidance context window figures for Claude Code updated from 200,000 tokens to up to 1,000,000 tokens (2,000,000 in beta)
+- Comparative guidance model lists updated to reflect current GitHub Copilot and Claude Code availability including Opus 5 and Sonnet 5
+- Claude Code setup guide default Opus model updated to claude-opus-4-8 with forward-looking Sonnet 5 migration note
+- Claude Code customisation guide dynamic workflows section updated to include Opus 5 alongside Opus 4.8
+- Token cost management playbook updated to reference Opus 5 and Sonnet 5
+- GitHub Enterprise AI controls page restructured with clickable anchor table of contents and blockquote callout formatting
+
+
 ## [0.1.4] - 2026-07-23
 
 ### Refactored

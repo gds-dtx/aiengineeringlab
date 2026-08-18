@@ -109,7 +109,7 @@ Create or update your `.claude/settings.json` file with the department defaults 
     "ANTHROPIC_AUTH_TOKEN": "sk-your-litellm-virtual-key",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "eu.anthropic.claude-sonnet-4-6",
     "ANTHROPIC_DEFAULT_HAIKU_MODEL": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "eu.anthropic.claude-opus-4-6-v1"
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "eu.anthropic.claude-opus-4-8"
   }
 }
 ```
@@ -118,7 +118,22 @@ Use these model identifiers:
 
 - `eu.anthropic.claude-sonnet-4-6` for most coding tasks
 - `eu.anthropic.claude-haiku-4-5-20251001-v1:0` for quick, low-cost tasks
-- `eu.anthropic.claude-opus-4-6-v1` for high-complexity planning and reasoning
+- `eu.anthropic.claude-opus-4-8` for high-complexity planning, reasoning and agentic tasks
+
+All Opus models (4.8, 4.6 and 4.5) are priced at $5 per 1 million input tokens and $25 per 1 million output tokens. Opus 4.8 offers improved judgement and self-correction in agentic tasks compared to earlier versions.
+
+To make additional models available in the `/model` selector, add them to the `customApiKeyModels` list in your settings:
+
+```json
+{
+  "customApiKeyModels": [
+    "eu.anthropic.claude-opus-4-6-v1",
+    "eu.anthropic.claude-opus-4-8"
+  ]
+}
+```
+
+Claude Sonnet 5 was released on 30 June 2026. When your LiteLLM tenant enables Sonnet 5, update `ANTHROPIC_DEFAULT_SONNET_MODEL` to your tenant's Sonnet 5 model identifier and recheck token budgets before rolling out broadly.
 
 ## Configure the VS Code extension
 
@@ -151,6 +166,7 @@ Use global settings when you want the same setup for every repository. Use proje
 | Project Claude Code settings | `<repo>/.claude/settings.json` | `<repo>\.claude\settings.json` |
 | Global VS Code user settings | `~/Library/Application Support/Code/User/settings.json` | `%APPDATA%\Code\User\settings.json` |
 | Project VS Code workspace settings | `<repo>/.vscode/settings.json` | `<repo>\.vscode\settings.json` |
+
 
 ## Application programming interface (API) key lifecycle
 
@@ -190,12 +206,12 @@ Do not store keys in source control. Do not share keys in chat, tickets, or pull
 
 Use a two-step pattern to reduce spend and keep quality high.
 
-1. Plan with Opus (4.8, 4.7, or 4.6) for complex decomposition, risk spotting, and architecture decisions.
+1. Plan with Opus 5 or Opus 4.8 for complex decomposition, risk spotting, and architecture decisions.
 2. Execute with Sonnet for implementation, tests, and iterative edits.
 
 Use Haiku for lightweight tasks such as formatting fixes, short explanations, and quick boilerplate.
 
-Opus 4.8 offers improved judgement in agentic tasks and is 4 times less likely to allow code flaws to pass unremarked compared to earlier versions.
+Opus 5 is the strongest model for agentic tasks and self-correction. Opus 4.8 offers improved judgement in agentic tasks and is 4 times less likely to allow code flaws to pass unremarked compared to earlier versions.
 
 ## Troubleshooting
 

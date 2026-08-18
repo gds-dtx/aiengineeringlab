@@ -111,22 +111,23 @@ Claude Code uses Anthropic's Claude model family. Each model offers a different 
 
 | Model | Strengths | Typical tasks |
 |-------|-----------|---------------|
-| Claude Opus 4.5 | Deepest reasoning and complex code understanding | Architectural decisions, complex refactoring, difficult debugging |
-| Claude Sonnet 4.5 | Balanced reasoning and speed | General coding, feature development, test generation |
+| Claude Opus 5 | Frontier reasoning, agentic thoroughness, self-correction | Architectural decisions, complex refactoring, difficult debugging, long-horizon autonomous tasks |
+| Claude Opus 4.8 | Enhanced judgement, self-correction, dynamic workflows | Architectural decisions, complex refactoring, difficult debugging |
+| Claude Sonnet 5 | Strong balance of speed, coding quality, and agentic tool use | General coding, feature development, test generation, multi-step implementation |
 | Claude Haiku 4.5 | Fastest responses, most cost effective | Quick edits, simple questions, boilerplate generation |
 
 ### Recommended model by task
 
 | Task | Recommended model | Why |
 |------|-------------------|-----|
-| Explore a large unfamiliar codebase | Claude Sonnet 4.5 | Good balance of context understanding and speed |
-| Debug a complex production issue | Claude Opus 4.5 | Deep reasoning about multi-layer problems |
+| Explore a large unfamiliar codebase | Claude Sonnet 5 | Good balance of context understanding and speed |
+| Debug a complex production issue | Claude Opus 5 or Claude Opus 4.8 | Deep reasoning about multi-layer problems |
 | Write unit tests | Claude Haiku 4.5 | Sufficient for structured, repetitive patterns |
-| Refactor legacy code | Claude Opus 4.5 | Needs deep understanding of code structure |
+| Refactor legacy code | Claude Opus 5 or Claude Opus 4.8 | Needs deep understanding of code structure |
 | Generate boilerplate | Claude Haiku 4.5 | Cost effective for simple patterns |
-| Design API contracts | Claude Sonnet 4.5 | Strong natural language and technical reasoning |
-| Security code review | Claude Sonnet 4.5 | Strong pattern recognition for vulnerabilities |
-| Implement a complex algorithm | Claude Opus 4.5 | Superior mathematical reasoning |
+| Design API contracts | Claude Sonnet 5 | Strong natural language and technical reasoning |
+| Security code review | Claude Sonnet 5 | Strong pattern recognition for vulnerabilities |
+| Implement a complex algorithm | Claude Opus 5 or Claude Opus 4.8 | Superior mathematical reasoning |
 | Answer quick questions | Claude Haiku 4.5 | Fast, sufficient for simple queries |
 
 ### Controlling model selection
