@@ -1,0 +1,57 @@
+pilot:
+  id: <pilot-id>
+  target_systems: []
+  litraf_reports: {}
+  selected_legacy_types: []
+  selected_clusters: []
+  current_phase: prepare
+  phase_status:
+    prepare: not-started
+    assess: not-started
+    execute: not-started
+    evaluate: not-started
+    report: not-started
+  started_at: <yyyy-mm-dd>
+  updated_at: <yyyy-mm-dd>
+
+phase_gates:
+  prepare:
+    required_artefacts:
+      - LITRAF report artefacts for in-scope systems where provided
+      - scoped activity discovery artefact when LITRAF reports are unavailable
+      - .github/pilots/<pilot-id>/tracker.md
+      - .github/pilots/<pilot-id>/state.yaml
+    notes: selected in-scope activities and dependencies must be initialized before assess starts
+  assess:
+    required_artefacts:
+      - .github/pilots/<pilot-id>/assess/baseline-metrics.md
+      - .github/pilots/<pilot-id>/assess/hypotheses.md
+      - .github/pilots/<pilot-id>/assess/execute-plan.md
+    notes: baseline metrics, hypotheses, and execute plan must exist before execute starts
+  execute:
+    required_artefacts:
+      - per-activity outcome artefacts for all completed activities
+      - shared output handoff notes where applicable
+    notes: all in-scope activities must be done, skipped, or formally deferred before evaluate starts
+  evaluate:
+    required_artefacts:
+      - .github/pilots/<pilot-id>/evaluate/end-state-metrics.md
+      - .github/pilots/<pilot-id>/evaluate/cross-type-observations.md
+      - .github/pilots/<pilot-id>/evaluate/evidence-completeness-check.md
+    notes: report inputs must be validated before report starts
+  report:
+    required_artefacts:
+      - .github/pilots/<pilot-id>/report/final-report-private.md
+    notes: report output must be generated from stored artefacts and tracker state
+
+summary:
+  ready_activities: []
+  waiting_on_human: []
+  blocked_activities: []
+  recently_completed: []
+  next_actions: []
+
+activities: []
+
+outputs:
+  final_report_private: .github/pilots/<pilot-id>/report/final-report-private.md
