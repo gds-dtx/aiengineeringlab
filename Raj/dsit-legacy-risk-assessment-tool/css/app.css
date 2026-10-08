@@ -1,0 +1,91 @@
+/* =========================================================
+   Custom styles — Legacy IT Risk Assessment Tool
+   Layered on top of GOV.UK Frontend v6
+   ========================================================= */
+
+/* ----------------------------------------------------------
+   Portfolio table row states
+   ---------------------------------------------------------- */
+.app-row--red-rated {
+  background-color: #fce9e9;
+}
+
+.app-row--legacy {
+  background-color: #fef9e3;
+}
+
+/* ----------------------------------------------------------
+   Risk matrix SVG container
+   ---------------------------------------------------------- */
+.app-risk-matrix-container {
+  overflow-x: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.app-risk-matrix-container svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Portfolio count badge in tab label */
+.app-portfolio-count {
+  font-size: 1rem;
+}
+
+/* ----------------------------------------------------------
+   Empty portfolio state
+   ---------------------------------------------------------- */
+.app-empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f3f2f1;
+  border: 2px dashed #b1b4b6;
+  margin-bottom: 30px;
+}
+
+/* ----------------------------------------------------------
+   Guidance accordion — tighten spacing a touch
+   ---------------------------------------------------------- */
+.app-guidance-intro {
+  max-width: 40em;
+}
+
+/* ----------------------------------------------------------
+   Print styles
+   ---------------------------------------------------------- */
+@media print {
+  /* Hide everything interactive */
+  .govuk-header,
+  .govuk-service-navigation,
+  .govuk-phase-banner,
+  .govuk-footer,
+  .govuk-tabs__list,
+  #tab-portfolio,
+  #tab-guidance,
+  #save-notification,
+  #error-summary,
+  .app-form-actions,
+  .govuk-details,
+  .govuk-button,
+  .app-portfolio-actions {
+    display: none !important;
+  }
+
+  /* Show all tab panels (not just active) */
+  .govuk-tabs__panel {
+    display: block !important;
+    padding: 0 !important;
+  }
+
+  /* Ensure full-width layout */
+  .govuk-grid-column-two-thirds,
+  .govuk-grid-column-one-third {
+    width: 100% !important;
+    float: none !important;
+  }
+
+  h1 {
+    font-size: 1.5rem !important;
+  }
+}
