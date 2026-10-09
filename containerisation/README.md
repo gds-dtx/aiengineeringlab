@@ -39,31 +39,37 @@ Then create the lightweight Linux VM that will host your containers:
 podman machine init
 ```
 
-Finally, create an image for the container that contains the coding agent and its dependencies:
+Finally, create an image for the container that contains the coding agent and its dependencies, by running this command from the root dir of this repo:
 
 ```
-podman build -t localhost/opencode-base ~/coding_sandbox/
+podman build -t localhost/opencode-base .
 ```
 
 ### Podman Custom Command
 
-Add the function below to your shell config file (e.g. `.zshrc` or `.bash_profile`). The helper now owns the logic that mirrors
-`$HOME/.config/opencode/opencode.jsonc` into the sandbox-owned config directory so that any credentials or preferences you store on your Mac
-are available inside the container before each launch.
+Add the function below to your shell config file (e.g. `.zshrc` or `.bash_profile`):
 
-```
+```bash
 opencode_sandboxed() {
   local target_dir="${1:-$(pwd)}"
   shift
 
-  # 1. Ensure the sandbox layout exists
+  # 1. Ensure the correct dirs within a dedicated dir exist
+  # NB: this dedicated dir will be mounted by the container, rather than mounting the whole ~/.local dir
   mkdir -p "$HOME/.ai-sandbox-home/.local/bin"
+  mkdir -p "$HOME/.ai-sandbox-home/.local/share/opencode"
   mkdir -p "$HOME/.ai-sandbox-home/.opencode"
+  chmod 700 "$HOME/.ai-sandbox-home/.local/share/opencode"
   chmod 700 "$HOME/.ai-sandbox-home/.opencode"
+  chmod 700 "$HOME/.ai-sandbox-home/.opencode/agents"
 
-  # 2. Mirror the host OpenCode config into the sandbox before starting
+  # 2. Mirror host OpenCode config/auth into the sandbox before starting
   local OPENCODE_CONFIG_SRC="${OPENCODE_CONFIG_SRC:-$HOME/.config/opencode/opencode.jsonc}"
   local OPENCODE_SANDBOX_CONFIG="${OPENCODE_SANDBOX_CONFIG:-$HOME/.ai-sandbox-home/.opencode/opencode.jsonc}"
+  local OPENCODE_AUTH_SRC="${OPENCODE_AUTH_SRC:-$HOME/.local/share/opencode/auth.json}"
+  local OPENCODE_SANDBOX_AUTH="${OPENCODE_SANDBOX_AUTH:-$HOME/.ai-sandbox-home/.local/share/opencode/auth.json}"
+  local OPENCODE_AGENTS_SRC="${OPENCODE_AGENTS_SRC:-$HOME/.config/opencode/agents}"
+  local OPENCODE_SANDBOX_AGENTS="${OPENCODE_SANDBOX_AGENTS:-$HOME/.ai-sandbox-home/.opencode/agents}"
 
   if [ ! -f "$OPENCODE_CONFIG_SRC" ]; then
     printf 'Host opencode config not present at %s, skipping copy.\n' "$OPENCODE_CONFIG_SRC" >&2
@@ -77,6 +83,36 @@ opencode_sandboxed() {
       chmod 600 "$OPENCODE_SANDBOX_CONFIG"
       printf 'Copied host opencode config into sandbox (%s).\n' "$OPENCODE_SANDBOX_CONFIG" >&2
     fi
+  fi
+
+  if [ ! -f "$OPENCODE_AUTH_SRC" ]; then
+    printf 'Host opencode auth file not present at %s, skipping copy.\n' "$OPENCODE_AUTH_SRC" >&2
+  else
+    mkdir -p "$(dirname "$OPENCODE_SANDBOX_AUTH")"
+    if [ -f "$OPENCODE_SANDBOX_AUTH" ] && cmp -s "$OPENCODE_AUTH_SRC" "$OPENCODE_SANDBOX_AUTH"; then
+      chmod 600 "$OPENCODE_SANDBOX_AUTH"
+      printf 'Sandbox opencode auth file already up to date (%s).\n' "$OPENCODE_SANDBOX_AUTH" >&2
+    else
+      cp "$OPENCODE_AUTH_SRC" "$OPENCODE_SANDBOX_AUTH"
+      chmod 600 "$OPENCODE_SANDBOX_AUTH"
+      printf 'Copied host opencode auth file into sandbox (%s).\n' "$OPENCODE_SANDBOX_AUTH" >&2
+    fi
+  fi
+
+  if [ ! -d "$OPENCODE_AGENTS_SRC" ]; then
+    printf 'Host opencode agents dir not present at %s, skipping copy.\n' "$OPENCODE_AGENTS_SRC" >&2
+  else
+    mkdir -p "$OPENCODE_SANDBOX_AGENTS"
+    if command -v rsync >/dev/null 2>&1; then
+      rsync -a --delete "$OPENCODE_AGENTS_SRC"/ "$OPENCODE_SANDBOX_AGENTS"/
+    else
+      rm -rf "$OPENCODE_SANDBOX_AGENTS"
+      mkdir -p "$OPENCODE_SANDBOX_AGENTS"
+      cp -r "$OPENCODE_AGENTS_SRC"/. "$OPENCODE_SANDBOX_AGENTS"/
+    fi
+    find "$OPENCODE_SANDBOX_AGENTS" -type d -exec chmod 700 {} +
+    find "$OPENCODE_SANDBOX_AGENTS" -type f -exec chmod 600 {} +
+    printf 'Mirrored host opencode agents into sandbox (%s).\n' "$OPENCODE_SANDBOX_AGENTS" >&2
   fi
 
   echo "Starting sandbox for directory: $target_dir"
@@ -96,10 +132,10 @@ Once you have added the function, *don't forget to source the shell config file 
 source ~/.zshrc
 ```
 
-Inside the helper we define `OPENCODE_CONFIG_SRC` and `OPENCODE_SANDBOX_CONFIG`, but you can still override them via environment variables before sourcing the function.
-The function checks for the host config file, reproduces the `.opencode` directory if needed, avoids needless copies by comparing the source and destination,
+Inside the helper we define `OPENCODE_CONFIG_SRC`, `OPENCODE_SANDBOX_CONFIG`, `OPENCODE_AUTH_SRC`, and `OPENCODE_SANDBOX_AUTH`, but you can still override them via environment variables before sourcing the function.
+The function checks for both host files, reproduces the `.opencode` and `.local/share/opencode` directories if needed, avoids needless copies by comparing each source and destination,
 and always enforces `chmod 600` after a copy or confirmation. Running the helper therefore mirrors your host `opencode.jsonc` into `/root/.opencode/opencode.jsonc`
-inside the container via the existing Podman mount, while giving informative messages about what happened.
+and your host `auth.json` into `/root/.local/share/opencode/auth.json` inside the container via the existing Podman mount, while giving informative messages about what happened.
 
 ## How to Run
 
@@ -147,3 +183,23 @@ These instructions have been tested with OpenCode, a vendor-agnostic agentic cod
 
 1. `Containerfile`: Change the `RUN` command to install the dependencies that your harness needs, and to issue the installation command. Also change the `ENTRYPOINT` value to reflect the name of your harness.
 2. `Custom command`: Change the custom command that you add to your shell config file so that it creates the appropriate binary and config folders
+
+## Troubleshooting
+
+### Error `unable to get issuer certificate`
+If you encounter the error `unable to get issuer certificate` when trying to connect to a model, this means that your VPN setup is handling outbound requests to the model through an intermediate service, and your podman image doesn't have the necessary certificate to trust this service. You can solve this by:
+
+1. Generate the root certificate for your VPN service. For Zscaler, you would run this on the terminal:
+```
+security find-certificate -a -c "Zscaler" -p /Library/Keychains/System.keychain > ~/zscaler-root-ca.crt
+```
+
+2. Change the COPY statement in the Containerfile to copy the certificate generated in Step 1 into `/usr/local/share/ca-certificates/`
+```
+COPY zscaler-root-ca.crt /usr/local/share/ca-certificates/zscaler-root-ca.crt
+```
+
+3. Rebuild the image, which will now copy the certificate and use `update-ca-certificates` to use it when handling outbound requests to your model
+```
+podman build -t localhost/opencode-base .
+```

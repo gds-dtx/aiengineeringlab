@@ -1,11 +1,17 @@
 FROM debian:stable-slim
 
+# change the COPY command below to import any TLS certificates specific to your VPN setup
+COPY zscaler-root-ca.crt /usr/local/share/ca-certificates/zscaler-root-ca.crt
+
 RUN apt-get update && apt-get install -y ca-certificates curl nodejs npm \
+    && update-ca-certificates \
     && npm config set prefix /usr/local \
     && npm install -g opencode-ai \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 ENV PATH="/usr/local/bin:$PATH"
+ENV NODE_EXTRA_CA_CERTS=/etc/ssl/certs/ca-certificates.crt
+
 WORKDIR /workspace
 ENTRYPOINT ["opencode"]
